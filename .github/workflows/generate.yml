@@ -54,8 +54,7 @@ jobs:
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         HINTS_CONCURRENCY: '10'
-      run: |
-  python scripts/generate_hints.py game_data.json hints.json explanations.json
+      run: python scripts/generate_hints.py game_data.json hints.json explanations.json
       
     - name: Generate HTML
       run: python scripts/generate_html.py src/template.html game_data.json index.html
