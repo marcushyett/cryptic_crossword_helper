@@ -75,10 +75,22 @@
             cursor: pointer;
             margin-left: 10px;
             margin-top: 5px;
-            display: block;
+            display: inline-block;
         }
         .reveal-btn:hover {
             background: #0056b3;
+        }
+        .reveal-word-btn {
+            background: #dc3545;
+        }
+        .reveal-word-btn:hover {
+            background: #c82333;
+        }
+        .check-btn {
+            background: #28a745;
+        }
+        .check-btn:hover {
+            background: #218838;
         }
         .answer {
             display: none;
@@ -147,6 +159,9 @@
 </head>
 <body>
     <h1>Sunday Times Cryptic No 5179</h1>
+    <div style="margin-bottom: 10px;">
+        <button id="clearGridBtn" style="background: #6c757d; color: white; border: none; padding: 8px 16px; cursor: pointer; border-radius: 4px;">Clear Grid</button>
+    </div>
     <div class="container">
         <div class="grid" id="grid"></div>
         <div class="clues" id="clues"></div>
@@ -157,11 +172,19 @@
 
         let gridState = {};
         let revealedClues = new Set();
+        let revealedLetters = {}; // Track revealed letters per word
+        let storageKey = '';
 
         function init() {
+            // Create unique storage key based on puzzle title
+            storageKey = 'crossword_' + gameData.title.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
+            
+            loadState(); // Load saved state first
             createGrid();
             createClues();
-            loadState();
+            
+            // Add clear grid button functionality
+            document.getElementById('clearGridBtn').addEventListener('click', clearGrid);
         }
 
         function createGrid() {
@@ -178,7 +201,7 @@
                         cellEl.addEventListener('input', (e) => {
                             const value = e.target.textContent.toUpperCase();
                             e.target.textContent = value.slice(-1); // Only last character
-                            gridState[`${rowIndex}-${colIndex}`] = value;
+                            gridState[`${rowIndex}-${colIndex}`] = value.slice(-1);
                             saveState();
                         });
                         if (cell.Number) {
@@ -216,18 +239,41 @@
                     
                     const revealBtn = document.createElement('button');
                     revealBtn.className = 'reveal-btn';
-                    revealBtn.textContent = 'Reveal';
-                    revealBtn.addEventListener('click', () => revealAnswer(clue));
+                    revealBtn.textContent = 'Reveal Letter';
+                    revealBtn.addEventListener('click', () => revealLetter(clue));
+                    
+                    const revealWordBtn = document.createElement('button');
+                    revealWordBtn.className = 'reveal-btn reveal-word-btn';
+                    revealWordBtn.textContent = 'Reveal Word';
+                    revealWordBtn.addEventListener('click', () => revealAnswer(clue));
+                    
+                    const checkBtn = document.createElement('button');
+                    checkBtn.className = 'reveal-btn check-btn';
+                    checkBtn.textContent = 'Check Solution';
+                    checkBtn.addEventListener('click', () => checkSolution(clue));
                     
                     clueEl.innerHTML = `
-                        <strong>${clue.number}.</strong> ${clue.clue}
+                        <strong>${clue.number}.</strong> ${clue.clue} (${clue.length})
                         <span class="answer"> (${clue.answer})</span>
                     `;
                     clueEl.appendChild(revealBtn);
+                    clueEl.appendChild(checkBtn);
+                    clueEl.appendChild(revealWordBtn);
                     
                     if (revealedClues.has(clue.word_id)) {
                         clueEl.classList.add('revealed');
                         fillGridWithAnswer(clue);
+                    } else if (revealedLetters[clue.word_id]) {
+                        // Fill in revealed letters for this word
+                        const positions = getWordPositions(clue.word_id);
+                        revealedLetters[clue.word_id].forEach(index => {
+                            const [row, col] = positions[index];
+                            const cellEl = document.querySelector(`.grid .cell:nth-child(${row * 15 + col + 1})`);
+                            if (cellEl && !cellEl.classList.contains('blank')) {
+                                cellEl.textContent = clue.answer[index];
+                                gridState[`${row}-${col}`] = clue.answer[index];
+                            }
+                        });
                     }
                     
                     groupEl.appendChild(clueEl);
@@ -237,11 +283,78 @@
             });
         }
 
-        function revealAnswer(clue) {
-            revealedClues.add(clue.word_id);
-            const clueEl = document.querySelector(`[data-word-id="${clue.word_id}"]`);
-            clueEl.classList.add('revealed');
-            fillGridWithAnswer(clue);
+        function checkSolution(clue) {
+            const wordId = clue.word_id;
+            const positions = getWordPositions(wordId);
+            let correctCount = 0;
+            let totalCount = positions.length;
+            
+            // Check each position
+            positions.forEach((pos, index) => {
+                const [row, col] = pos;
+                const currentLetter = gridState[`${row}-${col}`] || '';
+                const correctLetter = clue.answer[index];
+                
+                if (currentLetter.toUpperCase() === correctLetter.toUpperCase()) {
+                    correctCount++;
+                }
+            });
+            
+            const percentage = Math.round((correctCount / totalCount) * 100);
+            const isCorrect = correctCount === totalCount;
+            
+            // Show result
+            const result = isCorrect 
+                ? `✅ Correct! (100% correct)`
+                : `❌ Incorrect. ${percentage}% correct (${correctCount}/${totalCount} letters)`;
+            
+            alert(result);
+        }
+
+        function revealLetter(clue) {
+            const wordId = clue.word_id;
+            
+            // Initialize revealed letters for this word if not exists
+            if (!revealedLetters[wordId]) {
+                revealedLetters[wordId] = new Set();
+            }
+            
+            const positions = getWordPositions(wordId);
+            const availablePositions = [];
+            
+            // Find positions that are either empty or have incorrect letters
+            positions.forEach((pos, index) => {
+                const [row, col] = pos;
+                const currentLetter = gridState[`${row}-${col}`] || '';
+                const correctLetter = clue.answer[index];
+                
+                if (currentLetter !== correctLetter) {
+                    availablePositions.push({ pos, index, correctLetter });
+                }
+            });
+            
+            if (availablePositions.length === 0) {
+                // All letters are correct, mark as fully revealed
+                revealedClues.add(wordId);
+                const clueEl = document.querySelector(`[data-word-id="${wordId}"]`);
+                clueEl.classList.add('revealed');
+                saveState();
+                return;
+            }
+            
+            // Randomly select one of the available positions
+            const randomIndex = Math.floor(Math.random() * availablePositions.length);
+            const selected = availablePositions[randomIndex];
+            
+            // Fill the selected position with the correct letter
+            const [row, col] = selected.pos;
+            const cellEl = document.querySelector(`.grid .cell:nth-child(${row * 15 + col + 1})`);
+            if (cellEl && !cellEl.classList.contains('blank')) {
+                cellEl.textContent = selected.correctLetter;
+                gridState[`${row}-${col}`] = selected.correctLetter;
+                revealedLetters[wordId].add(selected.index);
+            }
+            
             saveState();
         }
 
@@ -262,6 +375,15 @@
             });
         }
 
+        function revealAnswer(clue) {
+            const wordId = clue.word_id;
+            revealedClues.add(wordId);
+            const clueEl = document.querySelector(`[data-word-id="${wordId}"]`);
+            clueEl.classList.add('revealed');
+            fillGridWithAnswer(clue);
+            saveState();
+        }
+
         function getWordPositions(wordId) {
             const word = gameData.grid.flat().filter(cell => 
                 cell.WordAcrossID == wordId || cell.WordDownID == wordId
@@ -274,18 +396,59 @@
         }
 
         function saveState() {
-            localStorage.setItem('crossword_state', JSON.stringify({
+            localStorage.setItem(storageKey, JSON.stringify({
                 grid: gridState,
-                revealed: Array.from(revealedClues)
+                revealed: Array.from(revealedClues),
+                revealedLetters: Object.fromEntries(
+                    Object.entries(revealedLetters).map(([key, set]) => [key, Array.from(set)])
+                )
             }));
         }
 
         function loadState() {
-            const state = localStorage.getItem('crossword_state');
+            const state = localStorage.getItem(storageKey);
             if (state) {
                 const parsed = JSON.parse(state);
                 gridState = parsed.grid || {};
                 revealedClues = new Set(parsed.revealed || []);
+                revealedLetters = {};
+                if (parsed.revealedLetters) {
+                    Object.entries(parsed.revealedLetters).forEach(([key, arr]) => {
+                        revealedLetters[key] = new Set(arr);
+                    });
+                }
+                
+                // Update cells with loaded state
+                Object.entries(gridState).forEach(([key, letter]) => {
+                    const [row, col] = key.split('-').map(Number);
+                    const cellEl = document.querySelector(`.grid .cell:nth-child(${row * 15 + col + 1})`);
+                    if (cellEl) {
+                        cellEl.textContent = letter;
+                    }
+                });
+            }
+        }
+
+        function clearGrid() {
+            if (confirm('Are you sure you want to clear the entire grid? This will remove all your progress.')) {
+                gridState = {};
+                revealedClues = new Set();
+                revealedLetters = {};
+                
+                // Clear all cells
+                document.querySelectorAll('.grid .cell').forEach(cell => {
+                    if (!cell.classList.contains('blank')) {
+                        cell.textContent = '';
+                    }
+                });
+                
+                // Reset clue styles
+                document.querySelectorAll('.clue').forEach(clue => {
+                    clue.classList.remove('revealed');
+                });
+                
+                // Clear local storage
+                localStorage.removeItem(storageKey);
             }
         }
 
