@@ -1,0 +1,38 @@
+name: Generate Crossword Game
+
+on:
+  workflow_dispatch:
+    inputs:
+      crossword_url:
+        description: 'URL of the crossword JSON'
+        required: true
+        default: 'https://feeds.thetimes.com/puzzles/st/crossword/20250831/56928/data.json'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Download crossword data
+      run: curl -s ${{ github.event.inputs.crossword_url }} > crossword.json
+      
+    - name: Extract answers
+      run: python scripts/extract_answers.py crossword.json > game_data.json
+      
+    - name: Generate HTML
+      run: python scripts/generate_html.py src/template.html game_data.json index.html
+      
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        publish_branch: gh-pages

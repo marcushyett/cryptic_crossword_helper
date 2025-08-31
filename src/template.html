@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(15, 30px);
+            grid-template-rows: repeat(15, 30px);
+            gap: 1px;
+            border: 2px solid #000;
+            background: #000;
+        }
+        .cell {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+        }
+        .cell.blank {
+            background: black;
+        }
+        .cell .number {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 10px;
+            color: #666;
+        }
+        .clues {
+            flex: 1;
+        }
+        .clue-group {
+            margin-bottom: 20px;
+        }
+        .clue {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .clue:hover {
+            background: #f0f0f0;
+        }
+        .clue.revealed {
+            background: #e0ffe0;
+        }
+        .reveal-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .reveal-btn:hover {
+            background: #0056b3;
+        }
+        .answer {
+            display: none;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .clue.revealed .answer {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{TITLE}}</h1>
+    <div class="container">
+        <div class="grid" id="grid"></div>
+        <div class="clues" id="clues"></div>
+    </div>
+
+    <script>
+        const gameData = {{GAME_DATA}};
+
+        let gridState = {};
+        let revealedClues = new Set();
+
+        function init() {
+            createGrid();
+            createClues();
+            loadState();
+        }
+
+        function createGrid() {
+            const gridEl = document.getElementById('grid');
+            gameData.grid.forEach((row, rowIndex) => {
+                row.forEach((cell, colIndex) => {
+                    const cellEl = document.createElement('div');
+                    cellEl.className = 'cell';
+                    if (cell.Blank === 'blank') {
+                        cellEl.classList.add('blank');
+                    } else {
+                        cellEl.textContent = gridState[`${rowIndex}-${colIndex}`] || '';
+                        cellEl.contentEditable = true;
+                        cellEl.addEventListener('input', (e) => {
+                            const value = e.target.textContent.toUpperCase();
+                            e.target.textContent = value.slice(-1); // Only last character
+                            gridState[`${rowIndex}-${colIndex}`] = value;
+                            saveState();
+                        });
+                        if (cell.Number) {
+                            const numEl = document.createElement('div');
+                            numEl.className = 'number';
+                            numEl.textContent = cell.Number;
+                            cellEl.appendChild(numEl);
+                        }
+                    }
+                    gridEl.appendChild(cellEl);
+                });
+            });
+        }
+
+        function createClues() {
+            const cluesEl = document.getElementById('clues');
+            const groups = {};
+            
+            gameData.clues.forEach(clue => {
+                if (!groups[clue.direction]) {
+                    groups[clue.direction] = [];
+                }
+                groups[clue.direction].push(clue);
+            });
+
+            Object.keys(groups).forEach(direction => {
+                const groupEl = document.createElement('div');
+                groupEl.className = 'clue-group';
+                groupEl.innerHTML = `<h3>${direction.charAt(0).toUpperCase() + direction.slice(1)}</h3>`;
+                
+                groups[direction].forEach(clue => {
+                    const clueEl = document.createElement('div');
+                    clueEl.className = 'clue';
+                    clueEl.dataset.wordId = clue.word_id;
+                    
+                    const revealBtn = document.createElement('button');
+                    revealBtn.className = 'reveal-btn';
+                    revealBtn.textContent = 'Reveal';
+                    revealBtn.addEventListener('click', () => revealAnswer(clue));
+                    
+                    clueEl.innerHTML = `
+                        <strong>${clue.number}.</strong> ${clue.clue}
+                        <span class="answer"> (${clue.answer})</span>
+                    `;
+                    clueEl.appendChild(revealBtn);
+                    
+                    if (revealedClues.has(clue.word_id)) {
+                        clueEl.classList.add('revealed');
+                        fillGridWithAnswer(clue);
+                    }
+                    
+                    groupEl.appendChild(clueEl);
+                });
+                
+                cluesEl.appendChild(groupEl);
+            });
+        }
+
+        function revealAnswer(clue) {
+            revealedClues.add(clue.word_id);
+            const clueEl = document.querySelector(`[data-word-id="${clue.word_id}"]`);
+            clueEl.classList.add('revealed');
+            fillGridWithAnswer(clue);
+            saveState();
+        }
+
+        function fillGridWithAnswer(clue) {
+            const word = gameData.grid.flat().find(cell => 
+                cell.WordAcrossID == clue.word_id || cell.WordDownID == clue.word_id
+            );
+            if (!word) return;
+            
+            const positions = getWordPositions(clue.word_id);
+            positions.forEach((pos, index) => {
+                const [row, col] = pos;
+                const cellEl = document.querySelector(`.grid .cell:nth-child(${row * 15 + col + 1})`);
+                if (cellEl && !cellEl.classList.contains('blank')) {
+                    cellEl.textContent = clue.answer[index];
+                    gridState[`${row}-${col}`] = clue.answer[index];
+                }
+            });
+        }
+
+        function getWordPositions(wordId) {
+            const word = gameData.grid.flat().filter(cell => 
+                cell.WordAcrossID == wordId || cell.WordDownID == wordId
+            );
+            return word.map(cell => {
+                const row = Math.floor((cell.SquareID - 1) / 15);
+                const col = (cell.SquareID - 1) % 15;
+                return [row, col];
+            });
+        }
+
+        function saveState() {
+            localStorage.setItem('crossword_state', JSON.stringify({
+                grid: gridState,
+                revealed: Array.from(revealedClues)
+            }));
+        }
+
+        function loadState() {
+            const state = localStorage.getItem('crossword_state');
+            if (state) {
+                const parsed = JSON.parse(state);
+                gridState = parsed.grid || {};
+                revealedClues = new Set(parsed.revealed || []);
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
