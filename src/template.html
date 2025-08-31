@@ -91,7 +91,9 @@
 
     <script>
         const gameData = {{GAME_DATA}};
-    </script>
+
+        let gridState = {};
+        let revealedClues = new Set();
 
         function init() {
             createGrid();
