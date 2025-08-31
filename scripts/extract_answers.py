@@ -23,25 +23,29 @@ def extract_answers(json_file):
     
     # Function to get word from positions
     def get_word(word_info):
-        x_range = word_info['x']
-        y = int(word_info['y'])
+        x = word_info['x']
+        y = word_info['y']
         
-        if '-' in x_range:
-            x_start, x_end = map(int, x_range.split('-'))
-            letters = []
-            for x in range(x_start, x_end + 1):
-                letter = grid[y-1][x-1]['Letter']
+        letters = []
+        if '-' in x:
+            # Across
+            x_start, x_end = map(int, x.split('-'))
+            y_pos = int(y)
+            for col in range(x_start, x_end + 1):
+                letter = grid[y_pos-1][col-1]['Letter']
                 letters.append(letter)
-            return ''.join(letters)
+        elif '-' in y:
+            # Down
+            x_pos = int(x)
+            y_start, y_end = map(int, y.split('-'))
+            for row in range(y_start, y_end + 1):
+                letter = grid[row-1][x_pos-1]['Letter']
+                letters.append(letter)
         else:
-            # Single column, down
-            x = int(x_range)
-            letters = []
-            y_start, y_end = map(int, word_info['y'].split('-'))
-            for yy in range(y_start, y_end + 1):
-                letter = grid[yy-1][x-1]['Letter']
-                letters.append(letter)
-            return ''.join(letters)
+            # Single cell, shouldn't happen
+            letters.append(grid[int(y)-1][int(x)-1]['Letter'])
+        
+        return ''.join(letters)
     
     # Add answers to clues
     for clue in clues:
