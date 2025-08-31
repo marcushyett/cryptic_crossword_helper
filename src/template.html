@@ -80,6 +80,22 @@
         .reveal-btn:hover {
             background: #0056b3;
         }
+        .hint-btn { background: #6f42c1; }
+        .hint-btn:hover { background: #5a35a1; }
+        .help-btn { background: #6f42c1; }
+        .help-btn:hover { background: #5a35a1; }
+        .help-panel {
+            margin-top: 8px; border: 1px solid #ddd; border-radius: 6px; padding: 8px; background: #fafafa;
+        }
+        .help-header { display: flex; gap: 6px; margin-bottom: 6px; }
+        .pill { padding: 4px 8px; border: 1px solid #ccc; border-radius: 999px; cursor: pointer; background: #fff; font-size: 12px; }
+        .pill.active { background: #e9f0ff; border-color: #7ba7ff; }
+        .help-content { font-size: 13px; color: #333; }
+        .hint-item { margin: 4px 0; }
+        .explain-step { margin: 4px 0; }
+        .token-indicator { background: #fff3cd; }
+        .token-fodder { background: #e2f0d9; }
+        .token-definition { background: #fde2e2; }
         .reveal-word-btn {
             background: #dc3545;
         }
@@ -169,22 +185,51 @@
 
     <script>
         const gameData = {{GAME_DATA}};
+    let hintsData = {}; // { word_id: [hint1, hint2, hint3] }
+    let explData = {}; // { word_id: { device, steps:[], highlights:[{role,text}] } }
 
         let gridState = {};
         let revealedClues = new Set();
-        let revealedLetters = {}; // Track revealed letters per word
+    let revealedLetters = {}; // Track revealed letters per word
+    let revealedHints = {}; // { wordId: Set of indices revealed }
+    const HINTS_STATE_VERSION = 'v2'; // bump to reset old auto-revealed states
         let storageKey = '';
 
-        function init() {
+        async function init() {
             // Create unique storage key based on puzzle title
             storageKey = 'crossword_' + gameData.title.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
             
             loadState(); // Load saved state first
+            await loadHints();
+            await loadExplanations();
             createGrid();
             createClues();
             
             // Add clear grid button functionality
             document.getElementById('clearGridBtn').addEventListener('click', clearGrid);
+        }
+
+        async function loadHints() {
+            try {
+                const res = await fetch('hints.json', { cache: 'no-store' });
+                if (!res.ok) return;
+                const json = await res.json();
+                hintsData = json || {};
+            } catch (e) {
+                // no-op if not available
+                hintsData = {};
+            }
+        }
+
+        async function loadExplanations() {
+            try {
+                const res = await fetch('explanations.json', { cache: 'no-store' });
+                if (!res.ok) return;
+                const json = await res.json();
+                explData = json || {};
+            } catch (e) {
+                explData = {};
+            }
         }
 
         function createGrid() {
@@ -241,16 +286,21 @@
                     revealBtn.className = 'reveal-btn';
                     revealBtn.textContent = 'Reveal Letter';
                     revealBtn.addEventListener('click', () => revealLetter(clue));
-                    
+
                     const revealWordBtn = document.createElement('button');
                     revealWordBtn.className = 'reveal-btn reveal-word-btn';
                     revealWordBtn.textContent = 'Reveal Word';
                     revealWordBtn.addEventListener('click', () => revealAnswer(clue));
-                    
+
                     const checkBtn = document.createElement('button');
                     checkBtn.className = 'reveal-btn check-btn';
                     checkBtn.textContent = 'Check Solution';
                     checkBtn.addEventListener('click', () => checkSolution(clue));
+
+                    const helpBtn = document.createElement('button');
+                    helpBtn.className = 'reveal-btn help-btn';
+                    helpBtn.textContent = 'Help';
+                    helpBtn.addEventListener('click', () => toggleHelp(clue, clueEl));
                     
                     clueEl.innerHTML = `
                         <strong>${clue.number}.</strong> ${clue.clue} (${clue.length})
@@ -258,6 +308,7 @@
                     `;
                     clueEl.appendChild(revealBtn);
                     clueEl.appendChild(checkBtn);
+                    clueEl.appendChild(helpBtn);
                     clueEl.appendChild(revealWordBtn);
                     
                     if (revealedClues.has(clue.word_id)) {
@@ -281,6 +332,122 @@
                 
                 cluesEl.appendChild(groupEl);
             });
+        }
+
+    function revealHint(clue, index, holderEl, btnEl) {
+            const wordId = String(clue.word_id);
+            const hints = hintsData[wordId];
+            if (!hints || !Array.isArray(hints) || !hints[index]) {
+                alert('No hint available.');
+                return;
+            }
+            if (!revealedHints[wordId]) revealedHints[wordId] = new Set();
+            if (revealedHints[wordId].has(index)) {
+                // Already revealed; ensure it's visible
+                const text = hintsData[wordId] && hintsData[wordId][index] ? hintsData[wordId][index] : '';
+                if (holderEl && !holderEl.textContent) holderEl.textContent = text ? ` ${text}` : ' (no hint available)';
+                return;
+            }
+            revealedHints[wordId].add(index);
+            const text = hintsData[wordId] && hintsData[wordId][index] ? hintsData[wordId][index] : '';
+            if (holderEl) holderEl.textContent = text ? ` ${text}` : ' (no hint available)';
+            if (btnEl) btnEl.disabled = true;
+            saveState();
+        }
+        // intentionally no inline list rendering to prevent default hint reveal
+
+        function toggleHelp(clue, clueEl) {
+            const existing = clueEl.querySelector('.help-panel');
+            if (existing) { existing.remove(); return; }
+            const panel = document.createElement('div');
+            panel.className = 'help-panel';
+            const header = document.createElement('div');
+            header.className = 'help-header';
+            const pillHints = document.createElement('div'); pillHints.className = 'pill active'; pillHints.textContent = 'Hints';
+            const pillExpl = document.createElement('div'); pillExpl.className = 'pill'; pillExpl.textContent = 'Explanation';
+            header.appendChild(pillHints); header.appendChild(pillExpl);
+            const content = document.createElement('div'); content.className = 'help-content';
+
+            function renderHints() {
+                content.innerHTML = '';
+                const list = document.createElement('div'); list.className = 'hints';
+                for (let i = 0; i < 3; i++) {
+                    const row = document.createElement('div'); row.className = 'hint-item';
+                    const btn = document.createElement('button'); btn.className = 'reveal-btn hint-btn'; btn.textContent = `Reveal hint ${i+1}`;
+                    const holder = document.createElement('span'); holder.style.marginLeft = '8px';
+                    row.appendChild(btn); row.appendChild(holder);
+                    btn.addEventListener('click', () => {
+                        revealHint(clue, i, holder, btn);
+                    });
+                    // Pre-fill if already revealed
+                    const wid = String(clue.word_id);
+                    if (revealedHints[wid] && revealedHints[wid].has(i)) {
+                        const text = (hintsData[wid] && hintsData[wid][i]) ? hintsData[wid][i] : '';
+                        holder.textContent = text ? ` ${text}` : ' (no hint available)';
+                        btn.disabled = true;
+                    }
+                    list.appendChild(row);
+                }
+                content.appendChild(list);
+            }
+
+            function renderExplanation() {
+                content.innerHTML = '';
+                const wid = String(clue.word_id);
+                const expl = explData[wid];
+                if (!expl) {
+                    content.textContent = 'No explanation available.';
+                    return;
+                }
+                // Device badge and legend for colors
+                if (expl.device) {
+                    const device = document.createElement('div');
+                    device.style.marginBottom = '6px';
+                    device.innerHTML = `<span style="display:inline-block;padding:2px 6px;border:1px solid #ccc;border-radius:12px;background:#fff;font-size:12px;">Device: ${expl.device}</span>`;
+                    content.appendChild(device);
+                }
+                const legend = document.createElement('div');
+                legend.style.display = 'flex'; legend.style.gap = '8px'; legend.style.alignItems = 'center'; legend.style.margin = '6px 0'; legend.style.fontSize = '12px';
+                legend.innerHTML = `
+                    <span><span style="display:inline-block;width:10px;height:10px;background:#fff3cd;border:1px solid #e6c200;margin-right:4px;"></span>Indicator</span>
+                    <span><span style="display:inline-block;width:10px;height:10px;background:#e2f0d9;border:1px solid #9ac27a;margin-right:4px;"></span>Fodder</span>
+                    <span><span style="display:inline-block;width:10px;height:10px;background:#fde2e2;border:1px solid #f2a0a0;margin-right:4px;"></span>Definition</span>
+                `;
+                content.appendChild(legend);
+                // Steps
+                if (Array.isArray(expl.steps)) {
+                    expl.steps.forEach((s, idx) => {
+                        const p = document.createElement('div'); p.className = 'explain-step';
+                        const clean = String(s).replace(/^\s*[0-9]+\./, '').trim();
+                        p.textContent = `${idx + 1}. ${clean}`;
+                        content.appendChild(p);
+                    });
+                }
+                // Simple token highlighting within the clue text area
+                try {
+                    const clueText = `${clue.clue}`;
+                    let highlighted = clueText;
+                    if (Array.isArray(expl.highlights)) {
+                        expl.highlights.forEach(h => {
+                            const cls = h.role === 'indicator' ? 'token-indicator' : h.role === 'fodder' ? 'token-fodder' : 'token-definition';
+                            const re = new RegExp(h.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+                            highlighted = highlighted.replace(re, (m) => `<span class="${cls}">${m}</span>`);
+                        });
+                    }
+                    const cluePreview = document.createElement('div');
+                    cluePreview.style.marginTop = '8px';
+                    cluePreview.innerHTML = `<em>${highlighted}</em>`;
+                    content.appendChild(cluePreview);
+                } catch (_) {}
+            }
+
+            pillHints.addEventListener('click', () => { pillHints.classList.add('active'); pillExpl.classList.remove('active'); renderHints(); });
+            pillExpl.addEventListener('click', () => { pillExpl.classList.add('active'); pillHints.classList.remove('active'); renderExplanation(); });
+
+            panel.appendChild(header);
+            panel.appendChild(content);
+            clueEl.appendChild(panel);
+            renderHints();
         }
 
         function checkSolution(clue) {
@@ -401,7 +568,11 @@
                 revealed: Array.from(revealedClues),
                 revealedLetters: Object.fromEntries(
                     Object.entries(revealedLetters).map(([key, set]) => [key, Array.from(set)])
-                )
+                ),
+                revealedHints: Object.fromEntries(
+                    Object.entries(revealedHints).map(([key, set]) => [key, Array.from(set)])
+                ),
+                hintsStateVersion: HINTS_STATE_VERSION
             }));
         }
 
@@ -412,9 +583,17 @@
                 gridState = parsed.grid || {};
                 revealedClues = new Set(parsed.revealed || []);
                 revealedLetters = {};
+                revealedHints = {};
                 if (parsed.revealedLetters) {
                     Object.entries(parsed.revealedLetters).forEach(([key, arr]) => {
                         revealedLetters[key] = new Set(arr);
+                    });
+                }
+                if (parsed.hintsStateVersion !== HINTS_STATE_VERSION) {
+                    revealedHints = {};
+                } else if (parsed.revealedHints) {
+                    Object.entries(parsed.revealedHints).forEach(([key, arr]) => {
+                        revealedHints[key] = new Set(arr);
                     });
                 }
                 

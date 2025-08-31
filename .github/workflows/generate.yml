@@ -41,6 +41,21 @@ jobs:
       
     - name: Extract answers
       run: python scripts/extract_answers.py crossword.json > game_data.json
+
+    - name: Cache hints
+      uses: actions/cache@v4
+      with:
+        path: hints_cache.json
+        key: hints-cache-${{ hashFiles('game_data.json') }}
+        restore-keys: |
+          hints-cache-
+
+    - name: Generate hints (OpenAI)
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        HINTS_CONCURRENCY: '10'
+      run: |
+  python scripts/generate_hints.py game_data.json hints.json explanations.json
       
     - name: Generate HTML
       run: python scripts/generate_html.py src/template.html game_data.json index.html
