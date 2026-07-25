@@ -22,6 +22,21 @@ def bare(s):
     return re.sub(r'[^A-Z]', '', s.upper())
 
 
+def redact(text, answer):
+    """Blank the answer wherever it appears in hint text.
+
+    A full parsing inevitably ends in the answer, which would spoil the rungs
+    below it — and would sit in the page source in plain sight. Match the
+    letters with any separators between them (ABSENT-MINDED, A,B,S,E,N,T...)
+    and swap in a marker instead.
+    """
+    letters = bare(answer)
+    if not letters:
+        return text
+    pattern = r'[\s,.\-’\']*'.join(re.escape(ch) for ch in letters)
+    return re.sub(pattern, '<span class="redact">the answer</span>', text, flags=re.I)
+
+
 def build(solved, template, title, dateline, credit, puzzle_id):
     clues = []
     for c in solved:
@@ -36,10 +51,11 @@ def build(solved, template, title, dateline, credit, puzzle_id):
             'a': base64.b64encode(answer.encode()).decode(),
             'k': hashlib.sha256(bare(answer).encode()).hexdigest(),
             'h': {
-                'definition': html.escape(c['definition_hint']),
-                'indicators': html.escape(c['indicators']),
-                'fodder': html.escape(c['fodder']),
-                'explanation': html.escape(c['explanation']),
+                k: redact(html.escape(c[src]), answer)
+                for k, src in (('definition', 'definition_hint'),
+                               ('indicators', 'indicators'),
+                               ('fodder', 'fodder'),
+                               ('explanation', 'explanation'))
             },
         })
     out = template
