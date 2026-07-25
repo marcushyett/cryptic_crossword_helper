@@ -1,0 +1,670 @@
+<title>__TITLE__ — Clue by Clue</title>
+<style>
+  :root {
+    --paper:      #FAFAF6;
+    --paper-2:    #F0F0EA;
+    --ink:        #14161A;
+    --graphite:   #62666E;
+    --rule:       #D9D9D1;
+    --mark:       #E9B824;   /* highlighter */
+    --mark-soft:  #F7E7AE;
+    --ok:         #2E7D4F;
+    --ok-soft:    #DCEDE2;
+    --miss:       #B4442E;
+    --shadow:     rgba(20,22,26,.10);
+    --cell-empty: #FFFFFF;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:      #15171B;
+      --paper-2:    #1D2026;
+      --ink:        #E8E8E1;
+      --graphite:   #9A9FA8;
+      --rule:       #2E323A;
+      --mark:       #D9A81F;
+      --mark-soft:  #45391A;
+      --ok:         #6BC48D;
+      --ok-soft:    #1E3327;
+      --miss:       #E58063;
+      --shadow:     rgba(0,0,0,.45);
+      --cell-empty: #0E1013;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #15171B;
+    --paper-2:    #1D2026;
+    --ink:        #E8E8E1;
+    --graphite:   #9A9FA8;
+    --rule:       #2E323A;
+    --mark:       #D9A81F;
+    --mark-soft:  #45391A;
+    --ok:         #6BC48D;
+    --ok-soft:    #1E3327;
+    --miss:       #E58063;
+    --shadow:     rgba(0,0,0,.45);
+    --cell-empty: #0E1013;
+  }
+  :root[data-theme="light"] {
+    --paper:      #FAFAF6;
+    --paper-2:    #F0F0EA;
+    --ink:        #14161A;
+    --graphite:   #62666E;
+    --rule:       #D9D9D1;
+    --mark:       #E9B824;
+    --mark-soft:  #F7E7AE;
+    --ok:         #2E7D4F;
+    --ok-soft:    #DCEDE2;
+    --miss:       #B4442E;
+    --shadow:     rgba(20,22,26,.10);
+    --cell-empty: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .wrap {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 1rem 6.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ---------- masthead ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--paper);
+    padding: .85rem 0 .6rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+  }
+  .title {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .dateline {
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+    color: var(--graphite);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* clue index: the grid motif, one block per clue */
+  .index {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 2px;
+  }
+  .blk {
+    aspect-ratio: 1;
+    border: 1px solid var(--rule);
+    background: var(--cell-empty);
+    font: 600 .55rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: var(--graphite);
+    display: grid;
+    place-items: center;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 1px;
+  }
+  .blk[data-state="solved"] { background: var(--ok); border-color: var(--ok); color: #fff; }
+  .blk[data-state="helped"] { background: var(--mark); border-color: var(--mark); color: #14161A; }
+  .blk[data-state="shown"]  { background: var(--graphite); border-color: var(--graphite); color: var(--paper); }
+  .blk[aria-current="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
+  .blk:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  /* ---------- clue card ---------- */
+  .card {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1.15rem 1.05rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .95rem;
+    box-shadow: 0 1px 0 var(--shadow);
+  }
+  .cluehead {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    font: 600 .68rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--graphite);
+  }
+  .num {
+    background: var(--ink);
+    color: var(--paper);
+    padding: .3rem .45rem;
+    border-radius: 2px;
+    letter-spacing: .06em;
+  }
+  .clue {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.42rem;
+    line-height: 1.34;
+    margin: 0;
+    text-wrap: pretty;
+  }
+  .enum {
+    font: 500 .95rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: var(--graphite);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- letter cells ---------- */
+  .cells {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    cursor: text;
+    padding: .1rem 0;
+  }
+  .cell {
+    width: 1.72rem;
+    height: 2.1rem;
+    border: 1.5px solid var(--ink);
+    background: var(--cell-empty);
+    display: grid;
+    place-items: center;
+    font: 600 1.05rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .cell.gapdash { border: none; background: none; width: .7rem; color: var(--graphite); }
+  .cell.gapspace { border: none; background: none; width: .45rem; }
+  .cell.cursor { box-shadow: inset 0 -3px 0 var(--mark); }
+  .cells.correct .cell { border-color: var(--ok); background: var(--ok-soft); color: var(--ok); }
+  .cells.shown .cell   { border-color: var(--graphite); color: var(--graphite); }
+  .cells.wrong { animation: nudge .3s; }
+  @keyframes nudge {
+    0%,100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cells.wrong { animation: none; }
+    .hint__body { transition: none !important; }
+  }
+  #entry {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 1px; height: 1px;
+  }
+
+  .verdict {
+    font: 600 .78rem/1.4 ui-sans-serif, system-ui, sans-serif;
+    min-height: 1.1rem;
+    letter-spacing: .01em;
+  }
+  .verdict[data-tone="ok"]   { color: var(--ok); }
+  .verdict[data-tone="miss"] { color: var(--miss); }
+  .verdict[data-tone="mute"] { color: var(--graphite); font-weight: 500; }
+
+  /* ---------- hints ---------- */
+  .hints { display: flex; flex-direction: column; gap: .4rem; }
+  .hints__label {
+    font: 600 .64rem/1 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--graphite);
+    margin-bottom: .1rem;
+  }
+  .hint {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: var(--paper);
+    overflow: hidden;
+  }
+  .hint__btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: 0;
+    padding: .65rem .75rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    cursor: pointer;
+    color: inherit;
+    font: 600 .84rem/1.3 ui-sans-serif, system-ui, sans-serif;
+  }
+  .hint__btn:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; }
+  .hint__step {
+    font: 700 .62rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--mark-soft);
+    color: var(--ink);
+    border-radius: 2px;
+    padding: .3rem .4rem;
+    flex: none;
+  }
+  .hint[data-open="true"] .hint__step { background: var(--mark); }
+  .hint__chev { margin-left: auto; color: var(--graphite); font-size: .8rem; flex: none; }
+  .hint__body {
+    padding: 0 .75rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .28s ease, padding .28s ease;
+    font-size: .93rem;
+    line-height: 1.55;
+    border-top: 0 solid var(--rule);
+  }
+  .hint[data-open="true"] .hint__body {
+    max-height: 34rem;
+    padding: .7rem .75rem .85rem;
+    border-top: 1px solid var(--rule);
+  }
+  .hint__body code {
+    font: 600 .88em/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--mark-soft);
+    padding: .1em .3em;
+    border-radius: 2px;
+  }
+  .hint--solution .hint__step { background: var(--ink); color: var(--paper); }
+  .solution {
+    font: 700 1.3rem/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .rowbtns { display: flex; gap: .5rem; flex-wrap: wrap; }
+  .btn {
+    font: 600 .82rem/1 ui-sans-serif, system-ui, sans-serif;
+    padding: .62rem .8rem;
+    border-radius: 3px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    cursor: pointer;
+  }
+  .btn--ghost { background: none; color: var(--ink); }
+  .btn--quiet { background: none; color: var(--graphite); border-color: var(--rule); }
+  .btn:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
+  .btn:disabled { opacity: .4; cursor: default; }
+
+  /* ---------- footer nav ---------- */
+  .nav {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    padding: .6rem 1rem calc(.6rem + env(safe-area-inset-bottom));
+    z-index: 6;
+  }
+  .nav__inner {
+    max-width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  }
+  .nav .btn { flex: 1; }
+  .tally {
+    font: 600 .68rem/1.25 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: var(--graphite);
+    text-align: center;
+    flex: none;
+    min-width: 5.4rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .note {
+    font-size: .74rem;
+    line-height: 1.5;
+    color: var(--graphite);
+  }
+  .note a { color: inherit; }
+  details.legend { font-size: .78rem; color: var(--graphite); }
+  details.legend summary { cursor: pointer; padding: .35rem 0; }
+  details.legend p { margin: .3rem 0; line-height: 1.55; }
+  .swatch {
+    display: inline-block; width: .7rem; height: .7rem;
+    border: 1px solid var(--rule); vertical-align: -1px; margin-right: .25rem; border-radius: 1px;
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="masthead">
+      <h1 class="title">__TITLE__</h1>
+      <span class="dateline">__DATELINE__</span>
+    </div>
+    <div class="index" id="index" role="tablist" aria-label="Jump to clue"></div>
+  </header>
+
+  <main class="card" id="card">
+    <div class="cluehead">
+      <span class="num" id="cnum">1 ACROSS</span>
+      <span id="cpos"></span>
+    </div>
+    <p class="clue" id="ctext"></p>
+    <div class="enum" id="cenum"></div>
+
+    <div class="cells" id="cells" role="textbox" tabindex="0" aria-label="Type your answer"></div>
+    <input id="entry" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-hidden="true" tabindex="-1">
+    <div class="verdict" id="verdict" role="status" aria-live="polite"></div>
+
+    <div class="rowbtns">
+      <button class="btn" id="check">Check answer</button>
+      <button class="btn btn--ghost" id="letter">Give me a letter</button>
+      <button class="btn btn--quiet" id="clear">Clear</button>
+    </div>
+
+    <div class="hints">
+      <div class="hints__label">Hints — tap to reveal, in any order</div>
+      <div id="hints"></div>
+    </div>
+  </main>
+
+  <details class="legend">
+    <summary>How this works</summary>
+    <p>Every clue is answered on its own, one at a time — no grid to fill. The blocks up top are your progress:
+      <span class="swatch" style="background:var(--ok);border-color:var(--ok)"></span>solved unaided,
+      <span class="swatch" style="background:var(--mark);border-color:var(--mark)"></span>solved with hints,
+      <span class="swatch" style="background:var(--graphite);border-color:var(--graphite)"></span>answer shown.</p>
+    <p>Hints climb in strength: what the definition is, then the device the setter used, then the raw material it works on, then a letter or two, then the full parsing, and only last the answer itself. Take the lowest rung that unsticks you.</p>
+    <p>Answers are stored hashed and encoded, so nothing is spoiled by scrolling or by peeking at the page source. Your progress is saved on this device.</p>
+  </details>
+
+  <p class="note">__CREDIT__</p>
+</div>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <button class="btn btn--ghost" id="prev">← Prev</button>
+    <span class="tally" id="tally"></span>
+    <button class="btn btn--ghost" id="next">Next →</button>
+  </div>
+</nav>
+
+<script>
+const CLUES = __DATA__;
+
+const HINT_STEPS = [
+  { key: 'definition',  label: 'Where the definition is' },
+  { key: 'indicators',  label: 'What the setter is doing' },
+  { key: 'fodder',      label: 'What the wordplay works on' },
+  { key: 'explanation', label: 'The full parsing' }
+];
+
+const STORE = 'cryptic-__PUZZLEID__-v1';
+let state = load();
+let i = clampIndex(state.last || 0);
+let typed = '';
+
+function load() {
+  try {
+    const raw = localStorage.getItem(STORE);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { last: 0, clues: {} };
+}
+function save() {
+  state.last = i;
+  try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {}
+}
+function rec(id) {
+  if (!state.clues[id]) state.clues[id] = { hints: [], letters: 0, solved: false, shown: false };
+  return state.clues[id];
+}
+function clampIndex(n) { return Math.max(0, Math.min(CLUES.length - 1, n)); }
+
+const plain = id => atob(CLUES.find(c => c.id === id).a);
+const bare  = s => s.toUpperCase().replace(/[^A-Z]/g, '');
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+/* enumeration "6-6" / "2,3,2" / "5-2-5" -> render slots */
+function slots(fmt) {
+  const out = [];
+  const parts = fmt.split(/([,-])/);
+  for (const p of parts) {
+    if (p === ',') out.push({ t: 'space' });
+    else if (p === '-') out.push({ t: 'dash' });
+    else { const n = parseInt(p, 10); for (let k = 0; k < n; k++) out.push({ t: 'letter' }); }
+  }
+  return out;
+}
+
+function status(id) {
+  const r = rec(id);
+  if (r.shown) return 'shown';
+  if (r.solved) return (r.hints.length || r.letters) ? 'helped' : 'solved';
+  return '';
+}
+
+function buildIndex() {
+  const box = document.getElementById('index');
+  box.innerHTML = '';
+  CLUES.forEach((c, n) => {
+    const b = document.createElement('button');
+    b.className = 'blk';
+    b.textContent = c.num + c.dir[0].toUpperCase();
+    b.title = c.num + ' ' + c.dir;
+    b.setAttribute('role', 'tab');
+    b.addEventListener('click', () => { i = n; typed = ''; render(); });
+    box.appendChild(b);
+  });
+}
+
+function paintIndex() {
+  [...document.getElementById('index').children].forEach((b, n) => {
+    const st = status(CLUES[n].id);
+    if (st) b.dataset.state = st; else delete b.dataset.state;
+    b.setAttribute('aria-current', n === i ? 'true' : 'false');
+  });
+  const solved = CLUES.filter(c => rec(c.id).solved || rec(c.id).shown).length;
+  document.getElementById('tally').textContent = solved + ' / ' + CLUES.length + ' done';
+}
+
+function paintCells() {
+  const c = CLUES[i];
+  const r = rec(c.id);
+  const box = document.getElementById('cells');
+  const revealed = r.shown ? bare(plain(c.id)) : null;
+  const source = revealed || typed;
+  box.className = 'cells' + (r.shown ? ' shown' : (r.solved ? ' correct' : ''));
+  box.innerHTML = '';
+  let li = 0;
+  slots(c.fmt).forEach(s => {
+    const el = document.createElement('span');
+    if (s.t === 'letter') {
+      el.className = 'cell';
+      const ch = source[li] || '';
+      // letters given away one at a time stay visible even when the box is empty
+      el.textContent = ch || (li < r.letters ? bare(plain(c.id))[li] : '');
+      if (!revealed && li === typed.length && !r.solved) el.classList.add('cursor');
+      li++;
+    } else if (s.t === 'dash') {
+      el.className = 'cell gapdash'; el.textContent = '–';
+    } else {
+      el.className = 'cell gapspace';
+    }
+    box.appendChild(el);
+  });
+}
+
+function buildHints() {
+  const c = CLUES[i];
+  const r = rec(c.id);
+  const box = document.getElementById('hints');
+  box.innerHTML = '';
+
+  HINT_STEPS.forEach((step, n) => {
+    if (!c.h[step.key]) return;
+    const open = r.hints.includes(step.key);
+    const wrap = document.createElement('div');
+    wrap.className = 'hint';
+    wrap.dataset.open = open ? 'true' : 'false';
+    wrap.innerHTML =
+      '<button class="hint__btn" type="button" aria-expanded="' + open + '">' +
+        '<span class="hint__step">' + (n + 1) + '</span>' +
+        '<span>' + step.label + '</span>' +
+        '<span class="hint__chev">' + (open ? '▾' : '▸') + '</span>' +
+      '</button>' +
+      '<div class="hint__body"></div>';
+    wrap.querySelector('.hint__body').innerHTML = c.h[step.key];
+    wrap.querySelector('.hint__btn').addEventListener('click', () => {
+      const nowOpen = wrap.dataset.open !== 'true';
+      wrap.dataset.open = nowOpen ? 'true' : 'false';
+      wrap.querySelector('.hint__btn').setAttribute('aria-expanded', nowOpen);
+      wrap.querySelector('.hint__chev').textContent = nowOpen ? '▾' : '▸';
+      if (nowOpen && !r.hints.includes(step.key)) { r.hints.push(step.key); save(); paintIndex(); }
+    });
+    box.appendChild(wrap);
+  });
+
+  // the answer, last rung, behind its own tap
+  const r2 = rec(c.id);
+  const sol = document.createElement('div');
+  sol.className = 'hint hint--solution';
+  sol.dataset.open = r2.shown ? 'true' : 'false';
+  sol.innerHTML =
+    '<button class="hint__btn" type="button" aria-expanded="' + (r2.shown) + '">' +
+      '<span class="hint__step">' + (HINT_STEPS.filter(s => c.h[s.key]).length + 1) + '</span>' +
+      '<span>' + (r2.solved ? 'Show the answer' : 'Give up — show the answer') + '</span>' +
+      '<span class="hint__chev">' + (r2.shown ? '▾' : '▸') + '</span>' +
+    '</button>' +
+    '<div class="hint__body"><div class="solution">' + (r2.shown ? plain(c.id) : '') + '</div></div>';
+  sol.querySelector('.hint__btn').addEventListener('click', () => {
+    const nowOpen = sol.dataset.open !== 'true';
+    sol.dataset.open = nowOpen ? 'true' : 'false';
+    sol.querySelector('.hint__chev').textContent = nowOpen ? '▾' : '▸';
+    sol.querySelector('.hint__btn').setAttribute('aria-expanded', nowOpen);
+    if (nowOpen) {
+      sol.querySelector('.solution').textContent = plain(c.id);
+      if (!r2.solved) { r2.shown = true; }
+      save(); paintCells(); paintIndex();
+      setVerdict(r2.solved ? '' : 'Answer shown — the parsing above explains why.', 'mute');
+    }
+  });
+  box.appendChild(sol);
+}
+
+function setVerdict(text, tone) {
+  const v = document.getElementById('verdict');
+  v.textContent = text;
+  v.dataset.tone = tone || 'mute';
+}
+
+function render() {
+  const c = CLUES[i];
+  const r = rec(c.id);
+  document.getElementById('cnum').textContent = c.num + ' ' + c.dir.toUpperCase();
+  document.getElementById('cpos').textContent = (i + 1) + ' of ' + CLUES.length;
+  document.getElementById('ctext').textContent = c.clue;
+  document.getElementById('cenum').textContent = '(' + c.fmt + ')';
+  if (r.solved && !typed) typed = bare(plain(c.id));
+  paintCells();
+  buildHints();
+  paintIndex();
+  setVerdict(r.solved ? 'Solved — nicely done.' : '', r.solved ? 'ok' : 'mute');
+  document.getElementById('prev').disabled = i === 0;
+  document.getElementById('next').disabled = i === CLUES.length - 1;
+  document.getElementById('entry').value = typed;
+  save();
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+}
+
+async function check() {
+  const c = CLUES[i];
+  const r = rec(c.id);
+  if (bare(typed).length !== c.len) {
+    setVerdict('That is ' + bare(typed).length + ' letters — the answer needs ' + c.len + '.', 'miss');
+    return;
+  }
+  const hash = await sha256(bare(typed));
+  if (hash === c.k) {
+    r.solved = true; save();
+    setVerdict(r.hints.length || r.letters ? 'Correct — with a nudge or two.' : 'Correct, unaided. Excellent.', 'ok');
+    paintCells(); paintIndex(); buildHints();
+  } else {
+    setVerdict('Not it. Try a hint below?', 'miss');
+    const box = document.getElementById('cells');
+    box.classList.add('wrong');
+    setTimeout(() => box.classList.remove('wrong'), 320);
+  }
+}
+
+function giveLetter() {
+  const c = CLUES[i];
+  const r = rec(c.id);
+  const answer = bare(plain(c.id));
+  if (r.letters >= answer.length - 1) { setVerdict('That is as far as letters go — try the parsing.', 'mute'); return; }
+  r.letters += 1;
+  typed = answer.slice(0, r.letters) + bare(typed).slice(r.letters);
+  document.getElementById('entry').value = typed;
+  save();
+  paintCells(); paintIndex();
+  setVerdict('First ' + r.letters + (r.letters === 1 ? ' letter' : ' letters') + ' filled in.', 'mute');
+}
+
+/* ---- input plumbing: a hidden field drives the visible cells ---- */
+const entry = document.getElementById('entry');
+document.getElementById('cells').addEventListener('click', () => entry.focus());
+document.getElementById('cells').addEventListener('focus', () => entry.focus());
+entry.addEventListener('input', () => {
+  typed = bare(entry.value).slice(0, CLUES[i].len);
+  entry.value = typed;
+  paintCells();
+});
+entry.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); check(); } });
+
+document.getElementById('check').addEventListener('click', check);
+document.getElementById('letter').addEventListener('click', giveLetter);
+document.getElementById('clear').addEventListener('click', () => {
+  typed = ''; entry.value = ''; setVerdict('', 'mute'); paintCells(); entry.focus();
+});
+document.getElementById('prev').addEventListener('click', () => { i = clampIndex(i - 1); typed = ''; render(); });
+document.getElementById('next').addEventListener('click', () => { i = clampIndex(i + 1); typed = ''; render(); });
+document.addEventListener('keydown', e => {
+  if (e.target === entry) return;
+  if (e.key === 'ArrowLeft')  { i = clampIndex(i - 1); typed = ''; render(); }
+  if (e.key === 'ArrowRight') { i = clampIndex(i + 1); typed = ''; render(); }
+});
+
+/* swipe between clues */
+let sx = null, sy = null;
+document.addEventListener('touchstart', e => { sx = e.changedTouches[0].clientX; sy = e.changedTouches[0].clientY; }, { passive: true });
+document.addEventListener('touchend', e => {
+  if (sx === null) return;
+  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 2) {
+    i = clampIndex(i + (dx < 0 ? 1 : -1)); typed = ''; render();
+  }
+  sx = sy = null;
+}, { passive: true });
+
+buildIndex();
+render();
+</script>
