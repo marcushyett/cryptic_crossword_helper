@@ -36,6 +36,21 @@ so viewers that support form filling let you type; the answer itself is one tap 
 separate page. The last page is the blank grid, so the file doubles as the printable
 puzzle.
 
+And a version that plays like an app, with no scripting at all:
+
+```bash
+python scripts/build_pdf_game.py solved_clues.json crossword.json clue_by_clue_game.pdf
+```
+
+Apple's PDFKit ignores PDF JavaScript and SetOCGState layer toggling, so neither can
+carry an interaction on an iPhone. What survives is link annotations — so the page
+becomes the state. Each clue has an on-screen keyboard whose keys are links: the right
+letter jumps to the page for that prefix, any other jumps to a page saying so while
+keeping the letters already correct. Only prefixes along the correct path need to exist,
+so the page count is linear in the number of letters (216 letters, 432 typing pages)
+rather than exponential. `scripts/verify_pdf_game.py` proves the graph by simulating
+every answer through the links.
+
 `solved_clues.json` holds the parsed clues (definition/indicator/fodder hints plus the full
 explanation). The builder never writes an answer as plain text: each one is base64-encoded
 for the reveal and SHA-256-hashed for checking, so nothing is spoiled by reading the page
