@@ -37,15 +37,28 @@ ONE_OFF = re.compile(
     r'head of|tail of|top of|bottom of|periodically|alternately|regularly)\b')
 
 
+# Conventions you can actually learn: a word that reliably stands for letters.
+# Plain synonyms are excluded — "warm" for HEATED is a word swap, not a
+# convention, and it makes an unanswerable multiple choice.
+CONVENTIONS = {'abbreviation', 'single-letter', 'nato', 'roman', 'cricket',
+               'music', 'chess', 'chemical', 'foreign', 'place'}
+
+
 def reusable(surface, kind):
     s = (surface or '').strip().lower()
-    return bool(s) and not ONE_OFF.search(s) and kind != 'selection' and len(s.split()) <= 3
+    return (bool(s) and not ONE_OFF.search(s) and kind in CONVENTIONS
+            and len(s.split()) <= 3)
 
 
 def options(correct, pool, rng, n=4):
     others = [p for p in dict.fromkeys(pool) if p != correct]
+    same = [p for p in others if len(p) == len(correct)]
+    near = [p for p in others if abs(len(p) - len(correct)) == 1]
+    rng.shuffle(same)
+    rng.shuffle(near)
     rng.shuffle(others)
-    opts = [correct] + others[:n - 1]
+    picks = (same + near + others)[:n - 1]
+    opts = [correct] + picks
     rng.shuffle(opts)
     return opts
 
@@ -100,23 +113,24 @@ def main():
     for (surface, letters), n in subs.most_common():
         cards.append({
             'kind': 'substitution',
-            'prompt': 'What is “%s” worth?' % surface,
+            'prompt': 'What could “%s” stand for?' % surface,
             'options': options(letters, all_letters, rng),
             'correct': letters,
             'tag': surface,
-            'note': '%s → %s. Seen %d time%s in the clues analysed%s.' % (
-                surface, letters, n, '' if n == 1 else 's',
-                ' (%s)' % sub_kind[(surface, letters)] if sub_kind.get((surface, letters)) not in (None, 'other') else ''),
+            'note': '“%s” stands for %s — %s, used %d time%s in the clues analysed.' % (
+                surface, letters, sub_kind[(surface, letters)],
+                n, '' if n == 1 else 's'),
         })
 
     for (text, typ), n in inds.most_common():
         cards.append({
             'kind': 'indicator_type',
-            'prompt': 'What does “%s” signal?' % text,
+            'prompt': 'What is “%s” telling you to do?' % text,
             'options': options(typ, INDICATOR_TYPES, rng),
             'correct': typ,
             'tag': text,
-            'note': '“%s” signals %s. Seen %d time%s.' % (text, typ, n, '' if n == 1 else 's'),
+            'note': '“%s” is a %s indicator — used %d time%s in the clues analysed.'
+                    % (text, typ, n, '' if n == 1 else 's'),
         })
 
     # ---------- worked examples, capped ----------
