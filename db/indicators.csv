@@ -1,5 +1,5 @@
 indicator,signals,count,seen_in,example_clue
-in,insertion,30,20260630-2D; 20260630-7D; 20260704-16A; 20260704-29A; 20260706-1D,Wind getting up in film of the ocean
+in,insertion,31,20260630-2D; 20260630-7D; 20260704-16A; 20260704-29A; 20260706-1D,Wind getting up in film of the ocean
 in,link,15,20260702-10A; 20260702-1A; 20260707-1D; 20260713-19A; 20260714-16D,Tie in school ultimately non-negotiable
 for,link,12,20260630-25A; 20260630-5D; 20260704-24D; 20260707-24A; 20260710-12A,Nothing for you in marriage — it causes tears
 on,link,12,20260707-11D; 20260710-10A; 20260711-19A; 20260715-18D; 20260716-24A,Deprived character of duck meat on bread roll
@@ -22,6 +22,7 @@ short,deletion,4,20260630-18D; 20260711-23A; 20260717-18A; 20260723-15A,Short pe
 taking,insertion,4,20260706-25A; 20260710-2D; 20260711-23A; 20260714-6A,Paint holy man taking Mass
 up,reversal,4,20260714-7D; 20260716-1D; 20260717-16D; 20260723-1D,Islander from Lindisfarne set laminator up
 upset,reversal,4,20260710-5D; 20260711-8D; 20260715-4D; 20260721-21D,Estate possibly blocking two thirds of Midland city upset intimidating figure in his field?
+back,reversal,3,20260701-28A; 20260716-20A; 20260724-21A,Artist’s back pay for services rendered
 blocking,insertion,3,20260703-17D; 20260710-5D; 20260715-5D,Car missing rear end blocking road over a Welsh river
 cuts,insertion,3,20260629-9A; 20260701-3D; 20260703-22D,Family snatch cold cuts and seafood
 embraces,container,3,20260629-6D; 20260720-23A; 20260722-6D,Valiant maiden shortly embraces warrior king
@@ -37,10 +38,10 @@ ultimately,selection,3,20260702-1A; 20260706-15D; 20260722-6D,Tie in school ulti
 with,link,3,20260703-6D; 20260711-14D; 20260717-21A,Restrict man’s starting blocks with pistol and stopwatch possibly
 working,anagram,3,20260629-26A; 20260710-23A; 20260718-16A,Clumsy article penned by dad — check working
 about,insertion,2,20260701-11A; 20260722-9D,Turner and others reflecting about what gets him going
-back,reversal,2,20260701-28A; 20260716-20A,Artist’s back pay for services rendered
 base,anagram,2,20260701-7D; 20260717-19A,Break tile under base
 before,link,2,20260701-21A; 20260717-23D,Brief stint to improve football club before unlimited team growth
 behind,link,2,20260711-25A; 20260716-25A,Column left behind regrouped at speed
+beneath,link,2,20260711-22D; 20260724-22D,Shower beneath grand timber structure
 broadcast,homophone,2,20260704-25A; 20260713-23A,Broadcast before broadcast
 by,link,2,20260701-16A; 20260704-27A,"Risky undertaking, coming by river"
 careers,anagram,2,20260701-12A; 20260702-6D,Protracted campaigns can now polarise careers
@@ -71,6 +72,8 @@ retiring,reversal,2,20260701-4A; 20260706-9A,Vulgar scheme involves English bish
 south of,link,2,20260717-12D; 20260721-2D,Estate managers cut cereal crops south of river
 spinning,reversal,2,20260629-8D; 20260711-21D,Expose US Navy periodically spinning untruth
 stops,insertion,2,20260706-15D; 20260715-7D,"Not even unusual urge stops terrible liar, traitor ultimately"
+to the west,reversal,2,20260720-15A; 20260724-1A,Collection extracted from soil of tropics to the west
+uncovered,deletion,2,20260701-5D; 20260724-6D,Uncovered definitive sweet or savoury drink
 when drunk,anagram,2,20260707-15A; 20260714-16D,Curry perhaps one Kelvin creates when drunk
 without,deletion,2,20260630-15A; 20260720-28A,Eloquent Roman commander-in-chief meeting hero without aspiration
 +,link,1,20260718-27A,N + L – F? Neat
@@ -103,7 +106,6 @@ becomes,link,1,20260723-14D,Author’s less wise when book becomes mostly golden
 beginning of,selection,1,20260720-18D,"Thanks boyfriend, introducing beginning of love scene"
 beginning to,selection,1,20260708-14D,Talk about cut beginning to affect crime checks
 being,link,1,20260710-28A,"Fail ’eavily, being a mug"
-beneath,link,1,20260711-22D,Shower beneath grand timber structure
 beset by,insertion,1,20260707-5D,Terriers beset by obsessive behaviour in four pairs?
 between,link,1,20260706-22A,Piety in turn followed by rows between daughter and son
 binding,container,1,20260706-14A,Superb quality in publication with good binding provided by New Church
@@ -141,6 +143,7 @@ changes heart for,deletion,1,20260704-15D,Whisky changes heart for English perso
 charged with,link,1,20260711-5A,Constant husband charged with fling remains grumpy
 checks,container,1,20260708-14D,Talk about cut beginning to affect crime checks
 chunk of,hidden,1,20260702-25A,Great chunk of retirement savings withdrawn
+coated with,container,1,20260724-10A,Lolly somebody coated with crumbs!
 collects,container,1,20260711-14A,"Processing unit collects university fees, assisting ministry"
 concealing,insertion,1,20260703-2D,St Peter’s successor seemingly concealing maiden’s perilous location
 concealing,container,1,20260711-3D,Republicans’ preferred leader now concealing identity
@@ -167,6 +170,7 @@ cut off,deletion,1,20260710-4D,Australia cut off Japanese conductor
 cut short,deletion,1,20260714-26A,Dreadful place cut short welcome
 cuts,deletion,1,20260711-24A,Last minute cuts restored later
 cutting back,deletion,1,20260701-26A,Grass company really cutting back parts obtained from waste
+cycling,anagram,1,20260724-21A,Woolly you finally gave back after cycling
 cycling round,anagram,1,20260711-12A,"Cycling round Lewis, see western one?"
 damaged,anagram,1,20260707-16D,Some exudation? Cap damaged mescal bottles
 defaced,deletion,1,20260701-27A,Weapons companies checking defaced equipment
@@ -186,6 +190,7 @@ dons,container,1,20260630-13A,Cross dons can rapidly empty chat room
 drawn in by,insertion,1,20260707-28A,Artist drawn in by enigmatic Chinese title
 dreadful,anagram,1,20260710-16D,Dreadful tedium gripping last month’s host
 drifting,anagram,1,20260711-9A,"Drifting mid-ocean, might one benefit from good routine?"
+drops,deletion,1,20260724-11A,"Nothing left of citrus drops, everything sold"
 eating,insertion,1,20260718-3D,Shark acted horribly eating bird not flying away
 eats,container,1,20260629-19D,Bill eats fruit out of English tree
 edges away,deletion,1,20260716-9A,"Edges away, keeling over exhausted"
@@ -199,6 +204,7 @@ enthralling,container,1,20260715-14A,"Eliminates our team, enthralling billions 
 essentially,selection,1,20260701-17D,"Test 1960s car model — very old Mercedes, essentially"
 exchanging,deletion,1,20260720-14A,"Catch without licence, exchanging penny for river fish"
 expelling content,deletion,1,20260707-19A,Tool secures device expelling content behind washer
+exploited,anagram,1,20260724-13D,Exchange of shots after sit-ins exploited by the left
 exposed,deletion,1,20260701-18A,Table designer’s almost repaired exposed tube
 extracted from,hidden,1,20260720-15A,Collection extracted from soil of tropics to the west
 face of,selection,1,20260717-11A,Land excellent jab striking face of boxer in brazen burst
@@ -210,6 +216,7 @@ featuring in,hidden,1,20260713-24A,"Series of coordinated steps featuring in app
 feeding,insertion,1,20260722-1D,King feeding another man peach snack
 fighting,anagram,1,20260630-26A,Frequent fighting in seaport
 fills,insertion,1,20260702-9A,Extra time fills fraction of device’s memory
+finish for,selection,1,20260724-17A,"Grafter losing in photo finish for medals, pressure showing"
 finish off,selection,1,20260629-3D,Finish off drug propping up party animal
 first in,selection,1,20260722-8A,"Star student, when is first in theory, receives prize like that"
 first of all,selection,1,20260722-7D,Country’s top player first of all in cup appearance
@@ -229,6 +236,7 @@ frames,container,1,20260703-10A,One who’s fetching display firstly selects the
 framing,container,1,20260720-1A,Action-led shot framing Coppola’s first western
 fresh,anagram,1,20260629-12D,Where to keep good clarets fresh?
 from,link,1,20260710-1D,Shy away from Florida island
+from below,reversal,1,20260724-24D,Structure resisting great pressure from below cracked
 from just after its inception,deletion,1,20260713-17A,Sport thriving from just after its inception
 gathered,anagram,1,20260722-10A,"Biblical character consumed, I gathered"
 generates,link,1,20260701-1A,"At last, floor space charge generates profit"
@@ -240,6 +248,7 @@ getting up,reversal,1,20260630-2D,Wind getting up in film of the ocean
 given by,link,1,20260715-1D,Heat and rain to west vaguely given by meteorological device
 given by spooner?,homophone,1,20260711-13D,"Eg “One giant leap”, its location given by Spooner?"
 going after,link,1,20260703-22A,Bury doctor going after mentor stripped of title
+going around,container,1,20260724-24A,Heavy load troubles European on motorway going around 100 mph
 going back,reversal,1,20260723-5A,"Perhaps deodorant can look desperate, going back on area"
 going into,insertion,1,20260706-26A,"Decline, for example, going into retreat ending in terrible cost"
 got up!,reversal,1,20260720-19D,Parrot got up — everyone got up!
@@ -268,6 +277,7 @@ hosts,container,1,20260720-12A,Plug in hosts connected to revolutionary network:
 housing,container,1,20260721-27A,"Home, comfortable one housing organ, seriously!"
 idiomatically,homophone,1,20260710-18A,"Sucker pronounced not entirely safe, idiomatically"
 ignoring,deletion,1,20260710-6D,Order having the benefit of ignoring leaders of youth groups
+impress,hidden,1,20260724-20D,Certain that charges impress a felon
 in,container,1,20260629-14A,Injure supporter in capital relocating northern star
 in first half,selection,1,20260708-24D,Absolutely worst acts on stage in first half
 in front of,link,1,20260717-13A,Spot wife in front of buffet
@@ -306,6 +316,7 @@ lead character in,selection,1,20260708-12A,Lead character in Greek writer’s pl
 leader,selection,1,20260706-6D,"Estimation of position that’s insensitive about country’s leader, monarch carrying on"
 leader in,selection,1,20260715-9A,Lot of surprise about leader in tournament table
 leader of,selection,1,20260703-3D,"Begrudge supporting old leader of mafia shot here, there and everywhere"
+leaders muddled,anagram,1,20260724-9A,Leaders muddled in battle rush order to reorient troops
 leaders of,selection,1,20260710-6D,Order having the benefit of ignoring leaders of youth groups
 lifted,reversal,1,20260723-20D,7 almost lifted product of eg Berkshire town
 limits to,selection,1,20260715-5D,Limits to Universal blocking movie award regarding kissing
@@ -321,20 +332,24 @@ mad,anagram,1,20260722-19D,Head going mad over inspection’s conclusion
 madly,anagram,1,20260702-13D,"Couple in middle of Gretna wearing wreathes, madly in love"
 making a comeback,reversal,1,20260708-21D,Dated observation failing to save author making a comeback
 making comeback,reversal,1,20260703-6A,"Fuss, saying instruction to boxer making comeback?"
+making late start,selection,1,20260724-26A,Rate model making late start in occupation
 masks,hidden,1,20260702-22D,"Typically dusty passageway, glad I took masks"
 minus one,deletion,1,20260722-1A,A variable in diagram minus one — is square
 missing last,deletion,1,20260714-13D,"Setter penning Listener, although missing last piece of mechanism"
 missing rear end,deletion,1,20260703-17D,Car missing rear end blocking road over a Welsh river
 mix,anagram,1,20260723-9A,What colours do Blur see in mix?
+modified,anagram,1,20260724-7D,Male genes modified to limit alpha element
 most of,deletion,1,20260717-2D,One’s leaving most of liquid waste in vessel
 moves,anagram,1,20260702-18A,"Singer, in need of opening, rehearsed new moves"
 murdered,anagram,1,20260718-13D,Sweet spirit of murdered Colm O’Neill
 nasty,anagram,1,20260629-20A,"More depressed, with nasty grime covering lavatory"
+nearly,deletion,1,20260724-15D,"Decent plain rounds within compass of bell-ringer, nearly"
 needing resetting,anagram,1,20260718-11A,Fake gem and nine others needing resetting
 next to,link,1,20260714-24A,"Next to empty temple, shot animals for egg cell?"
 no end of,deletion,1,20260716-15A,No end of obstruction for co-operating parties
 not entirely,deletion,1,20260704-14A,Not entirely well after reverse of healthy snack
 not taking first,deletion,1,20260723-23D,Criminal not taking first cross
+noted by auditor,homophone,1,20260724-5D,Later acquisition noted by auditor
 novel,anagram,1,20260630-28A,Gide novel is in French and most intense
 obscure,anagram,1,20260702-20A,Obscure athletes who succeeded attract most attention
 on board,insertion,1,20260722-18A,Crew on board ship cooks
@@ -354,6 +369,7 @@ over,reversal,1,20260713-16D,Cats maybe cross over threshold?
 overcomes,container,1,20260711-21D,Bottle still spinning overcomes resistance
 overseeing,link,1,20260701-2D,Cheer TV doctor overseeing surgical procedure
 packaging,container,1,20260717-28A,Firm searches packaging at counter
+part of,hidden,1,20260724-8D,Broad spiral rotating part of every galaxy
 partly,hidden,1,20260701-22D,Partly explain remark legally directed against property
 past,link,1,20260702-7D,Miss Cambridge University’s past love
 patrolling,insertion,1,20260714-11A,"Ignorant, like many police officers patrolling centre of Swansea"
@@ -383,6 +399,7 @@ racing,anagram,1,20260704-9D,Misbehaving punk scooterist racing
 raised,reversal,1,20260714-3D,Court raised point during judicial examination
 read out,homophone,1,20260630-20D,Number of joint head of faculty read out
 rear of,selection,1,20260716-21D,"In a perfect world, I mooch around rear of house"
+reassigned,anagram,1,20260724-14A,"Bachelor say, if gender reassigned, probably missing balls?"
 receives,container,1,20260722-8A,"Star student, when is first in theory, receives prize like that"
 reconstruction of,anagram,1,20260710-8D,Lanthanum used in reconstruction of Nordic warship
 reduced,hidden,1,20260629-21A,Decent return FTSE domestics reduced
@@ -408,16 +425,20 @@ retreating,reversal,1,20260630-9A,"In Kabul, are Taliban retreating on both side
 return,reversal,1,20260629-21A,Decent return FTSE domestics reduced
 returning,reversal,1,20260722-25A,"Polar bear’s back, on returning with particular force?"
 reverse of,reversal,1,20260704-14A,Not entirely well after reverse of healthy snack
+revised,anagram,1,20260724-25A,Revised dates agreed after loud festival
 revolutionary,reversal,1,20260720-12A,Plug in hosts connected to revolutionary network: cause of power surge?
 rocks,anagram,1,20260715-1A,London borough was the formal source of these rocks
 rolls,reversal,1,20260711-18A,Cook makes moist rolls
+rotating,reversal,1,20260724-8D,Broad spiral rotating part of every galaxy
 round,container,1,20260702-10A,Doctor and sister starting round quietly in formal attire
 round,reversal,1,20260717-21A,Performed round with King’s Singer
 rounding,reversal,1,20260716-24A,Regret rounding on crowd manipulator
+rounds,reversal,1,20260724-15D,"Decent plain rounds within compass of bell-ringer, nearly"
 ruined,anagram,1,20260703-23A,"Work is due, dream life’s ruined"
 running through it,insertion,1,20260714-15D,Only home with motorway running through it is extremely awe-inspiring
 safeguards,hidden,1,20260703-4D,"What’s cast, forgoing other safeguards"
 sample of,hidden,1,20260630-21D,Sample of paunchy presenter’s perfume
+saving,deletion,1,20260724-20A,Famous printmaker saving a frame for painting
 screens,link,1,20260717-18D,Small cinema complex screens not all there
 section of,hidden,1,20260723-28A,Section of puzzles team editorially kept just out of hot water?
 secures,container,1,20260707-19A,Tool secures device expelling content behind washer
@@ -435,6 +456,7 @@ some members of,hidden,1,20260721-21D,Some members of old law society upset anci
 somewhat,hidden,1,20260710-17A,Feel embarrassed somewhat about scrap
 sorted out,anagram,1,20260715-16A,Disturbance in court sorted out
 source of,selection,1,20260715-1A,London borough was the formal source of these rocks
+splits,insertion,1,20260724-12A,See one box splits quite apart
 spooner’s,homophone,1,20260702-16A,Spooner’s keen for cow as grass management aid
 squeezing,container,1,20260711-17D,Trouble squeezing letters in for marginal note
 squirming,anagram,1,20260711-16A,"Embarrassed at poem, thus squirming"
@@ -460,6 +482,7 @@ supports,link,1,20260629-2D,Hostile island to the north of California supports m
 suppressing,container,1,20260710-13A,"Set fuel to burn, suppressing naked anger"
 surface of,selection,1,20260717-5A,Orbiter linked to Mars rovers on surface of planet
 surrounding,selection,1,20260711-2D,Draw line between Florence and those surrounding settlements
+suspect,anagram,1,20260724-1D,Suspect Bard wore every costume
 swapping,link,1,20260711-4D,Very friendly con swapping sides for rematch
 swirling,reversal,1,20260715-17A,Last of smoke swirling around secure kitchen appliance
 swirling,anagram,1,20260715-21A,Punishment area today finally covered in swirling raindrops
@@ -483,10 +506,11 @@ to go in,insertion,1,20260716-11A,First person to go in to admire brown study
 to grab,insertion,1,20260722-23D,I managed to grab sunbed in the end — and took it easy
 to interrupt,insertion,1,20260715-3D,A fight to interrupt reduction in unorthodoxy in this area
 to leave,deletion,1,20260714-25A,Order policeman to leave mate following cigarette
+to limit,insertion,1,20260724-7D,Male genes modified to limit alpha element
+to north,reversal,1,20260724-16D,A certain stage not available to North Hollywood resident?
 to replace,link,1,20260707-18D,"Uncouth, rather rowdy: time to replace Democrat"
 to save,insertion,1,20260708-21D,Dated observation failing to save author making a comeback
 to secure,container,1,20260702-5D,Extra payment put up to secure very large venture
-to the west,reversal,1,20260720-15A,Collection extracted from soil of tropics to the west
 to track,link,1,20260710-29A,Harder to track each person in a rightish district?
 top of,selection,1,20260723-1D,"Stitch up outside of top of breeches, where flies may get caught"
 topless,deletion,1,20260714-21D,Outlet for one topless outfit
@@ -502,7 +526,6 @@ turning up,reversal,1,20260721-1D,Friar turning up in various plays — musical 
 turns to,deletion,1,20260704-6D,One admitted being restless as month turns to November
 twisted,reversal,1,20260701-20A,"Remained twisted, tense and obscene"
 two thirds of,deletion,1,20260710-5D,Estate possibly blocking two thirds of Midland city upset intimidating figure in his field?
-uncovered,deletion,1,20260701-5D,Uncovered definitive sweet or savoury drink
 under,link,1,20260701-9D,Made anxious under previous religious office
 underpinned by,link,1,20260704-18D,Tree underpinned by serious immediate treatment
 undone,anagram,1,20260723-22A,Opening words in panto come undone with European Union intervention
@@ -530,6 +553,7 @@ will be,link,1,20260710-1A,"Abandoned, of course I will be wild"
 with input from,insertion,1,20260711-15D,Trace family’s heir with input from American detective
 with tail missing,deletion,1,20260720-26A,Creature caught in coastal waters — throw back with tail missing
 withdrawn,reversal,1,20260702-25A,Great chunk of retirement savings withdrawn
+within compass of,insertion,1,20260724-15D,"Decent plain rounds within compass of bell-ringer, nearly"
 without beginning on it,deletion,1,20260704-20A,Considering grid without beginning on it
 worried,anagram,1,20260706-11A,Opposing commander isn’t worried
 yielding,deletion,1,20260706-4D,Guarantee yielding right result
