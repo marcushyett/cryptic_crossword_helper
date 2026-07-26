@@ -1,52 +1,63 @@
 letters,times_seen,distinct_words,words_that_give_it
-I,26,8,"one (11), i (5), current (4), india (2), island (1), international (1), if (1), one’s (1)"
-E,22,15,"english (6), energy (3), space (1), new (1), non-negotiable (1), enemies (1), drug (1), enterprise (1), european (1), earl (1), extremely (1), east (1)"
-A,18,9,"a (6), american (3), area (3), onset of ardent (1), america (1), note (1), article (1), an (1), ace (1)"
-L,18,8,"left (5), liberal (5), large (2), line (2), lima (1), litre (1), pound (1), love (1)"
+I,29,11,"one (11), i (5), current (4), india (2), island (1), international (1), if (1), author (1), one’s (1), in (1), 1 (1)"
+E,24,16,"english (7), energy (3), space (1), new (1), non-negotiable (1), enemies (1), drug (1), enterprise (1), european (1), earl (1), extremely (1), east (1)"
+A,22,12,"a (6), area (4), american (3), onset of ardent (1), america (1), note (1), article (1), affect (1), an (1), ace (1), rebecca (1), appearance (1)"
+C,21,12,"cold (4), caught (3), cape (2), conservative (2), constant (2), clubs (2), chapter (1), key (1), about (1), 100 (1), isaac (1), cup (1)"
+L,19,8,"left (6), liberal (5), large (2), line (2), lima (1), litre (1), pound (1), love (1)"
+N,18,11,"new (6), northern (2), name (2), noon (1), attention (1), november (1), note (1), n (1), depression (1), inspection (1), monty (1)"
+R,17,11,"republican (3), river (3), right (3), rivers (1), floor (1), reading perhaps (1), run (1), resistance (1), choir’s (1), bear’s back (1), king (1)"
+B,16,9,"book (6), billions (2), british (2), bishop (1), better (1), bomb (1), black (1), face of boxer (1), breeches (1)"
 M,16,12,"male (3), maiden (2), motorway (2), married (1), mafia (1), man (1), month (1), bond (1), mass (1), miles (1), mike (1), manager’s (1)"
-N,16,9,"new (6), northern (2), name (2), noon (1), attention (1), november (1), note (1), n (1), depression (1)"
-R,15,9,"republican (3), river (3), right (3), rivers (1), floor (1), reading perhaps (1), run (1), resistance (1), choir’s (1)"
+O,16,7,"old (4), nothing (4), love (3), duck (2), oxygenated (1), over (1), 0 (1)"
 S,15,10,"small (3), succeeded (2), son (2), second (2), society (1), selects (1), singleton (1), southern (1), sierra (1), of (1)"
-C,14,8,"cold (3), cape (2), caught (2), constant (2), clubs (2), conservative (1), chapter (1), key (1)"
-O,14,5,"old (4), nothing (4), love (3), duck (2), over (1)"
-T,13,10,"time (4), tense (1), terrible (1), the (1), trump (1), tesla (1), these (1), tournament (1), temperature (1), limit (1)"
-B,11,7,"book (4), billions (2), bishop (1), better (1), bomb (1), black (1), face of boxer (1)"
-D,9,5,"day (3), democrat (3), the day (1), daughter (1), world (1)"
+T,15,12,"time (4), tense (1), terrible (1), the (1), trump (1), to (1), tesla (1), these (1), tournament (1), temperature (1), limit (1), theory (1)"
+D,12,7,"democrat (4), day (3), the day (1), daughter (1), world (1), sunbed (1), 500 (1)"
+IN,9,4,"popular (3), home (3), in (2), to enter (1)"
 H,8,5,"husband (3), hard (2), aspiration (1), him (1), hot (1)"
 P,8,5,"power (4), quiet (1), pence (1), surface of planet (1), penny (1)"
 W,8,4,"wife (5), with (1), western (1), week (1)"
-IN,7,4,"popular (3), home (2), to enter (1), in (1)"
-G,6,5,"good (2), finish off drug (1), goose’s (1), grand (1), golf (1)"
+G,7,6,"good (2), finish off drug (1), goose’s (1), greek (1), grand (1), golf (1)"
+TA,7,7,"i’m obliged (1), terriers (1), cheers (1), <i>cheers</i> (1), you shouldn’t have (1), thanks (1), much appreciated (1)"
+U,7,4,"you (3), university (2), united (1), uniform (1)"
+Y,7,7,"tenancy (1), years (1), today (1), year (1), another (1), decay (1), employ (1)"
 PA,6,5,"old man (2), assistant (1), father (1), admin worker (1), secretary (1)"
-TA,6,6,"i’m obliged (1), terriers (1), cheers (1), <i>cheers</i> (1), you shouldn’t have (1), thanks (1)"
-U,6,4,"you (3), united (1), university (1), uniform (1)"
-Y,6,6,"tenancy (1), years (1), today (1), year (1), another (1), decay (1)"
+AN,5,2,"article (3), an (2)"
+AS,5,4,"when (2), since (1), while (1), like (1)"
 F,5,3,"female (3), f (1), following (1)"
 IS,5,3,"is (3), remains (1), lives (1)"
-AN,4,2,"article (2), an (2)"
-AS,4,4,"since (1), while (1), when (1), like (1)"
-LIE,4,3,"story (2), untruth (1), deliberate inaccuracy (1)"
-CAR,3,3,"estate possibly (1), saloon, perhaps (1), vehicle (1)"
+LIE,5,3,"story (3), untruth (1), deliberate inaccuracy (1)"
+CAR,4,4,"estate possibly (1), saloon, perhaps (1), vehicle (1), being driven (1)"
+ON,4,2,"on (2), working (2)"
+RE,4,3,"about (2), connected to (1), on (1)"
 CO,3,1,company (3)
 DR,3,1,doctor (3)
 EG,3,3,"say (1), for example (1), for one (1)"
+EX,3,3,"harry (1), old (1), former partner (1)"
 LA,3,3,"lanthanum (1), louisiana (1), los angeles (1)"
-ON,3,2,"working (2), on (1)"
+OR,3,3,"men (1), as an alternative (1), soldiers (1)"
 OS,3,3,"very large (1), mapmakers (1), very big (1)"
-RE,3,2,"about (2), connected to (1)"
+OUT,3,3,"unfashionable (1), light (1), exposed (1)"
+PLAN,3,3,"scheme (1), advance (1), diagram (1)"
 SH,3,3,"quiet (1), quietly (1), can it (1)"
+SS,3,3,"steamship (1), settlements (1), ship (1)"
+ST,3,3,"street (1), stone (1), extremely self-confident (1)"
+THE,3,3,"the (1), article (1), particular (1)"
 US,3,3,"america (1), american (1), our team (1)"
 V,3,2,"very (2), verse (1)"
+VERY,3,3,"really (1), jolly (1), so (1)"
 WIN,3,2,"victory (2), secure (1)"
 ACE,2,2,"superb (1), expert (1)"
 AD,2,2,"bill (1), plug (1)"
 AE,2,2,"raves (1), a&e (1)"
 AND,2,1,with (2)
+ARK,2,2,"large vessel (1), where couples survived (1)"
+ATE,2,2,"made anxious (1), consumed (1)"
 BAD,2,2,"unsound (1), corrupt (1)"
 BOUT,2,2,"stint (1), fight (1)"
 CAN,2,2,"toilet (1), is able to (1)"
 CASE,2,2,"lawsuit (1), investigation (1)"
 CE,2,2,"mercedes (1), church (1)"
+CON,2,2,"trick (1), fleece (1)"
 CONE,2,2,"3d figure (1), solid shape (1)"
 CROSS,2,2,"bridge (1), angry (1)"
 CRY,2,2,"call out (1), scream (1)"
@@ -57,15 +68,19 @@ EAR,2,2,"listener (1), organ (1)"
 ED,2,2,"journalist (1), paper boss (1)"
 ER,2,2,"beer (1), i don’t know (1)"
 ERE,2,1,before (2)
-EX,2,2,"harry (1), old (1)"
+EST,2,2,"is in french (1), extremely (1)"
 FIR,2,2,"tree (1), wood (1)"
 FLAT,2,2,"two-dimensional (1), domestic residence (1)"
+GA,2,1,georgia (2)
 GAME,2,2,"valiant (1), shot animals (1)"
 GO,2,2,"work (1), turn (1)"
 GREEN,2,2,"space (1), that one’s left (1)"
+HOME,2,1,in (2)
 IF,2,1,provided (2)
 INN,2,1,pub (2)
+IT,2,2,"relations (1), it (1)"
 K,2,2,"kelvin (1), king (1)"
+LIP,2,2,"cheek (1), edge (1)"
 LOB,2,1,throw (2)
 LOO,2,2,"lavatory (1), can (1)"
 MA,2,2,"mum (1), degree (1)"
@@ -73,31 +88,36 @@ MAN,2,2,"crew (1), fellow (1)"
 MEN,2,2,"pieces (1), fellows (1)"
 MESS,2,2,"muddle (1), confused situation (1)"
 MO,2,2,"maureen (1), way of working (1)"
+MOB,2,2,"criminal gang (1), crowd (1)"
+MUST,2,2,"item required (1), has to (1)"
+MY,2,2,"my (1), gracious (1)"
 NEST,2,2,"home (1), comfortable one (1)"
 OM,2,2,"order (1), order of merit (1)"
 OP,2,2,"work (1), surgical procedure (1)"
+OVER,2,2,"again (1), delivery of half-dozen (1)"
+PAGE,2,2,"part of book (1), contact (1)"
 PAT,2,2,"stroke (1), bit of butter (1)"
 PI,2,2,"holy (1), detective (1)"
-PLAN,2,2,"scheme (1), advance (1)"
 POST,2,2,"following (1), letters (1)"
 RA,2,2,"academician (1), artist (1)"
 RAN,2,2,"rushed (1), performed (1)"
+RATE,2,2,"cost (1), judges (1)"
 REM,2,2,"us band (1), band from us (1)"
 REP,2,2,"material (1), theatre (1)"
+ROCK,2,2,"stone (1), kind of music (1)"
 ROSE,2,2,"climbed (1), got up (1)"
 RUE,2,1,regret (2)
 RULE,2,2,"control (1), law (1)"
-SS,2,2,"steamship (1), settlements (1)"
-ST,2,2,"street (1), extremely self-confident (1)"
 STERN,2,1,back (2)
-THE,2,2,"the (1), article (1)"
 UM,2,2,"er … (1), i’m thinking (1)"
-VERY,2,2,"really (1), jolly (1)"
+WAR,2,1,conflict (2)
 WARD,2,2,"charge (1), child looked after (1)"
 X,2,2,"by (1), unknown (1)"
 A VEIL,1,1,a screen (1)
 A1,1,1,excellent (1)
 ACCEPT,1,1,admit (1)
+ACHE,1,1,hurt (1)
+ACHT,1,1,crew (1)
 ACING,1,1,pre-empting any return (1)
 ADVENT,1,1,coming (1)
 AEGISTHUS,1,1,agamemnon’s murderer (1)
@@ -113,6 +133,7 @@ ALE,1,1,porter (1)
 ALL,1,1,everyone (1)
 ALLEY,1,1,narrow path (1)
 AM,1,1,in the morning (1)
+AMI,1,1,friend (1)
 AMPLE,1,1,very spacious (1)
 AMPS,1,1,current unit (1)
 ANAL,1,1,obsessive (1)
@@ -120,18 +141,20 @@ ANGST,1,1,anxiety (1)
 ANNAL,1,1,record (1)
 ANON,1,1,shortly (1)
 ANT,1,1,insect (1)
+ANTI,1,1,critical of (1)
 APE,1,1,imitate (1)
+AR,1,1,park (1)
 ARC,1,1,bow (1)
 ARCH,1,1,curved structure (1)
 ARD,1,1,'eavily (1)
 ARIA,1,1,air (1)
-ARK,1,1,large vessel (1)
 ARM,1,1,guns (1)
+AS PER,1,1,according to (1)
 ASH,1,1,wood (1)
 ASS,1,1,dimwit (1)
-ATE,1,1,made anxious (1)
 ATOMIC,1,1,smallest thing (1)
 ATTLEE,1,1,ex-pm (1)
+AURI,1,1,golden (1)
 AV,1,1,seventeenth-century bible (1)
 AVERS,1,1,states (1)
 AVOWAL,1,1,a & e (1)
@@ -142,11 +165,13 @@ BACKED,1,1,supported (1)
 BARDS,1,1,poets (1)
 BARE,1,1,nude (1)
 BART,1,1,animated boy (1)
+BASE,1,1,low (1)
 BASHES,1,1,parties (1)
 BAT,1,1,club (1)
 BE,1,1,live (1)
 BEAU,1,1,boyfriend (1)
 BED,1,1,appropriate place (1)
+BERATE,1,1,carpet (1)
 BESTIE,1,1,closest associate (1)
 BIND,1,1,difficulty (1)
 BIT,1,1,tool (1)
@@ -154,9 +179,12 @@ BLACK,1,1,grim (1)
 BLOCK,1,1,obstruction (1)
 BOD,1,1,chap (1)
 BOUND,1,1,leap (1)
+BOWER,1,1,grotto (1)
 BOY,1,1,my (1)
 BRA,1,1,supporter (1)
 BRASS,1,1,money (1)
+BREAK,1,1,holiday (1)
+BRIEF,1,1,limited (1)
 BRIO,1,1,dash (1)
 BSE,1,1,agricultural disease (1)
 BURST,1,1,ruptured (1)
@@ -193,20 +221,24 @@ CLUB,1,1,possible putter (1)
 COAL,1,1,fuel to burn (1)
 CODE,1,1,key (1)
 COL,1,1,pass (1)
-CON,1,1,trick (1)
+COMA,1,1,state of unconsciousness (1)
+COME,1,1,move towards (1)
 CONSUME,1,1,eat (1)
 COP,1,1,policeman (1)
 COPULATE,1,1,mate (1)
 CORE,1,1,part of apple (1)
 COSH,1,1,truncheon (1)
+COSTAR,1,1,top player (1)
 COUNT,1,1,nobleman (1)
 COUNTER,1,1,token (1)
 COVER,1,1,insurance (1)
+CRACKER,1,1,peach (1)
 CRAM,1,1,stuff (1)
 CROW,1,1,bragging (1)
 CRU,1,1,vineyard’s (1)
 CU,1,1,copper (1)
 CUB,1,1,youngster (1)
+CURVE,1,1,bend (1)
 CUT,1,1,cross (1)
 CY,1,1,extremely crafty (1)
 DALE,1,1,glen (1)
@@ -218,6 +250,8 @@ DE,1,1,device (1)
 DEAD,1,1,insensitive (1)
 DEAN,1,1,academic (1)
 DEEP,1,1,profound (1)
+DEFERENCE,1,1,respect (1)
+DELIBERATE,1,1,intended (1)
 DELVER,1,1,digger (1)
 DEMO,1,1,show (1)
 DEN,1,1,retreat (1)
@@ -236,6 +270,8 @@ DREAM,1,1,fantasise (1)
 DRESS,1,1,outfit (1)
 DRIVER,1,1,club (1)
 DROIT,1,1,right (1)
+DRY,1,1,needing water (1)
+DUMBER,1,1,less wise (1)
 DY,1,1,display (1)
 EACH,1,1,per person (1)
 EDS,1,1,editor’s (1)
@@ -244,17 +280,19 @@ EH,1,1,what (1)
 ELDER,1,1,senior adviser (1)
 ELY,1,1,city (1)
 EMIN,1,1,artist (1)
+EMIT,1,1,let out (1)
+END,1,1,object (1)
 ENSURE,1,1,guarantee (1)
 ENT,1,1,hospital department (1)
 EP,1,1,record (1)
 ERR,1,1,make a mistake (1)
 ERRED,1,1,made a mistake (1)
 ESP,1,1,psychic ability (1)
-EST,1,1,is in french (1)
 ET,1,1,gretna (1)
 ETAL,1,1,and others (1)
 ETERNITY,1,1,long time (1)
 ETON,1,1,school (1)
+EU,1,1,european union (1)
 EVEN,1,1,still (1)
 EXCEPT,1,1,bar (1)
 EXE,1,1,river (1)
@@ -263,6 +301,8 @@ EXPO,1,1,display (1)
 FALLING,1,1,keeling over (1)
 FAN,1,1,supporter (1)
 FARROW,1,1,litter (1)
+FAST,1,1,have nothing (1)
+FAT,1,1,chubby (1)
 FELL,1,1,dropped (1)
 FIFTY,1,1,l (1)
 FINE,1,1,well (1)
@@ -271,9 +311,11 @@ FIRMS,1,1,companies (1)
 FIT,1,1,healthy (1)
 FL,1,1,florida (1)
 FLO,1,1,florence (1)
+FLY,1,1,race (1)
+FOR,1,1,supporting (1)
 FUNCTION,1,1,party perhaps (1)
-GA,1,1,georgia (1)
 GAIN,1,1,improve (1)
+GALA,1,1,party (1)
 GALE,1,1,wind (1)
 GAM,1,1,school (1)
 GEAR,1,1,equipment (1)
@@ -305,9 +347,11 @@ HAPPY,1,1,one of seven (1)
 HAVE,1,1,receive (1)
 HE,1,1,male (1)
 HEATED,1,1,warm (1)
+HEDGES,1,1,dodges (1)
 HELL,1,1,darn (1)
 HELLO,1,1,welcome (1)
 HERESY,1,1,unorthodoxy (1)
+HEW,1,1,cut (1)
 HID,1,1,safe (1)
 HIPS,1,1,haunches (1)
 HIRE,1,1,charter (1)
@@ -315,7 +359,6 @@ HIS,1,1,chap’s (1)
 HIT,1,1,buffet (1)
 HO,1,1,house (1)
 HOBOS,1,1,rovers (1)
-HOME,1,1,in (1)
 HONDA,1,1,car (1)
 HOT,1,1,in (1)
 HOUSE,1,1,line (1)
@@ -327,14 +370,17 @@ IE,1,1,that is (1)
 II,1,1,two (1)
 ILIUM,1,1,old city (1)
 ILL,1,1,bad (1)
+IM,1,1,setter’s (1)
 IMPATIENT,1,1,being restless (1)
 INCH,1,1,island (1)
 INJURE,1,1,harm (1)
 IR,1,1,irish (1)
 IRA,1,1,irish-american (1)
-IT,1,1,it (1)
+ISH,1,1,somewhat (1)
 IV,1,1,drip (1)
+IVE,1,1,writer’s (1)
 J,1,1,jack (1)
+JOB,1,1,patriarch (1)
 KC,1,1,silk (1)
 KIN,1,1,family (1)
 KING,1,1,monarch (1)
@@ -345,28 +391,34 @@ LAIC,1,1,amateur (1)
 LAMB,1,1,meat (1)
 LAN,1,1,network (1)
 LANDS,1,1,wins (1)
+LAPSE,1,1,failing (1)
 LARA,1,1,famous bat (1)
 LAUREATE,1,1,nation’s poet (1)
 LD,1,1,led (1)
+LED,1,1,managed (1)
 LEFT,1,1,abandoned (1)
 LEMON,1,1,fruit (1)
 LENDER,1,1,bank possibly (1)
 LENT,1,1,fast (1)
 LEO,1,1,sign (1)
+LESS,1,1,bar (1)
 LET,1,1,hired (1)
+LEVIS,1,1,casual garment (1)
 LEWD,1,1,obscene (1)
 LEWIS,1,1,lewis (1)
 LIED,1,1,song (1)
 LIGHT,1,1,fair (1)
 LINES,1,1,rows (1)
-LIP,1,1,cheek (1)
+LING,1,1,fish (1)
 LIST,1,1,roster (1)
 LIT,1,1,drunk (1)
 LIVE,1,1,potentially shocking (1)
 LIVED,1,1,was (1)
 LIVER,1,1,meat (1)
+LO,1,1,look (1)
 LONDON,1,1,capital (1)
 LOP,1,1,cut (1)
+LORD,1,1,my (1)
 LORE,1,1,learning (1)
 LOUDISH,1,1,rather rowdy (1)
 LOURS,1,1,scowls (1)
@@ -387,13 +439,13 @@ MATE,1,1,china (1)
 MATH,1,1,us school subject (1)
 MAX,1,1,the most (1)
 MB,1,1,doctor (1)
+MELEE,1,1,ruckus (1)
 MENDED,1,1,repaired (1)
 MET,1,1,encountered (1)
 MI,1,1,road (1)
 MIN,1,1,minute (1)
 MIS,1,1,missed (1)
 MIT,1,1,cambridge university (1)
-MOB,1,1,crowd (1)
 MOMENT,1,1,second (1)
 MOMENTUM,1,1,labour group (1)
 MONEY,1,1,bread (1)
@@ -403,8 +455,6 @@ MOURN,1,1,keen (1)
 MP,1,1,politician (1)
 MR,1,1,title (1)
 MULL,1,1,scottish island (1)
-MUST,1,1,item required (1)
-MY,1,1,my (1)
 NEE,1,1,once known as (1)
 NGE,1,1,anger (1)
 NI,1,1,in oil (1)
@@ -414,6 +464,7 @@ NOISE,1,1,racket (1)
 NON,1,1,de gaulle’s veto (1)
 NT,1,1,conservation society (1)
 NUB,1,1,point (1)
+NUMBER,1,1,feeling less (1)
 OCD,1,1,obsessive behaviour (1)
 OFF,1,1,inaccurate (1)
 OG,1,1,own goal (1)
@@ -424,19 +475,20 @@ OLE,1,1,cheer of approval (1)
 ONE,1,1,one (1)
 ONES,1,1,one’s (1)
 OPERA,1,1,work (1)
-OR,1,1,men (1)
 OSCAR,1,1,movie award (1)
 OU,1,1,university (1)
-OUT,1,1,unfashionable (1)
-OVER,1,1,delivery of half-dozen (1)
+OUTLAND,1,1,border (1)
+OVERT,1,1,open (1)
+OW,1,1,that’s sensitive (1)
 OWING,1,1,outstanding (1)
 OZ,1,1,australia (1)
 PACEMAKER,1,1,beat regulator (1)
-PAGE,1,1,part of book (1)
 PAID,1,1,coughed up (1)
 PAL,1,1,crony (1)
 PAPER,1,1,daily (1)
+PAR,1,1,expected score (1)
 PAST,1,1,former (1)
+PAWN,1,1,another man (1)
 PEN,1,1,cage (1)
 PERSON,1,1,individual (1)
 PETER,1,1,safe (1)
@@ -447,6 +499,7 @@ PIC,1,1,film (1)
 PIECE,1,1,pistol (1)
 PILS,1,1,lager (1)
 PIPER,1,1,peter (1)
+PIRATE,1,1,criminal (1)
 PLUMBS,1,1,sounds (1)
 POACH,1,1,catch without licence (1)
 POINTING,1,1,mortar (1)
@@ -470,12 +523,14 @@ RAIL,1,1,track (1)
 RAIN,1,1,shower (1)
 RAKE,1,1,libertine (1)
 RAMP,1,1,slope (1)
+RANT,1,1,tirade (1)
 RAP,1,1,criticism (1)
 RAT,1,1,renegade (1)
-RATE,1,1,cost (1)
 RATES,1,1,fees (1)
+RAVE,1,1,party (1)
 RAZE,1,1,level (1)
 RD,1,1,road (1)
+READ,1,1,study (1)
 REAL,1,1,authentic (1)
 RED,1,1,bloody (1)
 REED,1,1,grass (1)
@@ -485,6 +540,7 @@ RELAYED,1,1,broadcast (1)
 RESENT,1,1,begrudge (1)
 RESIN,1,1,"15, perhaps (1)"
 REST,1,1,others (1)
+RET,1,1,arrests (1)
 REV,1,1,vicar (1)
 REVERE,1,1,admire (1)
 RHEA,1,1,bird not flying (1)
@@ -493,19 +549,26 @@ RIE,1,1,arrived (1)
 RIGHT,1,1,just (1)
 RIGHTON,1,1,trendy (1)
 RIMS,1,1,borders (1)
+RN,1,1,force (1)
 ROBE,1,1,dress (1)
-ROCK,1,1,stone (1)
+ROI/NI,1,1,parts of ireland (1)
 ROLES,1,1,functions (1)
 ROLL,1,1,register (1)
+ROLY,1,1,pudding (1)
 ROOD,1,1,cross (1)
 ROOF,1,1,building’s top (1)
 ROUT,1,1,big defeat (1)
+ROUTINES,1,1,acts on stage (1)
+ROW,1,1,argument (1)
+ROWS,1,1,arguments (1)
 RUB,1,1,smooth (1)
 RUNG,1,1,place on ladder (1)
 RY,1,1,rapidly (1)
 SA,1,1,south american (1)
 SAC,1,1,bag (1)
+SAKE,1,1,benefit (1)
 SAP,1,1,trench (1)
+SAS,1,1,elite fighting force (1)
 SAVE,1,1,other than (1)
 SAW,1,1,saying (1)
 SC,1,1,namely (1)
@@ -513,11 +576,16 @@ SCAMPERS,1,1,skips about (1)
 SCAR,1,1,marking (1)
 SCION,1,1,family’s heir (1)
 SEE,1,1,spot (1)
+SELECTOR,1,1,person choosing (1)
+SERVICE,1,1,employment (1)
 SET,1,1,group (1)
 SETTER,1,1,compiler (1)
+SEVEN,1,1,7 (1)
+SEW,1,1,stitch (1)
 SHANT,1,1,will not (1)
 SHY,1,1,toss (1)
 SI,1,1,inside (1)
+SIC,1,1,like that (1)
 SIDE,1,1,team (1)
 SIGHT,1,1,vision (1)
 SIS,1,1,sibling (1)
@@ -537,6 +605,7 @@ SOME,1,1,a few (1)
 SON,1,1,lad (1)
 SONG,1,1,lay (1)
 SOON,1,1,before long (1)
+SORE,1,1,desperate (1)
 SP,1,1,odds (1)
 SPA,1,1,cheltenham (1)
 SPARK,1,1,scrap (1)
@@ -544,9 +613,11 @@ SPL,1,1,supply (1)
 STAID,1,1,serious (1)
 STAIR,1,1,segment of flight (1)
 STAR,1,1,celebrity (1)
+START,1,1,to launch (1)
 STERNER,1,1,harder (1)
 STICK,1,1,censure (1)
 STORY,1,1,tale (1)
+STRAIGHT,1,1,continuous (1)
 STRAT,1,1,guitar (1)
 STRUTS,1,1,swaggers (1)
 STY,1,1,pig-farmer (1)
@@ -554,6 +625,7 @@ SUNUP,1,1,dawn (1)
 SURER,1,1,less hesitant (1)
 SURGE,1,1,sudden upswing (1)
 SWAN,1,1,bird (1)
+SWISH,1,1,fancy (1)
 SWISS,1,1,national (1)
 TAB,1,1,cigarette (1)
 TALK,1,1,presentation (1)
@@ -562,10 +634,13 @@ TAN,1,1,beat (1)
 TANK,1,1,fail (1)
 TAT,1,1,rubbish (1)
 TE,1,1,empty temple (1)
+TEAM,1,1,crew (1)
+TEE,1,1,peg (1)
 TENDER,1,1,offer (1)
 TESS ELLA,1,1,two girls (1)
 TEST,1,1,trial (1)
 TETHER,1,1,tie (1)
+THEFT,1,1,crime (1)
 THIN,1,1,fine (1)
 THORN,1,1,germanic character (1)
 THRONG,1,1,hem in (1)
@@ -574,6 +649,7 @@ THUS,1,1,thus (1)
 TIE,1,1,restrict (1)
 TILE,1,1,slab (1)
 TIP,1,1,extra payment (1)
+TIRE,1,1,flag (1)
 TOP,1,1,cap (1)
 TOTO,1,1,visitor to oz (1)
 TRAIN,1,1,retinue (1)
@@ -587,6 +663,7 @@ TRICK,1,1,con (1)
 TRIKE,1,1,modest conveyance (1)
 TRITE,1,1,stock (1)
 TROLLOP,1,1,floozy (1)
+TROPHY,1,1,prize (1)
 TROUGH,1,1,depression (1)
 TUNA,1,1,fish (1)
 TUP,1,1,mate with (1)
@@ -594,7 +671,9 @@ TURN IN,1,1,go to bed (1)
 TUT,1,1,express impatience (1)
 TV,1,1,the tube (1)
 TWIST,1,1,bread roll (1)
+TWO,1,1,as well (1)
 UD,1,1,studio (1)
+UGH,1,1,how unpleasant (1)
 UL,1,1,universal (1)
 UND,1,1,conjunction for germans (1)
 UNION,1,1,marriage (1)
@@ -604,6 +683,7 @@ UR,1,1,jury (1)
 URAL,1,1,rivers (1)
 URE,1,1,river (1)
 URINE,1,1,liquid waste (1)
+URN,1,1,vessel (1)
 USED,1,1,second-hand (1)
 VAL,1,1,valerie (1)
 VAN,1,1,vehicle (1)
@@ -615,7 +695,6 @@ VIOLIN,1,1,fiddle (1)
 VIVA,1,1,1960s car model (1)
 VOL,1,1,volunteer (1)
 WALL,1,1,barrier (1)
-WAR,1,1,conflict (1)
 WE,1,1,plural pronoun (1)
 WELL,1,1,fully (1)
 WETS,1,1,makes moist (1)
@@ -626,3 +705,4 @@ WORCESTER,1,1,midland city (1)
 YELLING,1,1,shouting (1)
 YG,1,1,youth groups (1)
 YORKS,1,1,dismisses (1)
+Z,1,1,variable (1)

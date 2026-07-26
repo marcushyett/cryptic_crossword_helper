@@ -1,27 +1,30 @@
 surface,letters,count,kind,reusable,seen_in,example_clue,example_answer
 one,I,11,roman,yes,20260701-20D; 20260706-7D; 20260706-9A; 20260707-15A; 20260711-19A,Rescue one that’s been crushed by digger,DELIVER
+english,E,7,abbreviation,yes,20260629-19D; 20260701-4A; 20260704-15D; 20260707-8D; 20260715-8D,Bill eats fruit out of English tree,ALMOND
 a,A,6,other,yes,20260703-17D; 20260714-6A; 20260716-12A; 20260716-22D; 20260716-3D,Car missing rear end blocking road over a Welsh river,RHONDDA
-english,E,6,abbreviation,yes,20260629-19D; 20260701-4A; 20260704-15D; 20260707-8D; 20260715-8D,Bill eats fruit out of English tree,ALMOND
+book,B,6,abbreviation,yes,20260704-3D; 20260708-5D; 20260715-12A; 20260717-7D; 20260721-17D,"Came by omnibus book, second-hand",BUSED
+left,L,6,abbreviation,yes,20260630-10A; 20260704-17D; 20260706-5D; 20260711-25A; 20260718-14A,"Soldiers left Lima, fleeing from floozy",TROOP
 new,N,6,abbreviation,yes,20260629-24D; 20260701-8D; 20260702-18A; 20260704-2D; 20260706-14A,Mum! New fella?,MAN
 i,I,5,single-letter,yes,20260716-1D; 20260716-21D; 20260718-15D; 20260718-19D; 20260720-14D,"I throw up over match official, one Simon",BOLIVAR
-left,L,5,abbreviation,yes,20260630-10A; 20260704-17D; 20260706-5D; 20260711-25A; 20260718-14A,"Soldiers left Lima, fleeing from floozy",TROOP
 liberal,L,5,abbreviation,yes,20260701-6D; 20260704-22A; 20260707-19D; 20260714-6A; 20260715-2D,Unsound victory buries Liberal prime minister,BALDWIN
 wife,W,5,abbreviation,yes,20260703-11A; 20260707-25A; 20260710-27A; 20260717-13A; 20260718-28A,"Dad, mature, with wife leaving Chicago?",POPGROUP
-book,B,4,abbreviation,yes,20260704-3D; 20260715-12A; 20260717-7D; 20260721-17D,"Came by omnibus book, second-hand",BUSED
+area,A,4,abbreviation,yes,20260716-10A; 20260717-18A; 20260720-1D; 20260723-5A,Displaced area in girl’s haunches and in the waist,AMIDSHIPS
+cold,C,4,single-letter,yes,20260629-9A; 20260716-26A; 20260718-15A; 20260723-18D,Family snatch cold cuts and seafood,KINGCRAB
 current,I,4,single-letter,yes,20260630-18D; 20260715-11A; 20260720-10A; 20260721-11A,Short people collectively bolstered by current swimsuit style,MANKINI
+democrat,D,4,abbreviation,yes,20260707-18D; 20260714-17A; 20260720-23A; 20260723-24D,"Uncouth, rather rowdy: time to replace Democrat",LOUTISH
 nothing,O,4,single-letter,yes,20260630-25A; 20260710-26D; 20260716-14D; 20260721-23D,Nothing for you in marriage — it causes tears,ONION
 old,O,4,abbreviation,yes,20260629-17A; 20260701-17D; 20260703-3D; 20260718-28A,Quiet old Conservative Big Beast last to speak in vibrant tone,SHOCKINGPINK
 power,P,4,abbreviation,yes,20260706-10D; 20260707-11A; 20260715-2D; 20260718-14D,"Crafty chap, evil animal, badly wanting power",MACHIAVELLIAN
 time,T,4,abbreviation,yes,20260702-9A; 20260707-18D; 20260715-20A; 20260715-26A,Extra time fills fraction of device’s memory,BYTE
 american,A,3,abbreviation,yes,20260630-1D; 20260704-26A; 20260720-10A,Youngster on American island,CUBA
-area,A,3,abbreviation,yes,20260716-10A; 20260717-18A; 20260720-1D,Displaced area in girl’s haunches and in the waist,AMIDSHIPS
-cold,C,3,single-letter,yes,20260629-9A; 20260716-26A; 20260718-15A,Family snatch cold cuts and seafood,KINGCRAB
+article,AN,3,other,yes,20260629-26A; 20260708-19D; 20260720-7D,Clumsy article penned by dad — check working,CACKHANDED
+caught,C,3,cricket,yes,20260701-24D; 20260702-15A; 20260723-10A,Caught male with female cook,CHEF
 company,CO,3,abbreviation,yes,20260701-26A; 20260718-25A; 20260721-14A,Grass company really cutting back parts obtained from waste,RECOVERED
 day,D,3,abbreviation,yes,20260629-1A; 20260711-19A; 20260715-20A,"Around noon, day before, say Black Prince danced with her",CINDERELLA
-democrat,D,3,abbreviation,yes,20260707-18D; 20260714-17A; 20260720-23A,"Uncouth, rather rowdy: time to replace Democrat",LOUTISH
 doctor,DR,3,abbreviation,yes,20260702-10A; 20260713-4D; 20260715-8D,Doctor and sister starting round quietly in formal attire,DRESSSHIRT
 energy,E,3,single-letter,yes,20260706-12A; 20260707-3D; 20260717-22A,"Cleanser in middle of kitchen getting on with stuff, filled with energy",COLDCREAM
 female,F,3,abbreviation,yes,20260701-23D; 20260701-24D; 20260710-27A,Pointer litter abandoned by female,ARROW
+home,IN,3,synonym,yes,20260708-16A; 20260721-27A; 20260721-2D,Get used to holiday home,BREAKIN
 husband,H,3,abbreviation,yes,20260707-20A; 20260711-5A; 20260718-15D,Husband gripped by depression no longer able to function,THROUGH
 is,IS,3,synonym,yes,20260715-18D; 20260721-5D; 20260721-9D,"Drink provider, almost nude, is on <i>Cheers</i>",BARISTA
 love,O,3,single-letter,yes,20260702-7D; 20260706-18A; 20260721-5D,Miss Cambridge University’s past love,OMIT
@@ -31,21 +34,25 @@ republican,R,3,abbreviation,yes,20260704-26A; 20260714-17A; 20260720-23A,America
 right,R,3,abbreviation,yes,20260706-4D; 20260718-23D; 20260720-23A,Guarantee yielding right result,ENSUE
 river,R,3,abbreviation,yes,20260706-9A; 20260713-20D; 20260720-14A,"While around river, one encountered retiring goddess",ARTEMIS
 small,S,3,abbreviation,yes,20260703-19D; 20260704-1D; 20260717-18D,Small bank possibly short of pounds?,SLENDER
+story,LIE,3,synonym,yes,20260707-7D; 20260708-19D; 20260713-18D,Article: story upcoming beat journalist turned away,ALIENATED
 you,U,3,single-letter,yes,20260630-25A; 20260701-15D; 20260715-23D,Nothing for you in marriage — it causes tears,ONION
 about,RE,2,abbreviation,yes,20260704-2D; 20260706-6D,Change of plan about new flag,REDENSIGN
 an,AN,2,other,yes,20260629-16D; 20260713-15A,An international compiler failing to finish drink,ANISETTE
-article,AN,2,other,yes,20260629-26A; 20260720-7D,Clumsy article penned by dad — check working,CACKHANDED
 back,STERN,2,synonym,yes,20260717-8D; 20260720-26A,Toss back short-tailed shark,SHYSTER
 before,ERE,2,synonym,yes,20260629-1A; 20260704-25A,"Around noon, day before, say Black Prince danced with her",CINDERELLA
 billions,B,2,abbreviation,yes,20260704-7D; 20260715-14A,What’s between programmes of Biden and Trump initially losing billions,IDENT
+british,B,2,abbreviation,yes,20260708-1A; 20260722-11A,"British criminal gang let out — in retrospect, a disaster waiting to happen",TIMEBOMB
 cape,C,2,abbreviation,yes,20260629-10A; 20260703-14D,Onset of ardent romance when touring Cape Bay,ALCOVE
-caught,C,2,cricket,yes,20260701-24D; 20260702-15A,Caught male with female cook,CHEF
 clubs,C,2,abbreviation,yes,20260717-27A; 20260720-28A,Like to enter clubs wearing golf jacket,CASING
+conflict,WAR,2,synonym,yes,20260714-20D; 20260723-1A,Amount of distortion in part of book about conflict?,WARPAGE
+conservative,C,2,abbreviation,yes,20260629-17A; 20260722-2D,Quiet old Conservative Big Beast last to speak in vibrant tone,SHOCKINGPINK
 constant,C,2,single-letter,yes,20260706-24A; 20260711-5A,Spies in constant control endlessly essential,CRUCIAL
 duck,O,2,cricket,yes,20260707-11D; 20260718-26A,Deprived character of duck meat on bread roll,OLIVERTWIST
+georgia,GA,2,place,yes,20260715-24A; 20260723-5D,Radioactive element one’s lad found around Georgia,OGANESSON
 good,G,2,single-letter,yes,20260713-21D; 20260721-29A,Spirit of good admin worker broken by criticism,GRAPPA
 hard,H,2,abbreviation,yes,20260703-26A; 20260716-13A,"Hard drug injected in wound made good, at last?",REHEELED
-home,IN,2,synonym,yes,20260721-27A; 20260721-2D,"Home, comfortable one housing organ, seriously!",INEARNEST
+in,HOME,2,synonym,yes,20260707-1A; 20260723-15A,Second city storing rubbish in pile,STATELYHOME
+in,IN,2,synonym,yes,20260721-6D; 20260723-7D,Film director — one has dropped in at the start,FELLINI
 india,I,2,nato,yes,20260629-23A; 20260711-23A,Last lieutenant stationed in United India and China,ULTIMATE
 large,L,2,abbreviation,yes,20260714-12A; 20260715-15D,Covering many miles working in large country house,LONGRANGE
 line,L,2,abbreviation,yes,20260716-28A; 20260720-20A,"Seriously hoarse, missing a line",GRAVELY
@@ -54,23 +61,30 @@ motorway,M,2,abbreviation,yes,20260706-1D; 20260714-15D,Curved structure over mo
 name,N,2,abbreviation,yes,20260716-27A; 20260720-13A,One giving name getting through entrance,DONOR
 northern,N,2,abbreviation,yes,20260629-14A; 20260714-2D,Injure supporter in capital relocating northern star,MARLONBRANDO
 old man,PA,2,synonym,yes,20260630-4D; 20260721-1A,Old man scowls after initially referencing <i>Chambers</i>,PARLOURS
+on,ON,2,other,yes,20260706-6D; 20260722-25A,"Estimation of position that’s insensitive about country’s leader, monarch carrying on",DEADRECKONING
 provided,IF,2,synonym,yes,20260706-14A; 20260710-2D,Superb quality in publication with good binding provided by New Church,MAGNIFICENCE
 pub,INN,2,synonym,yes,20260704-19A; 20260710-21D,Guts of pub poets starting late,INNARDS
 regret,RUE,2,synonym,yes,20260703-8D; 20260716-24A,"Since pinching copy, regret mounts up",ACCRUES
 second,S,2,abbreviation,yes,20260707-1A; 20260720-9D,Second city storing rubbish in pile,STATELYHOME
 son,S,2,abbreviation,yes,20260706-22A; 20260721-5D,Piety in turn followed by rows between daughter and son,GODLINESS
-story,LIE,2,synonym,yes,20260707-7D; 20260713-18D,Article: story upcoming beat journalist turned away,ALIENATED
 succeeded,S,2,abbreviation,yes,20260702-20A; 20260716-1A,Obscure athletes who succeeded attract most attention,STEALTHESHOW
 throw,LOB,2,synonym,yes,20260716-1D; 20260720-26A,"I throw up over match official, one Simon",BOLIVAR
+university,U,2,abbreviation,yes,20260708-9A; 20260711-14A,Open University study halved proposal,OVERTURE
 very,V,2,abbreviation,yes,20260701-17D; 20260716-3D,"Test 1960s car model — very old Mercedes, essentially",VIVAVOCE
 victory,WIN,2,synonym,yes,20260701-6D; 20260707-19D,Unsound victory buries Liberal prime minister,BALDWIN
+when,AS,2,synonym,yes,20260711-8D; 20260722-8A,"When upset go to bed, heading off extremely gloomy",SATURNINE
 with,AND,2,synonym,yes,20260703-14D; 20260718-5D,Fabulous man with cape interrupting functions,ANDROCLES
 working,ON,2,synonym,yes,20260714-12A; 20260716-25A,Covering many miles working in large country house,LONGRANGE
 'eavily,ARD,1,other,yes,20260710-28A,"Fail ’eavily, being a mug",TANKARD
+0,O,1,single-letter,yes,20260723-26A,Boat Race coverage has to hurt after losing final 1-0,MUSTACHIO
+1,I,1,roman,yes,20260723-26A,Boat Race coverage has to hurt after losing final 1-0,MUSTACHIO
+100,C,1,roman,yes,20260708-18D,Person choosing to have 100 plus soldiers promoted for protection,CORSELET
 "15, perhaps",RESIN,1,other,yes,20260717-17A,"Turning 15, perhaps attention-seeker’s one to charge",IONISER
 1960s car model,VIVA,1,other,yes,20260701-17D,"Test 1960s car model — very old Mercedes, essentially",VIVAVOCE
 25,UNWED,1,other,yes,20260710-27A,Made one female in two for wife of 25,UNIFIED
 3d figure,CONE,1,synonym,yes,20260710-3D,Treat as one or two-dimensional in 3D figure,CONFLATE
+500,D,1,roman,yes,20260723-13A,A gracious party hosting 500? It’s a bit of a thinker,AMYGDALA
+7,SEVEN,1,other,yes,20260723-20D,7 almost lifted product of eg Berkshire town,EVESHAM
 <i>cheers</i>,TA,1,synonym,yes,20260715-18D,"Drink provider, almost nude, is on <i>Cheers</i>",BARISTA
 a & e,AVOWAL,1,other,yes,20260714-19A,"In denial, slag off A & E loudly, perhaps",DISAVOWAL
 a couple of zeds,ZZ,1,other,no,20260714-1D,"Confused, Glen catches a couple of zeds in appropriate place",BEDAZZLED
@@ -79,15 +93,20 @@ a poet laureate,MOTION,1,other,yes,20260702-2D,Still in need of a poet laureate?
 a screen,A VEIL,1,synonym,yes,20260702-21D,Advantage of a screen in the auditorium,AVAIL
 a&e,AE,1,other,yes,20260715-22D,Divert item required for the most part in A&E,AMUSE
 abandoned,LEFT,1,synonym,yes,20260701-13D,Sinister individual abandoned description of her?,LEFTHANDER
+about,C,1,abbreviation,yes,20260708-14D,Talk about cut beginning to affect crime checks,CHEWTHEFAT
 academic,DEAN,1,synonym,yes,20260713-15A,"An academic from Quito, say",ANDEAN
 academician,RA,1,abbreviation,yes,20260707-12A,Exhausted academician has eaten outside,DRAINED
+according to,AS PER,1,synonym,yes,20260708-3D,Infuriate former partner according to judges after losing case,EXASPERATE
 ace,A,1,abbreviation,yes,20260721-26A,Ace child looked after trophy?,AWARD
 act,DO,1,synonym,yes,20260706-3A,"Almost admit, on reflection, act involving bad misdemeanour",PECCADILLO
 acted horribly,HAMMED,1,synonym,yes,20260718-3D,Shark acted horribly eating bird not flying away,HAMMERHEAD
+acts on stage,ROUTINES,1,synonym,yes,20260708-24D,Absolutely worst acts on stage in first half,ROUT
 admin worker,PA,1,abbreviation,yes,20260713-21D,Spirit of good admin worker broken by criticism,GRAPPA
 admire,REVERE,1,synonym,yes,20260716-11A,First person to go in to admire brown study,REVERIE
 admit,ACCEPT,1,synonym,yes,20260706-3A,"Almost admit, on reflection, act involving bad misdemeanour",PECCADILLO
 advance,PLAN,1,synonym,yes,20260713-2D,"Airline finally can advance, having secured one place for aircraft",BIPLANE
+affect,A,1,single-letter,yes,20260708-14D,Talk about cut beginning to affect crime checks,CHEWTHEFAT
+again,OVER,1,synonym,yes,20260708-11A,Order around my relations again,LORDITOVER
 agamemnon’s murderer,AEGISTHUS,1,other,yes,20260704-23D,Protection thus denied to Agamemnon’s murderer,AEGIS
 agricultural disease,BSE,1,abbreviation,yes,20260715-19D,"Want expert to contain agricultural disease, note",ABSENCE
 air,AIR,1,other,yes,20260717-9D,An old woman adopting stuck-up air of cultivation,AGRARIAN
@@ -107,32 +126,45 @@ anger,NGE,1,other,yes,20260710-13A,"Set fuel to burn, suppressing naked anger",C
 angry,CROSS,1,synonym,yes,20260721-15D,Angry about one insect in food item,CROISSANT
 animated boy,BART,1,other,yes,20260703-22D,Animated boy discharging bomb finally cuts what wire?,EARTH
 another,Y,1,single-letter,yes,20260718-10A,Easygoing unknown replacing another in broadcast,RELAXED
+another man,PAWN,1,chess,yes,20260722-1D,King feeding another man peach snack,PRAWNCRACKER
 anxiety,ANGST,1,synonym,yes,20260715-19A,Beset by anxiety about way of working,AMONGST
+appearance,A,1,single-letter,yes,20260722-7D,Country’s top player first of all in cup appearance,COSTARICA
 appropriate place,BED,1,synonym,yes,20260714-1D,"Confused, Glen catches a couple of zeds in appropriate place",BEDAZZLED
+argument,ROW,1,synonym,yes,20260722-9D,Winger dodges argument about expected score,HEDGESPARROW
+arguments,ROWS,1,synonym,yes,20260708-5D,Adopts arguments introduced by book as an alternative,BORROWS
+arrests,RET,1,other,yes,20260708-2D,Centre backed arrests regularly dividing parts of Ireland,INTERIOR
 arrived,RIE,1,other,yes,20260713-13A,"Wine periodically arrived with stronger, mixed drink",RIESLING
 article,THE,1,other,yes,20260706-16D,"Airy editor’s opening article, authentic",ETHEREAL
 article,A,1,other,yes,20260707-7D,Article: story upcoming beat journalist turned away,ALIENATED
 artist,EMIN,1,other,yes,20260707-28A,Artist drawn in by enigmatic Chinese title,HISEMINENCE
 artist,RA,1,abbreviation,yes,20260720-16D,Uninhibited live artist close to limit in song,LIBERATED
+as an alternative,OR,1,synonym,yes,20260708-5D,Adopts arguments introduced by book as an alternative,BORROWS
+as well,TWO,1,other,yes,20260722-13D,Deputy feeling less outspoken as well,NUMBERTWO
 aspiration,H,1,single-letter,yes,20260630-15A,Eloquent Roman commander-in-chief meeting hero without aspiration,CICERO
 assistant,PA,1,abbreviation,yes,20260706-21A,"Shock assistant, turning against crony",APPAL
 attention,N,1,single-letter,yes,20260701-25A,Safe place to receive focus of attention,HAVEN
 attention-seeker’s,OI,1,other,yes,20260717-17A,"Turning 15, perhaps attention-seeker’s one to charge",IONISER
 australia,OZ,1,abbreviation,yes,20260710-4D,Australia cut off Japanese conductor,OZAWA
 authentic,REAL,1,synonym,yes,20260706-16D,"Airy editor’s opening article, authentic",ETHEREAL
+author,I,1,single-letter,yes,20260708-21D,Dated observation failing to save author making a comeback,ESPIAL
 bad,ILL,1,synonym,yes,20260706-3A,"Almost admit, on reflection, act involving bad misdemeanour",PECCADILLO
 bag,SAC,1,synonym,yes,20260717-15A,American thoroughly beat darn punching bag,SHELLAC
 band from us,REM,1,other,yes,20260703-12D,Protest band from US — one containing guitar,REMONSTRATE
 bank possibly,LENDER,1,synonym,yes,20260703-19D,Small bank possibly short of pounds?,SLENDER
+bar,LESS,1,synonym,yes,20260708-16D,Low bar having nothing to justify it,BASELESS
 bar,EXCEPT,1,synonym,yes,20260716-25A,Anomaly of one working behind bar,EXCEPTION
 barrier,WALL,1,synonym,yes,20260720-2D,Beastly noise — provide barrier for ears,CATERWAUL
 basic unit,CELL,1,synonym,yes,20260707-17A,Superb basic unit in old hospital department,EXCELLENT
+bear’s back,R,1,single-letter,yes,20260722-25A,"Polar bear’s back, on returning with particular force?",NORTHERN
 beat,TAN,1,synonym,yes,20260707-7D,Article: story upcoming beat journalist turned away,ALIENATED
 beat regulator,PACEMAKER,1,synonym,yes,20260717-22A,Energy boards beat regulator and arbitrator,PEACEMAKER
 beer,ER,1,other,yes,20260716-5A,"Spender rarely missed beer, half of each",MISER
 before long,SOON,1,synonym,yes,20260721-22A,Canadian city before long hosting a card game,SASKATOON
 begrudge,RESENT,1,synonym,yes,20260703-3D,"Begrudge supporting old leader of mafia shot here, there and everywhere",OMNIPRESENT
+being driven,CAR,1,synonym,yes,20260722-17A,African driver’s ruckus while being driven?,CAMELEER
 being restless,IMPATIENT,1,synonym,yes,20260704-6D,One admitted being restless as month turns to November,INPATIENT
+bend,CURVE,1,synonym,yes,20260708-7D,Bend initially to leap in the air,CURVET
+benefit,SAKE,1,synonym,yes,20260723-6D,Kind of music benefit including core from Monty Python,ROCKSNAKE
 better,B,1,single-letter,yes,20260702-24A,"Carefree on leaving show, one of seven heading for better parts",DEMOBHAPPY
 big beast,KINGPIN,1,synonym,yes,20260629-17A,Quiet old Conservative Big Beast last to speak in vibrant tone,SHOCKINGPINK
 big defeat,ROUT,1,synonym,yes,20260715-14A,"Eliminates our team, enthralling billions in big defeat",RUBSOUT
@@ -145,12 +177,14 @@ black,B,1,abbreviation,yes,20260716-23A,I’m thinking black fury brings offence
 bloody,RED,1,synonym,yes,20260701-3D,Abusively criticised bloody despicable cuts,REVILED
 bomb,B,1,other,yes,20260703-22D,Animated boy discharging bomb finally cuts what wire?,EARTH
 bond,M,1,other,yes,20260704-8D,What Bond says regarding management shenanigans?,MISCHIEF
+border,OUTLAND,1,synonym,yes,20260708-4D,Weird light has somewhat visible border?,OUTLANDISH
 borders,RIMS,1,synonym,yes,20260707-10A,Borders crossing close to free French city,REIMS
 bow,ARC,1,synonym,yes,20260720-24D,Romantic hero’s bow in hollow display,DARCY
 boyfriend,BEAU,1,synonym,yes,20260720-18D,"Thanks boyfriend, introducing beginning of love scene",TABLEAU
 bragging,CROW,1,synonym,yes,20260714-22A,Where one might find Jack bragging about space that one’s left,CROWNGREEN
 bread,MONEY,1,synonym,yes,20260630-8D,Daily bread for Buffalo Bill?,PAPERMONEY
 bread roll,TWIST,1,synonym,yes,20260707-11D,Deprived character of duck meat on bread roll,OLIVERTWIST
+breeches,B,1,single-letter,yes,20260723-1D,"Stitch up outside of top of breeches, where flies may get caught",WEBS
 bridge,CROSS,1,synonym,yes,20260716-8D,Los Angeles Gazette finally covers bridge game,LACROSSE
 broadcast,RELAYED,1,synonym,yes,20260718-10A,Easygoing unknown replacing another in broadcast,RELAXED
 buffet,HIT,1,synonym,yes,20260717-13A,Spot wife in front of buffet,WHIT
@@ -170,7 +204,9 @@ capital,LONDON,1,place,yes,20260629-14A,Injure supporter in capital relocating n
 capital,QUITO,1,place,yes,20260710-17D,Airborne pest miles over southern capital,MOSQUITO
 car,HONDA,1,other,yes,20260703-17D,Car missing rear end blocking road over a Welsh river,RHONDDA
 card game,SKAT,1,other,yes,20260721-22A,Canadian city before long hosting a card game,SASKATOON
+carpet,BERATE,1,synonym,yes,20260708-6D,Shop intended to give away carpet,DELI
 carry golf bags,CADDY,1,synonym,yes,20260720-28A,Irregular guards carry golf bags without clubs for rich older guy,SUGARDADDY
+casual garment,LEVIS,1,synonym,yes,20260722-16D,Show peg pinning casual garment,TELEVISE
 catch without licence,POACH,1,synonym,yes,20260720-14A,"Catch without licence, exchanging penny for river fish",ROACH
 cats maybe,PETS,1,synonym,yes,20260713-16D,Cats maybe cross over threshold?,DOORSTEP
 celebrity,STAR,1,synonym,yes,20260630-5A,Celebrity mate with new business,STARTUP
@@ -193,6 +229,7 @@ china,MATE,1,synonym,yes,20260629-23A,Last lieutenant stationed in United India 
 chinese,HAN,1,other,yes,20260702-3A,"Taken aback, coughed up Chinese university society fine",DIAPHANOUS
 chlorine,CL,1,chemical,yes,20260704-16A,Note chlorine in what might be maple syrup,TREACLE
 choir’s,R,1,other,yes,20260716-12A,"School music award missing year, a choir’s last",GRAMMAR
+chubby,FAT,1,synonym,yes,20260723-15A,"Get chubby, in short",FATHOM
 church,CH,1,abbreviation,yes,20260704-13A,Misuse needles right outside former church,DROPASTITCH
 church,CE,1,abbreviation,yes,20260706-14A,Superb quality in publication with good binding provided by New Church,MAGNIFICENCE
 cigarette,TAB,1,synonym,yes,20260714-25A,Order policeman to leave mate following cigarette,TABULATE
@@ -212,12 +249,13 @@ companies,FIRMS,1,synonym,yes,20260701-27A,Weapons companies checking defaced eq
 compiler,SETTER,1,synonym,yes,20260629-16D,An international compiler failing to finish drink,ANISETTE
 computer image,ICON,1,synonym,yes,20260716-19D,Stream smooth computer image,RUBICON
 con,TRICK,1,synonym,yes,20260711-4D,Very friendly con swapping sides for rematch,THICK
-conflict,WAR,1,synonym,yes,20260714-20D,Amount of distortion in part of book about conflict?,WARPAGE
 confused situation,MESS,1,synonym,yes,20260715-8D,A long time dismissing first English doctor in confused situation may be sign of pregnancy,MATERNITYDRESS
 conjunction for germans,UND,1,foreign,yes,20260710-25A,Single or plural pronoun in conjunction for Germans,UNWED
 connected to,RE,1,abbreviation,yes,20260720-12A,Plug in hosts connected to revolutionary network: cause of power surge?,ADRENALIN
 conservation society,NT,1,abbreviation,yes,20260720-10A,Invasive element’s current information on American conservation society,ANTIGEN
-conservative,C,1,abbreviation,yes,20260629-17A,Quiet old Conservative Big Beast last to speak in vibrant tone,SHOCKINGPINK
+consumed,ATE,1,synonym,yes,20260708-27A,Person of great strength consumed salt,TITANATE
+contact,PAGE,1,synonym,yes,20260723-5D,Contact Georgia about existing time difference?,AGEGAP
+continuous,STRAIGHT,1,synonym,yes,20260708-10A,We hear continuous sound,STRAIT
 control,RULE,1,synonym,yes,20260706-24A,Spies in constant control endlessly essential,CRUCIAL
 copper,CU,1,chemical,yes,20260717-16D,Copper led empty investigation up close,CULDESAC
 coppola’s first,C,1,single-letter,no,20260720-1A,Action-led shot framing Coppola’s first western,OCCIDENTAL
@@ -229,14 +267,22 @@ country house,GRANGE,1,synonym,yes,20260714-12A,Covering many miles working in l
 country’s leader,C,1,other,no,20260706-6D,"Estimation of position that’s insensitive about country’s leader, monarch carrying on",DEADRECKONING
 cow,LOWER,1,synonym,yes,20260702-16A,Spooner’s keen for cow as grass management aid,LAWNMOWER
 crew,MAN,1,synonym,yes,20260716-24D,"Crew, you shouldn’t have giant fish",MANTA
+crew,TEAM,1,synonym,yes,20260722-18A,Crew on board ship cooks,STEAMS
+crew,ACHT,1,foreign,yes,20260722-21D,Boat last to employ crew from Germany?,YACHT
+crime,THEFT,1,synonym,yes,20260708-14D,Talk about cut beginning to affect crime checks,CHEWTHEFAT
+criminal,PIRATE,1,synonym,yes,20260723-23D,Criminal not taking first cross,IRATE
+criminal gang,MOB,1,synonym,yes,20260708-1A,"British criminal gang let out — in retrospect, a disaster waiting to happen",TIMEBOMB
+critical of,ANTI,1,synonym,yes,20260722-2D,Old buffoon critical of Conservative,ANTIC
 criticism,RAP,1,synonym,yes,20260713-21D,Spirit of good admin worker broken by criticism,GRAPPA
 crony,PAL,1,synonym,yes,20260706-21A,"Shock assistant, turning against crony",APPAL
 cross,CUT,1,synonym,yes,20260630-13A,Cross dons can rapidly empty chat room,LOCUTORY
 cross,ROOD,1,synonym,yes,20260713-16D,Cats maybe cross over threshold?,DOORSTEP
 crowd,MOB,1,synonym,yes,20260716-1A,Ranting crowd in turn succeeded breaking into club,BOMBAST
 crowd,MASS,1,synonym,yes,20260716-24A,Regret rounding on crowd manipulator,MASSEUR
+cup,C,1,single-letter,yes,20260722-7D,Country’s top player first of all in cup appearance,COSTARICA
 current unit,AMPS,1,abbreviation,yes,20260718-9A,In final months current unit leaves temporary base,DECAMPS
 curved structure,ARCH,1,synonym,yes,20260706-1D,Curved structure over motorway in spot I don’t know,SEARCHME
+cut,HEW,1,synonym,yes,20260708-14D,Talk about cut beginning to affect crime checks,CHEWTHEFAT
 cut,LOP,1,synonym,yes,20260716-20A,"Powerful expression being cut back, aim only for resolution",POLYNOMIAL
 cut off,AWAY,1,synonym,yes,20260710-4D,Australia cut off Japanese conductor,OZAWA
 cuts,CLIPS,1,synonym,yes,20260707-3D,Energy cuts end in catastrophe — and darkness,ECLIPSE
@@ -257,9 +303,11 @@ deliberate inaccuracy,LIE,1,synonym,yes,20260720-7D,Deliberate inaccuracy in art
 delivery of half-dozen,OVER,1,cricket,yes,20260717-26D,Picked up delivery of half-dozen eggs,OVA
 depression,TROUGH,1,synonym,yes,20260707-20A,Husband gripped by depression no longer able to function,THROUGH
 depression,N,1,single-letter,yes,20260720-5D,Charity officer’s abysmal morale ending in depression,ALMONER
+desperate,SORE,1,synonym,yes,20260723-5A,"Perhaps deodorant can look desperate, going back on area",AEROSOL
 despicable,VILE,1,synonym,yes,20260701-3D,Abusively criticised bloody despicable cuts,REVILED
 detective,PI,1,abbreviation,yes,20260711-15D,Trace family’s heir with input from American detective,SUSPICION
 device,DE,1,other,yes,20260707-19A,Tool secures device expelling content behind washer,BIDET
+diagram,PLAN,1,synonym,yes,20260722-1A,A variable in diagram minus one — is square,PLAZA
 difficulty,BIND,1,synonym,yes,20260715-15D,"Difficulty about large fruit, one encountered for the first time?",BLINDDATE
 digger,DELVER,1,synonym,yes,20260701-20D,Rescue one that’s been crushed by digger,DELIVER
 dimwit,ASS,1,synonym,yes,20260720-22D,Collect degree taken by dimwit,AMASS
@@ -268,6 +316,7 @@ display,EXPO,1,synonym,yes,20260703-10A,One who’s fetching display firstly sel
 display,DY,1,other,yes,20260720-24D,Romantic hero’s bow in hollow display,DARCY
 displaying seat,MOONING,1,synonym,yes,20260702-12A,Employed outside job fair displaying seat covers,MOONLIGHTING
 doctor,MB,1,abbreviation,yes,20260703-22A,Bury doctor going after mentor stripped of title,ENTOMB
+dodges,HEDGES,1,synonym,yes,20260722-9D,Winger dodges argument about expected score,HEDGESPARROW
 domestic residence,FLAT,1,synonym,yes,20260721-4A,Put together solid shape outside domestic residence,CONFLATE
 dress,ROBE,1,synonym,yes,20260704-1A,Flash street dress,STROBE
 drip,IV,1,abbreviation,yes,20260710-23A,Drip caught by painter working secretly,INPRIVATE
@@ -281,10 +330,14 @@ earl,E,1,abbreviation,yes,20260707-6D,Earl to supply large vessel with guns and 
 east,E,1,single-letter,yes,20260713-5D,Reluctant explorers headed east,AVERSE
 eat,CONSUME,1,synonym,yes,20260716-17D,"With order of merit covering uniform, eat soup",CONSOMME
 ecstasy,E,1,abbreviation,yes,20260720-25A,Swinger’s gin and ecstasy tablets reported,TRAPEZE
+edge,LIP,1,synonym,yes,20260708-23A,Mock support and employment when on edge,LIPSERVICE
 editor’s,EDS,1,abbreviation,yes,20260721-8D,Fellows restricted by editor’s changes,EMENDS
 editor’s opening,E,1,other,no,20260706-16D,"Airy editor’s opening article, authentic",ETHEREAL
 electronic music,TRANCE,1,synonym,yes,20260713-6D,"Play electronic music, receiving cheer of approval",TOLERANCE
 elevated,TALL,1,synonym,yes,20260721-20D,Special sandals mostly elevated above air,TALARIA
+elite fighting force,SAS,1,abbreviation,yes,20260723-16D,Part of USA where couples survived an elite fighting force,ARKANSAS
+employ,Y,1,single-letter,yes,20260722-21D,Boat last to employ crew from Germany?,YACHT
+employment,SERVICE,1,synonym,yes,20260708-23A,Mock support and employment when on edge,LIPSERVICE
 empty temple,TE,1,other,yes,20260714-24A,"Next to empty temple, shot animals for egg cell?",GAMETE
 encountered,MET,1,synonym,yes,20260706-9A,"While around river, one encountered retiring goddess",ARTEMIS
 end in catastrophe,E,1,other,no,20260707-3D,Energy cuts end in catastrophe — and darkness,ECLIPSE
@@ -298,29 +351,36 @@ er …,UM,1,other,yes,20260713-19A,Drive in second? Er …,MOMENTUM
 established in position,SITED,1,synonym,yes,20260720-14D,Went back to see vicar I established in position,REVISITED
 estate possibly,CAR,1,synonym,yes,20260710-5D,Estate possibly blocking two thirds of Midland city upset intimidating figure in his field?,SCARECROW
 european,E,1,abbreviation,yes,20260706-18A,European with jolly temper receiving love periodically,EVERYSOOFTEN
+european union,EU,1,abbreviation,yes,20260723-22A,Opening words in panto come undone with European Union intervention,ONCEUPONATIME
 everyone,ALL,1,synonym,yes,20260720-19D,Parrot got up — everyone got up!,ROSELLA
 ex-pm,ATTLEE,1,other,yes,20260630-16D,Retired chap and ex-PM almost go to war,DOBATTLE
 excellent,A1,1,abbreviation,yes,20260717-11A,Land excellent jab striking face of boxer in brazen burst,AZERBAIJAN
+expected score,PAR,1,synonym,yes,20260722-9D,Winger dodges argument about expected score,HEDGESPARROW
 expert,ACE,1,synonym,yes,20260715-19D,"Want expert to contain agricultural disease, note",ABSENCE
 explorers,CAVERS,1,synonym,yes,20260713-5D,Reluctant explorers headed east,AVERSE
+exposed,OUT,1,synonym,yes,20260723-18D,White flesh is cold and exposed when fleece is inside,COCONUT
 express impatience,TUT,1,other,yes,20260706-2D,Instruction to express impatience with delay in middle of speech,TUTELAGE
 extra,BYE,1,cricket,yes,20260702-9A,Extra time fills fraction of device’s memory,BYTE
 extra payment,TIP,1,synonym,yes,20260702-5D,Extra payment put up to secure very large venture,POSIT
 extremely,E,1,other,yes,20260711-8D,"When upset go to bed, heading off extremely gloomy",SATURNINE
+extremely,EST,1,other,yes,20260723-19A,Extremely limited art offering information?,BRIEFEST
 extremely crafty,CY,1,other,yes,20260713-1A,Extremely crafty quintet brags about disreputable online activity,CYBERSQUATTING
 extremely self-confident,ST,1,other,yes,20260714-27A,Start to suspect terrible setter’s extremely self-confident in examination,STRESSTEST
 f,F,1,other,yes,20260718-27A,N + L – F? Neat,NIFTY
 face of boxer,B,1,other,yes,20260717-11A,Land excellent jab striking face of boxer in brazen burst,AZERBAIJAN
 fact,DATUM,1,synonym,yes,20260707-8D,"Essential fact about English team, Reading perhaps",DESIDERATUM
 fail,TANK,1,synonym,yes,20260710-28A,"Fail ’eavily, being a mug",TANKARD
+failing,LAPSE,1,synonym,yes,20260708-21D,Dated observation failing to save author making a comeback,ESPIAL
 fair,LIGHT,1,synonym,yes,20260702-12A,Employed outside job fair displaying seat covers,MOONLIGHTING
 fall,CASCADE,1,synonym,yes,20260710-12A,Fall with Valerie for Singleton’s first procession,CAVALCADE
 family,KIN,1,synonym,yes,20260629-9A,Family snatch cold cuts and seafood,KINGCRAB
 family’s heir,SCION,1,synonym,yes,20260711-15D,Trace family’s heir with input from American detective,SUSPICION
 famous bat,LARA,1,other,yes,20260707-9A,Fish devouring famous bat — suspect treachery?,SMELLARAT
+fancy,SWISH,1,synonym,yes,20260723-7D,Fancy taking in piggy?,SWINISH
 fantasise,DREAM,1,synonym,yes,20260718-12A,Fantasise removing last of bed sheets,REAM
 fast,LENT,1,synonym,yes,20260706-7D,"Seed, one ending in final, fast getting on top",LENTIL
 father,PA,1,synonym,yes,20260713-25A,Father travelling again to region of South America,PATAGONIA
+feeling less,NUMBER,1,synonym,yes,20260722-13D,Deputy feeling less outspoken as well,NUMBERTWO
 fees,RATES,1,synonym,yes,20260711-14A,"Processing unit collects university fees, assisting ministry",CURATESHIP
 fellow,MAN,1,synonym,yes,20260721-12A,"Artist, fellow out of this world",MANET
 fellows,MEN,1,synonym,yes,20260721-8D,Fellows restricted by editor’s changes,EMENDS
@@ -340,6 +400,9 @@ first question,QI,1,other,no,20260707-24A,Irish-American with first question for
 fish,SMELT,1,synonym,yes,20260707-9A,Fish devouring famous bat — suspect treachery?,SMELLARAT
 fish,TUNA,1,synonym,yes,20260707-27A,Tail removed from fish in barrel,TUN
 fish,GRAYLING,1,synonym,yes,20260718-24D,Half of fish can be bleak in Chesapeake Bay,GRAY
+fish,LING,1,synonym,yes,20260723-10A,Caught fish? Hold on tight,CLING
+flag,TIRE,1,synonym,yes,20260723-27A,One no longer working on carrying English flag,RETIREE
+fleece,CON,1,synonym,yes,20260723-18D,White flesh is cold and exposed when fleece is inside,COCONUT
 fling,HURL,1,synonym,yes,20260711-5A,Constant husband charged with fling remains grumpy,CHURLISH
 floor,R,1,other,yes,20260701-1A,"At last, floor space charge generates profit",REWARD
 floozy,TROLLOP,1,synonym,yes,20260630-10A,"Soldiers left Lima, fleeing from floozy",TROOP
@@ -351,8 +414,12 @@ football club,VILLA,1,other,yes,20260701-21A,Brief stint to improve football clu
 for,PRO,1,synonym,yes,20260713-1D,Token for trial demo (a responsive one),COUNTERPROTEST
 for example,EG,1,abbreviation,yes,20260706-26A,"Decline, for example, going into retreat ending in terrible cost",DEGENERATE
 for one,EG,1,abbreviation,yes,20260714-21D,Outlet for one topless outfit,EGRESS
+force,RN,1,abbreviation,yes,20260722-25A,"Polar bear’s back, on returning with particular force?",NORTHERN
 former,PAST,1,synonym,yes,20260704-13A,Misuse needles right outside former church,DROPASTITCH
+former partner,EX,1,abbreviation,yes,20260708-3D,Infuriate former partner according to judges after losing case,EXASPERATE
+free,E,1,single-letter,yes,20260722-20A,"Finally free, so all possible",EVERY
 friar,DOM,1,abbreviation,yes,20260721-1D,Friar turning up in various plays — musical contribution to worship,PSALMODY
+friend,AMI,1,foreign,yes,20260708-25A,Angers friend involved in race relations,FAMILY
 fruit,LEMON,1,synonym,yes,20260629-19D,Bill eats fruit out of English tree,ALMOND
 fruit,DATE,1,synonym,yes,20260715-15D,"Difficulty about large fruit, one encountered for the first time?",BLINDDATE
 fuel to burn,COAL,1,synonym,yes,20260710-13A,"Set fuel to burn, suppressing naked anger",CONGEAL
@@ -360,7 +427,6 @@ fully,WELL,1,synonym,yes,20260704-21D,"Blair’s men, fully",ORWELL
 functions,ROLES,1,synonym,yes,20260703-14D,Fabulous man with cape interrupting functions,ANDROCLES
 fury,RAGE,1,synonym,yes,20260716-23A,I’m thinking black fury brings offence,UMBRAGE
 gazette,E,1,other,yes,20260716-8D,Los Angeles Gazette finally covers bridge game,LACROSSE
-georgia,GA,1,place,yes,20260715-24A,Radioactive element one’s lad found around Georgia,OGANESSON
 germanic character,THORN,1,other,yes,20260630-12D,Walking stick of grim Germanic character,BLACKTHORN
 getting on,OLD,1,synonym,yes,20260706-12A,"Cleanser in middle of kitchen getting on with stuff, filled with energy",COLDCREAM
 gin,TRAP,1,synonym,yes,20260720-25A,Swinger’s gin and ecstasy tablets reported,TRAPEZE
@@ -369,15 +435,19 @@ glen,DALE,1,synonym,yes,20260714-1D,"Confused, Glen catches a couple of zeds in 
 glue,GUM,1,synonym,yes,20260716-4D,Put fine glue on my doodah,THINGUMMY
 go to bed,TURN IN,1,synonym,yes,20260711-8D,"When upset go to bed, heading off extremely gloomy",SATURNINE
 goes back and forth,TACKS,1,synonym,no,20260714-1A,Money goes back and forth for essentials,BRASSTACKS
+golden,AURI,1,synonym,yes,20260723-14D,Author’s less wise when book becomes mostly golden,DUMAURIER
 golf,G,1,nato,yes,20260717-27A,Like to enter clubs wearing golf jacket,CASING
 good,NICE,1,synonym,yes,20260706-14A,Superb quality in publication with good binding provided by New Church,MAGNIFICENCE
 goose’s,G,1,other,yes,20260703-24D,"Say, goose’s beginning",EGG
 got up,ROSE,1,synonym,yes,20260720-19D,Parrot got up — everyone got up!,ROSELLA
+gracious,MY,1,other,yes,20260723-13A,A gracious party hosting 500? It’s a bit of a thinker,AMYGDALA
 grand,G,1,abbreviation,yes,20260711-22D,Shower beneath grand timber structure,GRAIN
 grass,REED,1,synonym,yes,20260701-26A,Grass company really cutting back parts obtained from waste,RECOVERED
+greek,G,1,single-letter,yes,20260708-12A,Lead character in Greek writer’s play,GIVE
 gretna,ET,1,other,yes,20260702-13D,"Couple in middle of Gretna wearing wreathes, madly in love",SWEETHEART
 grid,GRATING,1,synonym,yes,20260704-20A,Considering grid without beginning on it,RATING
 grim,BLACK,1,synonym,yes,20260630-12D,Walking stick of grim Germanic character,BLACKTHORN
+grotto,BOWER,1,synonym,yes,20260723-12D,"Have nothing left in grotto, say, for one making deliveries",FASTBOWLER
 group,SET,1,synonym,yes,20260706-8D,Start unfashionable group,OUTSET
 growing substantially,TREBLING,1,synonym,yes,20260715-7D,Fearful male stops growing substantially?,TREMBLING
 guarantee,ENSURE,1,synonym,yes,20260706-4D,Guarantee yielding right result,ENSUE
@@ -389,7 +459,9 @@ harder,STERNER,1,synonym,yes,20260710-29A,Harder to track each person in a right
 harm,INJURE,1,synonym,yes,20260707-13A,"Jack, released from harm, put into operation",INURE
 harry,EX,1,other,yes,20260703-5D,Harry wanting very spacious case,EXAMPLE
 has eaten,DINED,1,synonym,yes,20260707-12A,Exhausted academician has eaten outside,DRAINED
+has to,MUST,1,synonym,yes,20260723-26A,Boat Race coverage has to hurt after losing final 1-0,MUSTACHIO
 haunches,HIPS,1,synonym,yes,20260716-10A,Displaced area in girl’s haunches and in the waist,AMIDSHIPS
+have nothing,FAST,1,synonym,yes,20260723-12D,"Have nothing left in grotto, say, for one making deliveries",FASTBOWLER
 having the benefit of,ENJOYING,1,synonym,no,20260710-6D,Order having the benefit of ignoring leaders of youth groups,ENJOIN
 head,DOME,1,synonym,yes,20260718-8D,Measuring device’s safe when put round head,PEDOMETER
 head of local,L,1,other,no,20260713-10A,Admit to knowing head of local school,LETON
@@ -402,20 +474,22 @@ him,H,1,single-letter,yes,20260701-11A,Turner and others reflecting about what g
 hired,LET,1,synonym,yes,20260718-15A,Cold dash in a hired car having unfixed roof,CABRIOLET
 historical times,AGES,1,synonym,yes,20260720-13A,Woman’s name in historical times,AGNES
 hoarse,GRAVELLY,1,synonym,yes,20260716-28A,"Seriously hoarse, missing a line",GRAVELY
+holiday,BREAK,1,synonym,yes,20260708-16A,Get used to holiday home,BREAKIN
 holy,PI,1,synonym,yes,20260706-25A,Paint holy man taking Mass,PIGMENT
 home,NEST,1,synonym,yes,20260714-15D,Only home with motorway running through it is extremely awe-inspiring,SOLEMNEST
 hospital department,ENT,1,abbreviation,yes,20260707-17A,Superb basic unit in old hospital department,EXCELLENT
 hot,H,1,single-letter,yes,20260718-14A,Suspicion of hot meal that’s left out,HUNCH
 house,E,1,other,yes,20260716-21D,"In a perfect world, I mooch around rear of house",IDEALLY
 house,HO,1,abbreviation,yes,20260717-6D,House fire in US could be malicious prank,HOAX
+how unpleasant,UGH,1,other,yes,20260723-2D,"How unpleasant to cut half of pudding, or thereabouts",ROUGHLY
+hurt,ACHE,1,synonym,yes,20260723-26A,Boat Race coverage has to hurt after losing final 1-0,MUSTACHIO
 i don’t know,ER,1,other,yes,20260716-22D,Little pet I don’t know catches a church mouse,PAUPER
 identity,ID,1,abbreviation,yes,20260711-3D,Republicans’ preferred leader now concealing identity,PRESIDENT
 if,I,1,single-letter,yes,20260702-15A,Stomach pains pass if caught in the earliest stages,COLIC
 imitate,APE,1,synonym,yes,20260711-20D,Can it imitate fashion?,SHAPE
 improve,GAIN,1,synonym,yes,20260701-21A,Brief stint to improve football club before unlimited team growth,BOUGAINVILLAEA
 in,HOT,1,synonym,yes,20260630-3D,Place to stay in centre of Medellin,HOTEL
-in,HOME,1,synonym,yes,20260707-1A,Second city storing rubbish in pile,STATELYHOME
-in,IN,1,synonym,yes,20260721-6D,Film director — one has dropped in at the start,FELLINI
+in,I,1,single-letter,yes,20260722-7D,Country’s top player first of all in cup appearance,COSTARICA
 in oil,NI,1,other,yes,20260713-7D,Type of salt regularly in oil and stock,NITRITE
 in the morning,AM,1,abbreviation,yes,20260721-29A,Meat good in the morning first day back at work?,GAMMON
 inaccurate,OFF,1,synonym,yes,20260711-1A,Inaccurate stroke perfected by repetition,OFFPAT
@@ -426,10 +500,12 @@ injure,MAR,1,synonym,yes,20260629-14A,Injure supporter in capital relocating nor
 insect,ANT,1,synonym,yes,20260721-15D,Angry about one insect in food item,CROISSANT
 insensitive,DEAD,1,synonym,yes,20260706-6D,"Estimation of position that’s insensitive about country’s leader, monarch carrying on",DEADRECKONING
 inside,SI,1,other,yes,20260720-20A,She predicts crux of inside line on Times,SIBYL
+inspection,N,1,single-letter,yes,20260722-19D,Head going mad over inspection’s conclusion,NOGGIN
 inspector,DI,1,abbreviation,yes,20260704-28A,Inspector swaggers bringing forward last suspect,DISTRUST
 instruction to boxer,SIT,1,synonym,yes,20260703-6A,"Fuss, saying instruction to boxer making comeback?",TISWAS
 instrument,PIANOLA,1,synonym,yes,20260715-11A,Chap’s instrument transferring current in Caribbean island,HISPANIOLA
 insurance,COVER,1,synonym,yes,20260701-15D,City in which you must be protected by vehicle insurance,VANCOUVER
+intended,DELIBERATE,1,synonym,yes,20260708-6D,Shop intended to give away carpet,DELI
 international,I,1,abbreviation,yes,20260629-16D,An international compiler failing to finish drink,ANISETTE
 investigation,CASE,1,synonym,yes,20260717-16D,Copper led empty investigation up close,CULDESAC
 investigator,DET,1,abbreviation,yes,20260721-28A,"Investigator made a mistake, being put off",DETERRED
@@ -437,12 +513,14 @@ irish,IR,1,abbreviation,yes,20260702-4D,Irish serviceman not meeting expected st
 irish-american,IRA,1,abbreviation,yes,20260707-24A,Irish-American with first question for Arab?,IRAQI
 is able to,CAN,1,synonym,yes,20260718-26A,Potential hazard to life volunteer is able to duck,VOLCANO
 is in french,EST,1,foreign,yes,20260630-28A,Gide novel is in French and most intense,EDGIEST
+isaac,C,1,single-letter,yes,20260722-6D,Patriarch embraces Rebecca and Isaac ultimately — their son?,JACOB
 island,I,1,abbreviation,yes,20260629-2D,Hostile island to the north of California supports mini uprising,INIMICAL
 island,INCH,1,synonym,yes,20260710-1D,Shy away from Florida island,FLINCH
 it,IT,1,other,yes,20260716-16D,"Dispatch salad plant, having wrapped it",CELERITY
 item required,MUST,1,synonym,yes,20260715-22D,Divert item required for the most part in A&E,AMUSE
 its location,SITE,1,synonym,yes,20260711-13D,"Eg “One giant leap”, its location given by Spooner?",SOUNDBITE
 i’m enjoying this,WHEE,1,other,yes,20260713-18D,I’m enjoying this story — it may well be full of rubbish,WHEELIE
+i’m not sure what to say,ER,1,other,no,20260708-17A,I’m not sure what to say out of respect for legal argument,DEFENCE
 i’m obliged,TA,1,synonym,yes,20260629-22A,I’m obliged to enter swanky compound,POTASH
 i’m thinking,UM,1,other,yes,20260716-23A,I’m thinking black fury brings offence,UMBRAGE
 jack,J,1,abbreviation,yes,20260707-13A,"Jack, released from harm, put into operation",INURE
@@ -450,6 +528,7 @@ jeopardy,DANGER,1,synonym,yes,20260720-3D,Selfish person one might cast in <i>Je
 joint head of faculty,CODEAN,1,synonym,no,20260630-20D,Number of joint head of faculty read out,CODEINE
 jolly,VERY,1,synonym,yes,20260706-18A,European with jolly temper receiving love periodically,EVERYSOOFTEN
 journalist,ED,1,abbreviation,yes,20260707-7D,Article: story upcoming beat journalist turned away,ALIENATED
+judges,RATE,1,synonym,yes,20260708-3D,Infuriate former partner according to judges after losing case,EXASPERATE
 judicial examination,TRIAL,1,synonym,yes,20260714-3D,Court raised point during judicial examination,TRIBUNAL
 jury,UR,1,other,yes,20260711-5D,"Honesty positively helpful with jury, getting case dismissed",CANDOUR
 just,RIGHT,1,synonym,yes,20260717-7D,Book digests just scrap source of many ideas,BRIGHTSPARK
@@ -460,7 +539,9 @@ key,CODE,1,synonym,yes,20260703-21A,Alphanumeric string of six or seven characte
 key,C,1,music,yes,20260704-27A,Nobelium is processed by key plant,COLUMBINE
 key in,DIAL,1,synonym,yes,20260711-23A,"Festival key in India, taking short week",DIWALI
 kill,SLAY,1,synonym,yes,20260716-5D,Lose track of road kill,MISLAY
+kind of music,ROCK,1,synonym,yes,20260723-6D,Kind of music benefit including core from Monty Python,ROCKSNAKE
 king,K,1,abbreviation,yes,20260717-21A,Performed round with King’s Singer,NARK
+king,R,1,abbreviation,yes,20260722-1D,King feeding another man peach snack,PRAWNCRACKER
 kinky sex,SM,1,abbreviation,yes,20260702-1D,Astounded work supported kinky sex breaks,GOBSMACKED
 knock,DIS,1,synonym,yes,20260703-18A,"Knock, making audible sound",DISCERNING
 l,FIFTY,1,roman,yes,20260718-27A,N + L – F? Neat,NIFTY
@@ -482,16 +563,21 @@ leap,BOUND,1,synonym,yes,20260711-13D,"Eg “One giant leap”, its location giv
 learning,LORE,1,synonym,yes,20260721-11A,Learning to control current in river,LOIRE
 led,LD,1,other,yes,20260717-16D,Copper led empty investigation up close,CULDESAC
 less hesitant,SURER,1,synonym,yes,20260713-22A,Money manager less hesitant after rate changes,TREASURER
+less wise,DUMBER,1,synonym,yes,20260723-14D,Author’s less wise when book becomes mostly golden,DUMAURIER
+let out,EMIT,1,synonym,yes,20260708-1A,"British criminal gang let out — in retrospect, a disaster waiting to happen",TIMEBOMB
 letters,POST,1,synonym,yes,20260711-17D,Trouble squeezing letters in for marginal note,APOSTIL
 level,RAZE,1,synonym,yes,20260706-13A,Put up orator’s level,RAISE
 lewis,LEWIS,1,place,yes,20260711-12A,"Cycling round Lewis, see western one?",ISLE
 libertine,RAKE,1,synonym,yes,20260716-2D,Wildly enthusiastic about new libertine one found in bed,MANDRAKE
 lieutenant,LT,1,abbreviation,yes,20260629-23A,Last lieutenant stationed in United India and China,ULTIMATE
+light,OUT,1,synonym,yes,20260708-4D,Weird light has somewhat visible border?,OUTLANDISH
 like,AS,1,synonym,yes,20260717-27A,Like to enter clubs wearing golf jacket,CASING
 like <i>wyrd sister</i>’s,HAGGISH,1,synonym,yes,20260703-25A,Almost entirely like <i>Wyrd Sister</i>’s mix of meaty morsels,HAGGIS
 like many police officers,UNIFORMED,1,synonym,no,20260714-11A,"Ignorant, like many police officers patrolling centre of Swansea",UNINFORMED
+like that,SIC,1,foreign,yes,20260722-8A,"Star student, when is first in theory, receives prize like that",ASTROPHYSICIST
 lima,L,1,nato,yes,20260630-10A,"Soldiers left Lima, fleeing from floozy",TROOP
 limit,T,1,single-letter,yes,20260720-16D,Uninhibited live artist close to limit in song,LIBERATED
+limited,BRIEF,1,synonym,yes,20260723-19A,Extremely limited art offering information?,BRIEFEST
 line,HOUSE,1,synonym,yes,20260718-1A,Possible putter’s line for nineteenth hole?,CLUBHOUSE
 liquid waste,URINE,1,synonym,yes,20260717-2D,One’s leaving most of liquid waste in vessel,URN
 listener,EAR,1,synonym,yes,20260714-13D,"Setter penning Listener, although missing last piece of mechanism",GEARWHEEL
@@ -501,17 +587,21 @@ little pet,PUP,1,synonym,yes,20260716-22D,Little pet I don’t know catches a ch
 live,BE,1,synonym,yes,20260720-16D,Uninhibited live artist close to limit in song,LIBERATED
 lives,IS,1,synonym,yes,20260720-27A,Record lives in centre of US politics,DISC
 long time,ETERNITY,1,synonym,yes,20260715-8D,A long time dismissing first English doctor in confused situation may be sign of pregnancy,MATERNITYDRESS
+look,LO,1,other,yes,20260723-5A,"Perhaps deodorant can look desperate, going back on area",AEROSOL
 los angeles,LA,1,place,yes,20260716-8D,Los Angeles Gazette finally covers bridge game,LACROSSE
 louisiana,LA,1,abbreviation,yes,20260710-14D,"Perhaps a blow, being all in when Louisiana stands for America",EXHALATION
 love,L,1,single-letter,yes,20260720-18D,"Thanks boyfriend, introducing beginning of love scene",TABLEAU
+low,BASE,1,synonym,yes,20260708-16D,Low bar having nothing to justify it,BASELESS
 made a mistake,ERRED,1,synonym,yes,20260721-28A,"Investigator made a mistake, being put off",DETERRED
 made anxious,ATE,1,synonym,yes,20260701-9D,Made anxious under previous religious office,PRIORATE
 mafia,M,1,other,yes,20260703-3D,"Begrudge supporting old leader of mafia shot here, there and everywhere",OMNIPRESENT
 make a mistake,ERR,1,synonym,yes,20260718-5D,Make a mistake with my delivery person,ERRANDBOY
+make a move quickly,LEGIT,1,synonym,no,20260723-8D,Proper to make a move quickly before I move to end the game,LEGITIMATE
 makes moist,WETS,1,synonym,yes,20260711-18A,Cook makes moist rolls,STEW
 male,HE,1,synonym,yes,20260701-24D,Caught male with female cook,CHEF
 man,M,1,other,yes,20260703-6D,Restrict man’s starting blocks with pistol and stopwatch possibly,TIMEPIECE
 man,GENT,1,synonym,yes,20260706-25A,Paint holy man taking Mass,PIGMENT
+managed,LED,1,synonym,yes,20260722-23D,I managed to grab sunbed in the end — and took it easy,IDLED
 management,CHIEF,1,synonym,yes,20260704-8D,What Bond says regarding management shenanigans?,MISCHIEF
 manager’s,M,1,single-letter,yes,20260721-14A,Corruption of company manager’s first seen in witness statement,DECOMPOSITION
 mapmakers,OS,1,abbreviation,yes,20260717-1D,Parties of amateur mapmakers hiked up sierra,SOCIALS
@@ -543,13 +633,18 @@ modest conveyance,TRIKE,1,synonym,yes,20260716-13A,"Sitting astride modest conve
 monarch,KING,1,synonym,yes,20260706-6D,"Estimation of position that’s insensitive about country’s leader, monarch carrying on",DEADRECKONING
 money,BRASS,1,synonym,yes,20260714-1A,Money goes back and forth for essentials,BRASSTACKS
 month,M,1,abbreviation,yes,20260704-6D,One admitted being restless as month turns to November,INPATIENT
+monty,N,1,single-letter,yes,20260723-6D,Kind of music benefit including core from Monty Python,ROCKSNAKE
 mooch,DALLY,1,synonym,yes,20260716-21D,"In a perfect world, I mooch around rear of house",IDEALLY
 mortar,POINTING,1,synonym,yes,20260711-19A,Trench mortar on day one not going off as hoped,DISAPPOINTING
 mothers,MAS,1,abbreviation,yes,20260702-23D,Religious festival widely celebrated by mothers,XMAS
+move to end the game,MATE,1,chess,no,20260723-8D,Proper to make a move quickly before I move to end the game,LEGITIMATE
+move towards,COME,1,synonym,yes,20260723-21D,Red setter’s about to move towards guards,COMMIE
 movie award,OSCAR,1,synonym,yes,20260715-5D,Limits to Universal blocking movie award regarding kissing,OSCULAR
+much appreciated,TA,1,other,yes,20260723-17A,Much appreciated state of unconsciousness in US city,TACOMA
 muddle,MESS,1,synonym,yes,20260706-5D,"Cleaner, left in muddle, having no appeal",CHARMLESS
 mum,MA,1,synonym,yes,20260629-24D,Mum! New fella?,MAN
 music award,GRAMMY,1,synonym,yes,20260716-12A,"School music award missing year, a choir’s last",GRAMMAR
+my,LORD,1,synonym,yes,20260708-11A,Order around my relations again,LORDITOVER
 my,MY,1,other,yes,20260716-4D,Put fine glue on my doodah,THINGUMMY
 my,BOY,1,synonym,yes,20260718-5D,Make a mistake with my delivery person,ERRANDBOY
 n,N,1,other,yes,20260718-27A,N + L – F? Neat,NIFTY
@@ -557,6 +652,7 @@ namely,SC,1,abbreviation,yes,20260714-5D,"Part of the neck, namely the hair arou
 narrow path,ALLEY,1,synonym,yes,20260710-2D,"Taking the Tube, run provided narrow path for divided area",RIFTVALLEY
 national,SWISS,1,synonym,yes,20260720-8D,National register for part of final course,SWISSROLL
 nation’s poet,LAUREATE,1,synonym,yes,20260714-18D,Nation’s poet loses pound of gold,AUREATE
+needing water,DRY,1,synonym,yes,20260708-22A,Fish needing water that’s oxygenated,DORY
 network,LAN,1,abbreviation,yes,20260720-12A,Plug in hosts connected to revolutionary network: cause of power surge?,ADRENALIN
 new,E,1,single-letter,yes,20260701-19D,Plant centre in New Guinea flourishing,EUGENIA
 nigh,CLOSE,1,synonym,yes,20260721-9D,Reveal end of world is nigh,DISCLOSE
@@ -569,6 +665,7 @@ note,N,1,abbreviation,yes,20260715-19D,"Want expert to contain agricultural dise
 november,N,1,nato,yes,20260704-6D,One admitted being restless as month turns to November,INPATIENT
 now,PRESENT,1,synonym,yes,20260711-3D,Republicans’ preferred leader now concealing identity,PRESIDENT
 nude,BARE,1,synonym,yes,20260715-18D,"Drink provider, almost nude, is on <i>Cheers</i>",BARISTA
+object,END,1,synonym,yes,20260722-26A,Object that’s sensitive gift,ENDOW
 obscene,LEWD,1,synonym,yes,20260701-20A,"Remained twisted, tense and obscene",DWELT
 obsessive,ANAL,1,synonym,yes,20260717-14D,Corporal’s obsessive checking of smallest thing,ANATOMICAL
 obsessive behaviour,OCD,1,abbreviation,yes,20260707-5D,Terriers beset by obsessive behaviour in four pairs?,OCTAD
@@ -579,7 +676,8 @@ offer,TENDER,1,synonym,yes,20260630-22A,"Easily touched, offer last of our warm 
 old,EX,1,synonym,yes,20260707-17A,Superb basic unit in old hospital department,EXCELLENT
 old city,ILIUM,1,place,yes,20260721-25D,Report of old city’s section of canal,ILEUM
 old woman,GRAN,1,synonym,yes,20260717-9D,An old woman adopting stuck-up air of cultivation,AGRARIAN
-on,ON,1,other,yes,20260706-6D,"Estimation of position that’s insensitive about country’s leader, monarch carrying on",DEADRECKONING
+on,RE,1,abbreviation,yes,20260723-27A,One no longer working on carrying English flag,RETIREE
+once had sex with,KNEW,1,synonym,no,20260708-13A,Presenter reportedly once had sex with failed actress,NEWSCASTER
 once known as,NEE,1,synonym,yes,20260702-19A,Vegetables once known as “hollow potatoes”,NEEPS
 one,ONE,1,synonym,yes,20260703-12D,Protest band from US — one containing guitar,REMONSTRATE
 one of seven,HAPPY,1,other,yes,20260702-24A,"Carefree on leaving show, one of seven heading for better parts",DEMOBHAPPY
@@ -587,6 +685,7 @@ one’s,ONES,1,synonym,yes,20260715-24A,Radioactive element one’s lad found ar
 one’s,I,1,roman,yes,20260717-2D,One’s leaving most of liquid waste in vessel,URN
 only,SOLE,1,synonym,yes,20260714-15D,Only home with motorway running through it is extremely awe-inspiring,SOLEMNEST
 onset of ardent,A,1,other,yes,20260629-10A,Onset of ardent romance when touring Cape Bay,ALCOVE
+open,OVERT,1,synonym,yes,20260708-9A,Open University study halved proposal,OVERTURE
 order,OM,1,abbreviation,yes,20260630-27A,Disgusting racket stopped by order,NOISOME
 order of merit,OM,1,abbreviation,yes,20260716-17D,"With order of merit covering uniform, eat soup",CONSOMME
 organ,EAR,1,synonym,yes,20260721-27A,"Home, comfortable one housing organ, seriously!",INEARNEST
@@ -599,19 +698,30 @@ outlaw’s lover,MARIAN,1,other,yes,20260630-6D,Legendary outlaw’s lover ditch
 outstanding,OWING,1,synonym,yes,20260710-26D,Nothing detracted from outstanding side of building,WING
 over,O,1,cricket,yes,20260710-17D,Airborne pest miles over southern capital,MOSQUITO
 own goal,OG,1,abbreviation,yes,20260711-11A,Censure own goal during tie to remain in league,STICKTOGETHER
+oxygenated,O,1,chemical,yes,20260708-22A,Fish needing water that’s oxygenated,DORY
 paper boss,ED,1,abbreviation,yes,20260721-13A,Handler of money paper boss sacked,CASHIERED
+park,AR,1,other,yes,20260723-3D,Shower in middle of Park Row,ARROW
 part of apple,CORE,1,synonym,yes,20260713-23A,People working together in part of Apple broadcast?,CORPS
 part of book,PAGE,1,synonym,yes,20260714-20D,Amount of distortion in part of book about conflict?,WARPAGE
+particular,THE,1,synonym,yes,20260722-25A,"Polar bear’s back, on returning with particular force?",NORTHERN
 parties,BASHES,1,synonym,yes,20260714-14A,Residue from parties initially ignored,ASHES
+parts of ireland,ROI/NI,1,place,yes,20260708-2D,Centre backed arrests regularly dividing parts of Ireland,INTERIOR
 party,DO,1,synonym,yes,20260629-3D,Finish off drug propping up party animal,DOG
+party,RAVE,1,synonym,yes,20260722-11A,Valorous British party,BRAVE
+party,GALA,1,synonym,yes,20260723-13A,A gracious party hosting 500? It’s a bit of a thinker,AMYGDALA
 party perhaps,FUNCTION,1,synonym,yes,20260718-2D,What comforts party perhaps as following disappears,UNCTION
 pass,COL,1,synonym,yes,20260702-15A,Stomach pains pass if caught in the earliest stages,COLIC
+patriarch,JOB,1,synonym,yes,20260722-6D,Patriarch embraces Rebecca and Isaac ultimately — their son?,JACOB
 pay for services rendered,REWARD,1,synonym,no,20260701-28A,Artist’s back pay for services rendered,DRAWER
+peach,CRACKER,1,synonym,yes,20260722-1D,King feeding another man peach snack,PRAWNCRACKER
+peg,TEE,1,synonym,yes,20260722-16D,Show peg pinning casual garment,TELEVISE
 pence,P,1,abbreviation,yes,20260714-9A,Mike Pence breaking law in disorder,RUMPLE
 penny,P,1,abbreviation,yes,20260720-14A,"Catch without licence, exchanging penny for river fish",ROACH
 people collectively,MANKIND,1,synonym,yes,20260630-18D,Short people collectively bolstered by current swimsuit style,MANKINI
 per person,EACH,1,synonym,yes,20260711-7D,Litre per person let out through porous material,LEACH
 performed,RAN,1,synonym,yes,20260717-21A,Performed round with King’s Singer,NARK
+person choosing,SELECTOR,1,synonym,yes,20260708-18D,Person choosing to have 100 plus soldiers promoted for protection,CORSELET
+person of great strength,TITAN,1,synonym,no,20260708-27A,Person of great strength consumed salt,TITANATE
 peter,PIPER,1,other,yes,20260703-13A,"In rhyme, Peter periodically raves about superb peppers",PIPERACEAE
 pieces,MEN,1,chess,yes,20260715-23D,Options to be selected from pieces supported by you,MENU
 pig-farmer,STY,1,other,yes,20260710-20A,Designer of roster for pig-farmer?,STYLIST
@@ -637,32 +747,39 @@ prepared,DID,1,synonym,yes,20260701-14A,Psalmist prepared seventeenth-century bi
 presentation,TALK,1,synonym,yes,20260717-18A,Save short presentation after area meeting at an end,ABUTTAL
 previous,PRIOR,1,synonym,yes,20260701-9D,Made anxious under previous religious office,PRIORATE
 prior to,PRE,1,abbreviation,yes,20260704-11A,What navy did to recruit prior to steamship,PRESS
+prize,TROPHY,1,synonym,yes,20260722-8A,"Star student, when is first in theory, receives prize like that",ASTROPHYSICIST
 prize at the end,E,1,other,no,20260713-14D,Artist’s work wins top prize at the end,LANDSCAPE
 processing unit,CHIP,1,synonym,yes,20260711-14A,"Processing unit collects university fees, assisting ministry",CURATESHIP
+product of eg berkshire,HAM,1,other,no,20260723-20D,7 almost lifted product of eg Berkshire town,EVESHAM
 profound,DEEP,1,synonym,yes,20260714-8A,Profound touch barely registered in act of passion,DEEPKISS
 provide,CATER,1,synonym,yes,20260720-2D,Beastly noise — provide barrier for ears,CATERWAUL
 psychic ability,ESP,1,abbreviation,yes,20260718-20A,See psychic ability decay finally,ESPY
 publication,MAG,1,abbreviation,yes,20260706-14A,Superb quality in publication with good binding provided by New Church,MAGNIFICENCE
+pudding,ROLY,1,synonym,yes,20260723-2D,"How unpleasant to cut half of pudding, or thereabouts",ROUGHLY
 punish,CANE,1,synonym,yes,20260718-15D,Scream about husband I punish for deceitfulness,CHICANERY
 question,QUERY,1,synonym,yes,20260710-9A,Trick question curtailed win,CONQUER
 quiet,SH,1,synonym,yes,20260629-17A,Quiet old Conservative Big Beast last to speak in vibrant tone,SHOCKINGPINK
 quiet,P,1,music,yes,20260703-16A,Witch-hunt brushing aside quiet advocate,URGE
 quietly,SH,1,other,yes,20260702-10A,Doctor and sister starting round quietly in formal attire,DRESSSHIRT
+race,FLY,1,synonym,yes,20260708-25A,Angers friend involved in race relations,FAMILY
 racket,NOISE,1,synonym,yes,20260630-27A,Disgusting racket stopped by order,NOISOME
 rapidly,RY,1,other,yes,20260630-13A,Cross dons can rapidly empty chat room,LOCUTORY
 rather rowdy,LOUDISH,1,synonym,yes,20260707-18D,"Uncouth, rather rowdy: time to replace Democrat",LOUTISH
 raves,AE,1,other,yes,20260703-13A,"In rhyme, Peter periodically raves about superb peppers",PIPERACEAE
 reading perhaps,R,1,other,yes,20260707-8D,"Essential fact about English team, Reading perhaps",DESIDERATUM
 really,VERY,1,synonym,yes,20260701-26A,Grass company really cutting back parts obtained from waste,RECOVERED
+rebecca,A,1,single-letter,yes,20260722-6D,Patriarch embraces Rebecca and Isaac ultimately — their son?,JACOB
 receive,HAVE,1,synonym,yes,20260701-25A,Safe place to receive focus of attention,HAVEN
 record,ANNAL,1,synonym,yes,20260704-29A,Head of enterprise in record temper,ANNEAL
 record,EP,1,abbreviation,yes,20260706-23D,Storehouse in spot holding record,DEPOT
 register,ROLL,1,synonym,yes,20260720-8D,National register for part of final course,SWISSROLL
+relations,IT,1,synonym,yes,20260708-11A,Order around my relations again,LORDITOVER
 remains,IS,1,synonym,yes,20260711-5A,Constant husband charged with fling remains grumpy,CHURLISH
 renegade,RAT,1,synonym,yes,20260707-25A,Renegade wife tucked into ruptured sausage,BRATWURST
 repaired,MENDED,1,synonym,yes,20260701-18A,Table designer’s almost repaired exposed tube,MENDELEEV
 resistance,R,1,abbreviation,yes,20260711-21D,Bottle still spinning overcomes resistance,NERVE
 resolute,GRIM,1,synonym,yes,20260707-22A,"Religious traveller turning cheek, resolute",PILGRIM
+respect,DEFERENCE,1,synonym,yes,20260708-17A,I’m not sure what to say out of respect for legal argument,DEFENCE
 restrict,TIE,1,synonym,yes,20260703-6D,Restrict man’s starting blocks with pistol and stopwatch possibly,TIMEPIECE
 retinue,TRAIN,1,synonym,yes,20260713-12A,Control of retinue taken by others,RESTRAINT
 retreat,DEN,1,synonym,yes,20260706-26A,"Decline, for example, going into retreat ending in terrible cost",DEGENERATE
@@ -678,6 +795,7 @@ roster,LIST,1,synonym,yes,20260710-20A,Designer of roster for pig-farmer?,STYLIS
 rovers,HOBOS,1,synonym,yes,20260717-5A,Orbiter linked to Mars rovers on surface of planet,PHOBOS
 rows,LINES,1,synonym,yes,20260706-22A,Piety in turn followed by rows between daughter and son,GODLINESS
 rubbish,TAT,1,synonym,yes,20260707-1A,Second city storing rubbish in pile,STATELYHOME
+ruckus,MELEE,1,synonym,yes,20260722-17A,African driver’s ruckus while being driven?,CAMELEER
 run,R,1,cricket,yes,20260710-2D,"Taking the Tube, run provided narrow path for divided area",RIFTVALLEY
 ruptured,BURST,1,synonym,yes,20260707-25A,Renegade wife tucked into ruptured sausage,BRATWURST
 rushed,RAN,1,synonym,yes,20260706-19D,"Pursued by police, rushed off",RANCID
@@ -707,8 +825,10 @@ senior adviser,ELDER,1,synonym,yes,20260710-22D,Unionist who might make sparks f
 serious,STAID,1,synonym,yes,20260704-18D,Tree underpinned by serious immediate treatment,FIRSTAID
 serviceman,REGULAR,1,synonym,yes,20260702-4D,Irish serviceman not meeting expected standards,IRREGULAR
 setter,GEL,1,synonym,yes,20260714-13D,"Setter penning Listener, although missing last piece of mechanism",GEARWHEEL
+setter’s,IM,1,other,yes,20260723-21D,Red setter’s about to move towards guards,COMMIE
 settlements,SS,1,other,yes,20260711-2D,Draw line between Florence and those surrounding settlements,FLOSS
 seventeenth-century bible,AV,1,abbreviation,yes,20260701-14A,Psalmist prepared seventeenth-century bible lines,DAVID
+ship,SS,1,abbreviation,yes,20260722-18A,Crew on board ship cooks,STEAMS
 shortly,ANON,1,synonym,yes,20260629-6D,Valiant maiden shortly embraces warrior king,AGAMEMNON
 shot,NIP,1,synonym,yes,20260703-3D,"Begrudge supporting old leader of mafia shot here, there and everywhere",OMNIPRESENT
 shot animals,GAME,1,synonym,yes,20260714-24A,"Next to empty temple, shot animals for egg cell?",GAMETE
@@ -730,10 +850,13 @@ smallest thing,ATOMIC,1,synonym,yes,20260717-14D,Corporal’s obsessive checking
 smooth,RUB,1,synonym,yes,20260716-19D,Stream smooth computer image,RUBICON
 smut,GRIME,1,synonym,yes,20260714-23A,Unpleasant smut curtailed,GRIM
 snatch,GRAB,1,synonym,yes,20260629-9A,Family snatch cold cuts and seafood,KINGCRAB
+so,VERY,1,synonym,yes,20260722-20A,"Finally free, so all possible",EVERY
 soccer team,SIX,1,other,yes,20260715-4D,More than half of soccer team aboard vehicle upset left-winger,MARXIST
 society,S,1,abbreviation,yes,20260702-3A,"Taken aback, coughed up Chinese university society fine",DIAPHANOUS
+soldiers,OR,1,abbreviation,yes,20260708-18D,Person choosing to have 100 plus soldiers promoted for protection,CORSELET
 solid shape,CONE,1,synonym,yes,20260721-4A,Put together solid shape outside domestic residence,CONFLATE
 sometimes called,AKA,1,abbreviation,yes,20260714-17A,Democrat sometimes called Republican in west coast city,DAKAR
+somewhat,ISH,1,other,yes,20260708-4D,Weird light has somewhat visible border?,OUTLANDISH
 song,LIED,1,synonym,yes,20260720-16D,Uninhibited live artist close to limit in song,LIBERATED
 sounds,PLUMBS,1,synonym,yes,20260710-24D,These are very desirable vocal sounds,PLUMS
 south american,SA,1,abbreviation,yes,20260720-1D,Fine area outside South American city,OSAKA
@@ -747,24 +870,30 @@ st peter’s successor,POPE II,1,other,yes,20260703-2D,St Peter’s successor se
 start to suspect,S,1,other,no,20260714-27A,Start to suspect terrible setter’s extremely self-confident in examination,STRESSTEST
 starter of lemon,L,1,other,no,20260629-5D,One potted starter of lemon sorbet ordered,LOBSTER
 starts to intoxicate gamblers,IG,1,other,no,20260713-23D,"Smoke starts to intoxicate gamblers inside saloon, perhaps",CIGAR
+state of unconsciousness,COMA,1,synonym,yes,20260723-17A,Much appreciated state of unconsciousness in US city,TACOMA
 states,AVERS,1,synonym,yes,20260704-1D,Those who keep funding small states,SAVERS
 steamship,SS,1,abbreviation,yes,20260704-11A,What navy did to recruit prior to steamship,PRESS
 still,EVEN,1,synonym,yes,20260711-21D,Bottle still spinning overcomes resistance,NERVE
 stint,BOUT,1,synonym,yes,20260701-21A,Brief stint to improve football club before unlimited team growth,BOUGAINVILLAEA
+stitch,SEW,1,synonym,yes,20260723-1D,"Stitch up outside of top of breeches, where flies may get caught",WEBS
 stock,TRITE,1,synonym,yes,20260713-7D,Type of salt regularly in oil and stock,NITRITE
+stone,ST,1,abbreviation,yes,20260708-19D,Prominent story central to article set in stone,SALIENT
 stone,ROCK,1,synonym,yes,20260715-10A,"Stone work in <i>The Wall</i>, say",ROCKOPERA
 street,ST,1,abbreviation,yes,20260704-1A,Flash street dress,STROBE
 string up,HANG,1,synonym,yes,20260718-14D,String up individual losing power and followers,HANGERSON
 stroke,PAT,1,synonym,yes,20260711-1A,Inaccurate stroke perfected by repetition,OFFPAT
 "stronger, mixed drink",SLING,1,synonym,yes,20260713-13A,"Wine periodically arrived with stronger, mixed drink",RIESLING
 studio,UD,1,other,yes,20260716-23D,Overturn cage in middle of studio,UPEND
+study,READ,1,synonym,yes,20260708-9A,Open University study halved proposal,OVERTURE
 stuff,CRAM,1,synonym,yes,20260706-12A,"Cleanser in middle of kitchen getting on with stuff, filled with energy",COLDCREAM
 sudden upswing,SURGE,1,synonym,yes,20260718-25A,Flog company during sudden upswing,SCOURGE
+sunbed,D,1,single-letter,yes,20260722-23D,I managed to grab sunbed in the end — and took it easy,IDLED
 superb,ACE,1,synonym,yes,20260703-13A,"In rhyme, Peter periodically raves about superb peppers",PIPERACEAE
 supply,SPL,1,other,yes,20260630-5D,Regularly supply wood for blaze,SPLASH
 supported,BACKED,1,synonym,yes,20260702-1D,Astounded work supported kinky sex breaks,GOBSMACKED
 supporter,BRA,1,synonym,yes,20260629-14A,Injure supporter in capital relocating northern star,MARLONBRANDO
 supporter,FAN,1,synonym,yes,20260710-10A,Supporter cheers on popular princess,INFANTA
+supporting,FOR,1,synonym,yes,20260723-24D,President supporting Democrat,FORD
 surface of planet,P,1,other,yes,20260717-5A,Orbiter linked to Mars rovers on surface of planet,PHOBOS
 surgical procedure,OP,1,abbreviation,yes,20260701-2D,Cheer TV doctor overseeing surgical procedure,WHOOP
 surprise,ALARM,1,synonym,yes,20260715-9A,Lot of surprise about leader in tournament table,ALTAR
@@ -784,6 +913,7 @@ tesla,T,1,abbreviation,yes,20260713-11A,Follow Tesla alongside track,TRAIL
 thanks,TA,1,abbreviation,yes,20260720-18D,"Thanks boyfriend, introducing beginning of love scene",TABLEAU
 that is,IE,1,abbreviation,yes,20260701-4A,Vulgar scheme involves English bishop that is retiring,PLEBEIAN
 that one’s left,GREEN,1,synonym,yes,20260714-22A,Where one might find Jack bragging about space that one’s left,CROWNGREEN
+that’s sensitive,OW,1,other,yes,20260722-26A,Object that’s sensitive gift,ENDOW
 the,THE,1,other,yes,20260629-13A,The US band with popular electronic instrument,THEREMIN
 the,T,1,other,yes,20260703-10A,One who’s fetching display firstly selects the frames,SEXPOT
 the day,D,1,abbreviation,yes,20260704-17D,Cannot stand getting left for the day singing,CANTABILE
@@ -791,6 +921,7 @@ the hair around it,RUFF,1,synonym,no,20260714-5D,"Part of the neck, namely the h
 the most,MAX,1,abbreviation,yes,20260718-7D,"Physicist, the most significant one by a considerable margin",MAXWELL
 the tube,TV,1,abbreviation,yes,20260710-2D,"Taking the Tube, run provided narrow path for divided area",RIFTVALLEY
 theatre,REP,1,abbreviation,yes,20260718-17D,Theatre building’s top carpeting,REPROOF
+theory,T,1,single-letter,yes,20260722-8A,"Star student, when is first in theory, receives prize like that",ASTROPHYSICIST
 these,T,1,other,yes,20260715-1A,London borough was the formal source of these rocks,WALTHAMFOREST
 this in ancient rome,HIC,1,foreign,no,20260629-15D,Very old one stupidly drunk on this in ancient Rome,NEOLITHIC
 thriving,GROWING,1,synonym,yes,20260713-17A,Sport thriving from just after its inception,ROWING
@@ -798,13 +929,17 @@ thus,THUS,1,other,yes,20260704-23D,Protection thus denied to Agamemnon’s murde
 tie,TETHER,1,synonym,yes,20260711-11A,Censure own goal during tie to remain in league,STICKTOGETHER
 time,AGE,1,synonym,yes,20260716-3D,Time to eat a very succulent growth,AGAVE
 times,BY,1,other,yes,20260720-20A,She predicts crux of inside line on Times,SIBYL
+tirade,RANT,1,synonym,yes,20260723-1A,Justify tirade backing conflict,WARRANT
 title,MR,1,abbreviation,yes,20260703-22A,Bury doctor going after mentor stripped of title,ENTOMB
+to,T,1,single-letter,yes,20260708-7D,Bend initially to leap in the air,CURVET
 to enter,IN,1,synonym,yes,20260717-27A,Like to enter clubs wearing golf jacket,CASING
+to launch,START,1,synonym,yes,20260708-26A,Most wanted performer to launch vessel,STARTURN
 today,Y,1,other,yes,20260715-21A,Punishment area today finally covered in swirling raindrops,PRISONYARD
 toilet,CAN,1,synonym,yes,20260714-16D,Weed in toilet and basin when drunk,CANNABIS
 token,COUNTER,1,synonym,yes,20260713-1D,Token for trial demo (a responsive one),COUNTERPROTEST
 tool,BIT,1,synonym,yes,20260707-19A,Tool secures device expelling content behind washer,BIDET
 top,CAP,1,synonym,yes,20260713-14D,Artist’s work wins top prize at the end,LANDSCAPE
+top player,COSTAR,1,synonym,yes,20260722-7D,Country’s top player first of all in cup appearance,COSTARICA
 toss,SHY,1,synonym,yes,20260717-8D,Toss back short-tailed shark,SHYSTER
 touch barely registered,KISS,1,synonym,yes,20260714-8A,Profound touch barely registered in act of passion,DEEPKISS
 tournament,T,1,other,yes,20260715-9A,Lot of surprise about leader in tournament table,ALTAR
@@ -831,7 +966,6 @@ uniform,U,1,nato,yes,20260716-17D,"With order of merit covering uniform, eat sou
 united,U,1,abbreviation,yes,20260629-23A,Last lieutenant stationed in United India and China,ULTIMATE
 universal,UL,1,other,yes,20260715-5D,Limits to Universal blocking movie award regarding kissing,OSCULAR
 university,OU,1,abbreviation,yes,20260702-3A,"Taken aback, coughed up Chinese university society fine",DIAPHANOUS
-university,U,1,abbreviation,yes,20260711-14A,"Processing unit collects university fees, assisting ministry",CURATESHIP
 university,EDUCATED,1,synonym,yes,20260715-26A,Visitors from university presumably having no time for reasonable supposition,EDUCATEDGUESS
 unknown,X,1,single-letter,yes,20260718-10A,Easygoing unknown replacing another in broadcast,RELAXED
 unorthodoxy,HERESY,1,synonym,yes,20260715-3D,A fight to interrupt reduction in unorthodoxy in this area,HEREABOUTS
@@ -841,6 +975,7 @@ us band,REM,1,other,yes,20260629-13A,The US band with popular electronic instrum
 us school subject,MATH,1,synonym,yes,20260629-21D,Duplicate chapter covered by US school subject,MATCH
 valerie,VAL,1,abbreviation,yes,20260710-12A,Fall with Valerie for Singleton’s first procession,CAVALCADE
 valiant,GAME,1,synonym,yes,20260629-6D,Valiant maiden shortly embraces warrior king,AGAMEMNON
+variable,Z,1,single-letter,yes,20260722-1A,A variable in diagram minus one — is square,PLAZA
 vehicle,VAN,1,synonym,yes,20260701-15D,City in which you must be protected by vehicle insurance,VANCOUVER
 vehicle,TRAM,1,synonym,yes,20260715-4D,More than half of soccer team aboard vehicle upset left-winger,MARXIST
 vehicle,QUAD,1,synonym,yes,20260717-1A,Vehicle marking cops?,SQUADCAR
@@ -849,6 +984,7 @@ verse,V,1,abbreviation,yes,20260717-10A,Description of verse could be focus of M
 very big,OS,1,abbreviation,yes,20260718-18A,"Very big vehicle, coveted model of stars",OSCAR
 very large,OS,1,abbreviation,yes,20260702-5D,Extra payment put up to secure very large venture,POSIT
 very spacious,AMPLE,1,synonym,yes,20260703-5D,Harry wanting very spacious case,EXAMPLE
+vessel,URN,1,synonym,yes,20260708-26A,Most wanted performer to launch vessel,STARTURN
 vicar,REV,1,abbreviation,yes,20260720-14D,Went back to see vicar I established in position,REVISITED
 vineyard’s,CRU,1,foreign,yes,20260716-18A,"English vineyard’s white, a bit off",ECRU
 vision,SIGHT,1,synonym,yes,20260706-1A,Locate vision in speech,SITE
@@ -864,7 +1000,7 @@ well,FINE,1,synonym,yes,20260704-14A,Not entirely well after reverse of healthy 
 western,W,1,single-letter,yes,20260711-12A,"Cycling round Lewis, see western one?",ISLE
 what,EH,1,synonym,yes,20260703-22D,Animated boy discharging bomb finally cuts what wire?,EARTH
 what might be maple,TREE,1,synonym,no,20260704-16A,Note chlorine in what might be maple syrup,TREACLE
-when,AS,1,synonym,yes,20260711-8D,"When upset go to bed, heading off extremely gloomy",SATURNINE
+where couples survived,ARK,1,other,yes,20260723-16D,Part of USA where couples survived an elite fighting force,ARKANSAS
 while,AS,1,synonym,yes,20260706-9A,"While around river, one encountered retiring goddess",ARTEMIS
 whisky,FIREWATER,1,synonym,yes,20260704-15D,Whisky changes heart for English person that’s aggressive,FIREEATER
 wildly enthusiastic,MAD,1,synonym,yes,20260716-2D,Wildly enthusiastic about new libertine one found in bed,MANDRAKE
@@ -881,6 +1017,7 @@ work,GO,1,synonym,yes,20260702-1D,Astounded work supported kinky sex breaks,GOBS
 work,OPERA,1,synonym,yes,20260715-10A,"Stone work in <i>The Wall</i>, say",ROCKOPERA
 world,D,1,single-letter,yes,20260721-9D,Reveal end of world is nigh,DISCLOSE
 wound,REELED,1,synonym,yes,20260703-26A,"Hard drug injected in wound made good, at last?",REHEELED
+writer’s,IVE,1,other,yes,20260708-12A,Lead character in Greek writer’s play,GIVE
 year,Y,1,abbreviation,yes,20260716-12A,"School music award missing year, a choir’s last",GRAMMAR
 years,Y,1,abbreviation,yes,20260715-20A,Considerable time — one day? Years,TIDY
 you shouldn’t have,TA,1,other,yes,20260716-24D,"Crew, you shouldn’t have giant fish",MANTA
