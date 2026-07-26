@@ -144,3 +144,4 @@ clue_by_clue_game.pdf.map.json
 corpus/raw/
 corpus/*.jsonl
 db/clues.csv
+crux.html
