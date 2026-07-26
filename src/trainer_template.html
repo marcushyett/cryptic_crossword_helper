@@ -1,0 +1,586 @@
+<title>Cryptic Drills — one move at a time</title>
+<style>
+  :root {
+    --paper:#FAFAF6; --paper-2:#F1F1EB; --card:#FFFFFF;
+    --ink:#14161A; --graphite:#63676F; --rule:#DCDCD4;
+    --mark:#E9B824; --mark-soft:#F8E9B4;
+    --ok:#2E7D4F; --ok-soft:#DCEDE2;
+    --miss:#B4442E; --miss-soft:#F7E1DB;
+    --track:#E4E4DC;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#131519; --paper-2:#1B1E24; --card:#20242B;
+      --ink:#E9E9E2; --graphite:#9BA0A9; --rule:#2E323A;
+      --mark:#D9A81F; --mark-soft:#43381A;
+      --ok:#6BC48D; --ok-soft:#1D3326;
+      --miss:#E58063; --miss-soft:#3A211A;
+      --track:#282C33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#131519; --paper-2:#1B1E24; --card:#20242B;
+    --ink:#E9E9E2; --graphite:#9BA0A9; --rule:#2E323A;
+    --mark:#D9A81F; --mark-soft:#43381A;
+    --ok:#6BC48D; --ok-soft:#1D3326;
+    --miss:#E58063; --miss-soft:#3A211A;
+    --track:#282C33;
+  }
+  :root[data-theme="light"] {
+    --paper:#FAFAF6; --paper-2:#F1F1EB; --card:#FFFFFF;
+    --ink:#14161A; --graphite:#63676F; --rule:#DCDCD4;
+    --mark:#E9B824; --mark-soft:#F8E9B4;
+    --ok:#2E7D4F; --ok-soft:#DCEDE2;
+    --miss:#B4442E; --miss-soft:#F7E1DB;
+    --track:#E4E4DC;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap { max-width:34rem; margin:0 auto; padding:0 1rem 5.5rem; }
+
+  /* ---------- top bar ---------- */
+  .bar {
+    position:sticky; top:0; z-index:6; background:var(--paper);
+    padding:.8rem 0 .6rem; border-bottom:1px solid var(--rule);
+    display:flex; align-items:center; gap:.75rem;
+  }
+  .bar h1 {
+    font: 700 .95rem/1.1 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    margin:0; flex:1; letter-spacing:-.01em;
+  }
+  .stat {
+    display:flex; align-items:center; gap:.28rem;
+    font: 700 .78rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums; color:var(--graphite);
+  }
+  .stat b { color:var(--ink); }
+  .stat--streak b { color:var(--mark); }
+
+  .progress { height:6px; background:var(--track); border-radius:3px; overflow:hidden; margin-top:.55rem; }
+  .progress i { display:block; height:100%; background:var(--mark); width:0; transition:width .3s ease; }
+
+  /* ---------- home ---------- */
+  .hero { padding:1.4rem 0 .4rem; }
+  .hero p { color:var(--graphite); font-size:.9rem; line-height:1.6; margin:.5rem 0 0; }
+  .kicker {
+    font:700 .66rem/1 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);
+  }
+  .hero h2 {
+    font: 700 1.6rem/1.15 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    margin:.5rem 0 0; text-wrap:balance;
+  }
+
+  .tracks { display:flex; flex-direction:column; gap:.5rem; margin-top:1.1rem; }
+  .track {
+    display:flex; align-items:center; gap:.7rem; width:100%; text-align:left;
+    background:var(--card); border:1px solid var(--rule); border-radius:4px;
+    padding:.7rem .8rem; cursor:pointer; color:inherit; font:inherit;
+  }
+  .track:focus-visible { outline:2px solid var(--ink); outline-offset:2px; }
+  .track__name { display:block; font-weight:600; font-size:.92rem; }
+  .track__sub { display:block; font-size:.72rem; color:var(--graphite); margin-top:.12rem; }
+  .track__body { flex:1; min-width:0; }
+  .ring { flex:none; width:2.2rem; height:2.2rem; position:relative; }
+  .ring svg { transform:rotate(-90deg); display:block; }
+  .ring span {
+    position:absolute; inset:0; display:grid; place-items:center;
+    font: 700 .58rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .btn {
+    font:700 .88rem/1 ui-sans-serif, system-ui, sans-serif;
+    padding:.85rem 1rem; border-radius:4px; border:1px solid var(--ink);
+    background:var(--ink); color:var(--paper); cursor:pointer; width:100%;
+  }
+  .btn--ghost { background:none; color:var(--ink); }
+  .btn--mark { background:var(--mark); border-color:var(--mark); color:#14161A; }
+  .btn:disabled { opacity:.45; cursor:default; }
+  .btn:focus-visible { outline:2px solid var(--mark); outline-offset:2px; }
+
+  /* ---------- drill card ---------- */
+  .card {
+    background:var(--card); border:1px solid var(--rule); border-radius:5px;
+    padding:1.1rem 1rem 1.15rem; margin-top:1rem;
+    display:flex; flex-direction:column; gap:.9rem;
+  }
+  .tagrow { display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; }
+  .tag {
+    font:700 .6rem/1 ui-sans-serif, system-ui, sans-serif; letter-spacing:.1em;
+    text-transform:uppercase; padding:.32rem .45rem; border-radius:2px;
+    background:var(--mark-soft); color:var(--ink);
+  }
+  .tag--src { background:none; color:var(--graphite); letter-spacing:.06em; }
+  .prompt { font-weight:700; font-size:1.02rem; line-height:1.4; margin:0; text-wrap:pretty; }
+
+  .clue {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size:1.2rem; line-height:1.7; display:flex; flex-wrap:wrap; gap:.28rem .34rem;
+  }
+  .clue--plain { display:block; }
+  .tok {
+    background:none; border:1px dashed transparent; border-radius:3px;
+    padding:.05rem .2rem; font:inherit; color:inherit; cursor:pointer;
+  }
+  .tok:hover { border-color:var(--rule); }
+  .tok[aria-pressed="true"] { background:var(--mark-soft); border-color:var(--mark); border-style:solid; }
+  .tok.right { background:var(--ok-soft); border:1px solid var(--ok); color:var(--ok); }
+  .tok.wrong { background:var(--miss-soft); border:1px solid var(--miss); color:var(--miss); text-decoration:line-through; }
+  .tok.missed { border:1px dashed var(--ok); color:var(--ok); }
+  .tok:focus-visible { outline:2px solid var(--ink); outline-offset:1px; }
+  .enum { font: 600 .8rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; color:var(--graphite); }
+
+  .opts { display:flex; flex-direction:column; gap:.45rem; }
+  .opt {
+    text-align:left; background:var(--paper-2); border:1px solid var(--rule);
+    border-radius:4px; padding:.75rem .85rem; cursor:pointer; color:inherit;
+    font:600 .92rem/1.3 ui-sans-serif, system-ui, sans-serif;
+  }
+  .opt[aria-pressed="true"] { border-color:var(--ink); background:var(--mark-soft); }
+  .opt.right { border-color:var(--ok); background:var(--ok-soft); color:var(--ok); }
+  .opt.wrong { border-color:var(--miss); background:var(--miss-soft); color:var(--miss); }
+  .opt:focus-visible { outline:2px solid var(--ink); outline-offset:1px; }
+  .opt code { font:700 .95em/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing:.06em; }
+
+  .verdict { border-radius:4px; padding:.75rem .85rem; font-size:.88rem; line-height:1.55; }
+  .verdict--ok { background:var(--ok-soft); color:var(--ok); }
+  .verdict--miss { background:var(--miss-soft); color:var(--miss); }
+  .verdict b { display:block; margin-bottom:.2rem; font-size:.94rem; }
+  .verdict .why { color:var(--ink); opacity:.85; margin-top:.35rem; display:block; font-size:.84rem; }
+  .verdict .ans { font:700 .82rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing:.08em; }
+
+  .foot {
+    position:fixed; left:0; right:0; bottom:0; background:var(--paper);
+    border-top:1px solid var(--rule); padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom)); z-index:7;
+  }
+  .foot__in { max-width:34rem; margin:0 auto; display:flex; gap:.5rem; align-items:center; }
+
+  /* ---------- session summary ---------- */
+  .score { display:flex; gap:.5rem; margin-top:1rem; }
+  .score div {
+    flex:1; background:var(--card); border:1px solid var(--rule); border-radius:4px;
+    padding:.8rem .6rem; text-align:center;
+  }
+  .score b { display:block; font:700 1.5rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric:tabular-nums; }
+  .score span { font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--graphite); }
+
+  .list { display:flex; flex-direction:column; gap:.4rem; margin-top:.9rem; }
+  .row {
+    background:var(--card); border:1px solid var(--rule); border-radius:4px;
+    padding:.6rem .7rem; font-size:.85rem; line-height:1.45;
+  }
+  .row .q { color:var(--graphite); font-size:.76rem; }
+  .muted { color:var(--graphite); font-size:.78rem; line-height:1.55; }
+  .hidden { display:none !important; }
+
+  table.freq { width:100%; border-collapse:collapse; font-size:.82rem; }
+  table.freq th, table.freq td { text-align:left; padding:.4rem .3rem; border-bottom:1px solid var(--rule); }
+  table.freq th { font:700 .64rem/1 ui-sans-serif, system-ui, sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--graphite); }
+  table.freq td.l { font:700 .85rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing:.06em; }
+  table.freq td.n { text-align:right; color:var(--graphite); font-variant-numeric:tabular-nums; }
+  .scroll { overflow-x:auto; }
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <h1>Cryptic Drills</h1>
+    <span class="stat stat--streak" title="Day streak">🔥 <b id="streak">0</b></span>
+    <span class="stat" title="Cards answered today"><b id="today">0</b>/<span id="goal">30</span></span>
+  </div>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero">
+      <div class="kicker">Times cryptic · <span id="corpus"></span></div>
+      <h2>One move per clue.</h2>
+      <p>Real clues, but you are only asked for one thing at a time — where the definition
+        sits, which word is doing the signalling, what letters a word is worth. The same clue
+        comes back wearing a different question.</p>
+    </div>
+
+    <div class="tracks" id="tracks"></div>
+
+    <div style="margin-top:1rem; display:flex; flex-direction:column; gap:.5rem;">
+      <button class="btn" id="start">Start a session</button>
+      <button class="btn btn--ghost" id="review">Review weak spots (<span id="weak">0</span>)</button>
+      <button class="btn btn--ghost" id="tables">Substitutions this setter uses</button>
+    </div>
+    <p class="muted" style="margin-top:1rem;" id="credit"></p>
+  </section>
+
+  <!-- SESSION -->
+  <section id="session" class="hidden">
+    <div class="progress" style="margin-top:.7rem;"><i id="bar"></i></div>
+    <div class="card" id="card"></div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section id="summary" class="hidden">
+    <div class="hero">
+      <div class="kicker">Session done</div>
+      <h2 id="verdictTitle">Nicely done.</h2>
+    </div>
+    <div class="score">
+      <div><b id="sRight">0</b><span>Right</span></div>
+      <div><b id="sWrong">0</b><span>Missed</span></div>
+      <div><b id="sXP">0</b><span>XP</span></div>
+    </div>
+    <div class="list" id="missedList"></div>
+    <div style="margin-top:1rem; display:flex; flex-direction:column; gap:.5rem;">
+      <button class="btn" id="again">Another session</button>
+      <button class="btn btn--ghost" id="home2">Back to start</button>
+    </div>
+  </section>
+
+  <!-- TABLES -->
+  <section id="tablesView" class="hidden">
+    <div class="hero">
+      <div class="kicker">From the corpus</div>
+      <h2>What their words are worth.</h2>
+      <p>Counted across every clue analysed — the substitutions this paper's setters reach
+        for most, and the words they use to signal each device.</p>
+    </div>
+    <div class="scroll"><table class="freq" id="subTable"></table></div>
+    <h3 style="font:700 .95rem/1.2 Georgia,serif; margin:1.4rem 0 .3rem;">Indicators</h3>
+    <div class="scroll"><table class="freq" id="indTable"></table></div>
+    <button class="btn btn--ghost" style="margin-top:1rem;" id="home3">Back to start</button>
+  </section>
+</div>
+
+<nav class="foot hidden" id="foot">
+  <div class="foot__in">
+    <button class="btn btn--ghost" id="skip" style="flex:0 0 auto; width:auto; padding:.85rem .9rem;">Skip</button>
+    <button class="btn" id="act">Check</button>
+  </div>
+</nav>
+
+<script>
+const DATA = __DATA__;
+
+const KIND_LABEL = {
+  definition: 'Definition',
+  indicator: 'Indicator',
+  indicator_type: 'Indicator type',
+  device: 'Device',
+  substitution: 'Substitution',
+  reverse_sub: 'Substitution',
+  fodder: 'Fodder'
+};
+const TRACKS = [
+  { key: 'definition',  name: 'Spot the definition', kinds: ['definition'],
+    sub: 'Which words define the answer' },
+  { key: 'indicators',  name: 'Read the signals', kinds: ['indicator', 'indicator_type'],
+    sub: 'Which word tells you what to do' },
+  { key: 'devices',     name: 'Name the device', kinds: ['device'],
+    sub: 'Anagram, container, reversal…' },
+  { key: 'subs',        name: 'Substitutions', kinds: ['substitution', 'reverse_sub'],
+    sub: 'What a word is worth in letters' },
+  { key: 'fodder',      name: 'Find the fodder', kinds: ['fodder'],
+    sub: 'The letters the wordplay chews on' }
+];
+
+const STORE = 'cryptic-drills-v1';
+const GOAL = 30;
+const SESSION_LEN = 12;
+
+let state = load();
+let queue = [], at = 0, session = null, picked = null, answered = false;
+
+function load() {
+  try {
+    const raw = localStorage.getItem(STORE);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { items: {}, xp: 0, streak: 0, lastDay: null, today: 0, seen: 0 };
+}
+function save() { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {} }
+function dayKey() { return new Date().toISOString().slice(0, 10); }
+
+function rollDay() {
+  const d = dayKey();
+  if (state.lastDay === d) return;
+  if (state.lastDay) {
+    const gap = (new Date(d) - new Date(state.lastDay)) / 86400000;
+    state.streak = gap === 1 ? (state.streak || 0) + 1 : 1;
+  } else {
+    state.streak = 1;
+  }
+  state.lastDay = d;
+  state.today = 0;
+  save();
+}
+
+/* item key: one drill = one card, tracked for spaced repetition */
+const keyOf = d => d.kind + '|' + d.clue_id + '|' + (d.tag || d.prompt);
+function rec(d) {
+  const k = keyOf(d);
+  if (!state.items[k]) state.items[k] = { box: 0, due: 0, right: 0, wrong: 0 };
+  return state.items[k];
+}
+const isWeak = r => r.wrong > r.right;
+function weakCount() {
+  return Object.values(state.items).filter(isWeak).length;
+}
+
+/* pick a session: anything due, then the weakest, then unseen — favouring
+   the substitutions this setter uses most, since those repay learning first */
+function buildQueue(kinds, weakOnly) {
+  const now = Date.now();
+  const pool = DATA.drills.filter(d => !kinds || kinds.includes(d.kind));
+  const scored = pool.map(d => {
+    const r = state.items[keyOf(d)];
+    let score = Math.random();
+    if (!r) score += 1.0;                        // unseen
+    else if (r.due && r.due <= now) score += 2.5; // due for review
+    else if (isWeak(r)) score += 2.0;             // previously missed
+    else score -= r.box * 0.6;                    // known: push down
+    return { d, r, score };
+  }).filter(x => !weakOnly || (x.r && isWeak(x.r)));
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, SESSION_LEN).map(x => x.d);
+}
+
+/* Leitner-ish: right moves up a box and further away, wrong resets */
+function grade(d, ok) {
+  const r = rec(d);
+  if (ok) { r.right++; r.box = Math.min(5, r.box + 1); }
+  else { r.wrong++; r.box = 0; }
+  const days = [0, 1, 2, 4, 8, 16][r.box] || 0;
+  r.due = Date.now() + days * 86400000;
+  state.xp += ok ? 10 : 2;
+  state.today++;
+  state.seen++;
+  save();
+}
+
+/* ---------------- rendering ---------------- */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function show(which) {
+  ['home', 'session', 'summary', 'tablesView'].forEach(id => $(id).classList.toggle('hidden', id !== which));
+  $('foot').classList.toggle('hidden', which !== 'session');
+  window.scrollTo(0, 0);
+}
+
+function paintStats() {
+  $('streak').textContent = state.streak || 0;
+  $('today').textContent = state.today || 0;
+  $('goal').textContent = GOAL;
+  $('weak').textContent = weakCount();
+}
+
+function paintTracks() {
+  const box = $('tracks');
+  box.innerHTML = '';
+  TRACKS.forEach(t => {
+    const pool = DATA.drills.filter(d => t.kinds.includes(d.kind));
+    if (!pool.length) return;
+    const known = pool.filter(d => (state.items[keyOf(d)] || {}).box >= 3).length;
+    const pct = pool.length ? Math.round(100 * known / pool.length) : 0;
+    const b = document.createElement('button');
+    b.className = 'track';
+    b.innerHTML =
+      '<span class="ring"><svg width="35" height="35">' +
+      '<circle cx="17.5" cy="17.5" r="14" fill="none" stroke="var(--track)" stroke-width="4"></circle>' +
+      '<circle cx="17.5" cy="17.5" r="14" fill="none" stroke="var(--mark)" stroke-width="4" ' +
+      'stroke-linecap="round" stroke-dasharray="' + (2 * Math.PI * 14) + '" ' +
+      'stroke-dashoffset="' + (2 * Math.PI * 14 * (1 - pct / 100)) + '"></circle>' +
+      '</svg><span>' + pct + '</span></span>' +
+      '<span class="track__body"><span class="track__name">' + t.name + '</span>' +
+      '<span class="track__sub">' + t.sub + ' · ' + pool.length + ' cards</span></span>';
+    b.addEventListener('click', () => startSession(t.kinds, false));
+    box.appendChild(b);
+  });
+}
+
+function startSession(kinds, weakOnly) {
+  rollDay();
+  queue = buildQueue(kinds, weakOnly);
+  if (!queue.length) { alert('Nothing to review there yet — try a full session.'); return; }
+  session = { right: 0, wrong: 0, xp: 0, missed: [] };
+  at = 0;
+  show('session');
+  renderCard();
+}
+
+function renderCard() {
+  const d = queue[at];
+  picked = null; answered = false;
+  $('bar').style.width = (100 * at / queue.length) + '%';
+  $('act').textContent = 'Check';
+  $('act').disabled = true;
+  $('skip').classList.remove('hidden');
+
+  const c = $('card');
+  c.innerHTML = '';
+
+  const tags = document.createElement('div');
+  tags.className = 'tagrow';
+  tags.innerHTML = '<span class="tag">' + KIND_LABEL[d.kind] + '</span>' +
+    '<span class="tag tag--src">' + esc(d.puzzle || '') + '</span>';
+  c.appendChild(tags);
+
+  const p = document.createElement('p');
+  p.className = 'prompt';
+  p.innerHTML = esc(d.prompt).replace(/“([^”]*)”/g, '<em>“$1”</em>');
+  c.appendChild(p);
+
+  if (d.tokens) {
+    const box = document.createElement('div');
+    box.className = 'clue';
+    d.tokens.forEach((w, i) => {
+      const b = document.createElement('button');
+      b.className = 'tok';
+      b.type = 'button';
+      b.textContent = w;
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', () => {
+        if (answered) return;
+        b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+        $('act').disabled = !box.querySelector('[aria-pressed="true"]');
+      });
+      box.appendChild(b);
+    });
+    c.appendChild(box);
+    const e = document.createElement('div');
+    e.className = 'enum';
+    e.textContent = '(' + d.enumeration + ')';
+    c.appendChild(e);
+  } else {
+    const q = document.createElement('div');
+    q.className = 'clue clue--plain';
+    q.textContent = d.clue;
+    c.appendChild(q);
+    const e = document.createElement('div');
+    e.className = 'enum';
+    e.textContent = '(' + d.enumeration + ')';
+    c.appendChild(e);
+
+    const opts = document.createElement('div');
+    opts.className = 'opts';
+    d.options.forEach(o => {
+      const b = document.createElement('button');
+      b.className = 'opt';
+      b.type = 'button';
+      b.dataset.value = o;
+      b.innerHTML = /^[A-Z'’\-]+$/.test(o) ? '<code>' + esc(o) + '</code>' : esc(o);
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', () => {
+        if (answered) return;
+        [...opts.children].forEach(x => x.setAttribute('aria-pressed', 'false'));
+        b.setAttribute('aria-pressed', 'true');
+        picked = o;
+        $('act').disabled = false;
+      });
+      opts.appendChild(b);
+    });
+    c.appendChild(opts);
+  }
+}
+
+function checkCard() {
+  const d = queue[at];
+  const c = $('card');
+  let ok;
+
+  if (d.tokens) {
+    const toks = [...c.querySelectorAll('.tok')];
+    const chosen = toks.map((t, i) => t.getAttribute('aria-pressed') === 'true' ? i : -1).filter(i => i >= 0);
+    const want = d.targets;
+    ok = chosen.length === want.length && chosen.every(i => want.includes(i));
+    toks.forEach((t, i) => {
+      const isWant = want.includes(i);
+      const isChosen = chosen.includes(i);
+      t.classList.remove('tok');
+      t.classList.add('tok');
+      if (isChosen && isWant) t.classList.add('right');
+      else if (isChosen && !isWant) t.classList.add('wrong');
+      else if (!isChosen && isWant) t.classList.add('missed');
+    });
+  } else {
+    ok = picked === d.correct;
+    [...c.querySelectorAll('.opt')].forEach(b => {
+      if (b.dataset.value === d.correct) b.classList.add('right');
+      else if (b.dataset.value === picked) b.classList.add('wrong');
+    });
+  }
+
+  answered = true;
+  grade(d, ok);
+  if (ok) { session.right++; session.xp += 10; }
+  else { session.wrong++; session.xp += 2; session.missed.push(d); }
+
+  const v = document.createElement('div');
+  v.className = 'verdict ' + (ok ? 'verdict--ok' : 'verdict--miss');
+  const answerLine = d.correct ? '<span class="ans">' + esc(d.correct) + '</span> — ' : '';
+  v.innerHTML = '<b>' + (ok ? 'Right.' : 'Not quite.') + '</b>' +
+    (ok ? '' : answerLine) +
+    '<span class="why">' + esc(d.explanation || '') + '</span>' +
+    '<span class="why">Answer: <span class="ans">' + esc(d.answer_word) + '</span></span>';
+  c.appendChild(v);
+
+  $('act').textContent = at + 1 >= queue.length ? 'Finish' : 'Next';
+  $('act').disabled = false;
+  $('skip').classList.add('hidden');
+  paintStats();
+}
+
+function advance() {
+  at++;
+  if (at >= queue.length) return finish();
+  renderCard();
+}
+
+function finish() {
+  $('bar').style.width = '100%';
+  $('sRight').textContent = session.right;
+  $('sWrong').textContent = session.wrong;
+  $('sXP').textContent = session.xp;
+  $('verdictTitle').textContent =
+    session.wrong === 0 ? 'Clean sweep.' :
+    session.right >= session.wrong ? 'Nicely done.' : 'Worth another run.';
+  const list = $('missedList');
+  list.innerHTML = '';
+  session.missed.forEach(d => {
+    const r = document.createElement('div');
+    r.className = 'row';
+    r.innerHTML = '<span class="q">' + esc(d.prompt) + '</span><br>' + esc(d.clue) +
+      (d.correct ? '<br><b>' + esc(d.correct) + '</b>' : '');
+    list.appendChild(r);
+  });
+  paintStats(); paintTracks();
+  show('summary');
+}
+
+function paintTables() {
+  const st = $('subTable');
+  st.innerHTML = '<tr><th>Word in the clue</th><th>Worth</th><th>Times seen</th></tr>' +
+    DATA.subs.map(s => '<tr><td>' + esc(s.surface) + '</td><td class="l">' + esc(s.letters) +
+      '</td><td class="n">' + s.count + '</td></tr>').join('');
+  const it = $('indTable');
+  it.innerHTML = '<tr><th>Indicator</th><th>Times seen</th></tr>' +
+    DATA.indicators.map(s => '<tr><td>' + esc(s.text) + '</td><td class="n">' + s.count + '</td></tr>').join('');
+}
+
+/* ---------------- wiring ---------------- */
+$('act').addEventListener('click', () => { if (answered) advance(); else checkCard(); });
+$('skip').addEventListener('click', () => { grade(queue[at], false); session.wrong++; session.missed.push(queue[at]); advance(); });
+$('start').addEventListener('click', () => startSession(null, false));
+$('again').addEventListener('click', () => startSession(null, false));
+$('review').addEventListener('click', () => startSession(null, true));
+$('tables').addEventListener('click', () => { paintTables(); show('tablesView'); });
+$('home2').addEventListener('click', () => { paintTracks(); show('home'); });
+$('home3').addEventListener('click', () => show('home'));
+
+$('corpus').textContent = __CORPUS__;
+$('credit').innerHTML = __CREDIT__;
+rollDay(); paintStats(); paintTracks(); show('home');
+</script>

@@ -137,3 +137,10 @@ crossword.json
 # Generated HTML (can be regenerated)
 index.html
 clue_by_clue_game.pdf.map.json
+
+# Local puzzle corpus: cached feed JSON and clue-level working files.
+# The committed database is the derived analysis (substitutions, indicators,
+# devices), not a copy of the paper's puzzles.
+corpus/raw/
+corpus/*.jsonl
+db/clues.csv
